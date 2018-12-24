@@ -30,6 +30,7 @@ const ListItem = styled.li`
 `
 
 const ListItemLink = styled.a`
+  font-size: 1.2rem;
   color: white;
   text-decoration: none;
 `
@@ -46,6 +47,7 @@ const DividerText = styled.h3`
   display: inline-block;
   text-align: center;
   color: white;
+  font-weight: normal;
   background: black;
   z-index: 999;
   position: absolute;
