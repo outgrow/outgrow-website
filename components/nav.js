@@ -34,6 +34,26 @@ const ListItemLink = styled.a`
   text-decoration: none;
 `
 
+const Divider = styled.hr`
+  width: 90%;
+  transform: translate(-50%, 15px);
+  z-index: 1;
+  position: relative;
+  left: 50%;
+`
+
+const DividerText = styled.h3`
+  display: inline-block;
+  text-align: center;
+  color: white;
+  background: black;
+  z-index: 999;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 1rem;
+`
+
 const ButtonLink = styled.a`
   display: inline-block;
   background: #016FB9;
@@ -42,12 +62,17 @@ const ButtonLink = styled.a`
   text-align: center;
 
   padding: 1rem 2rem;
-  
+  margin-top: 2rem;
+
   border-radius: 68px;
   
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+
+  span {
+    font-size: .8rem;
+  }
 `
 
 const Nav = () => (
@@ -61,7 +86,11 @@ const Nav = () => (
         </ListItem>
       ))}
 
-      
+      <ListItem>
+        <Divider />
+        <DividerText>or</DividerText>
+      </ListItem>
+
       <ListItem>E-Commerce Site Down?</ListItem>
       <ButtonLink href="tel:+18009680818">
         (800) 968-0818<br/>
