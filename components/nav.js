@@ -13,7 +13,24 @@ const links = [
   return link
 })
 
-const Wrapper = styled.nav`
+const TopBar = styled.div`
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+`
+
+const MenuButton = styled.i`
+
+`
+
+const Logo = styled.img`
+  height: 2rem;
+  float: right;
+  margin: .5rem .5rem 0 0;
+`
+
+const MobileNavWrapper = styled.nav`
   background: black;
   height: 100vh;
 `
@@ -78,28 +95,34 @@ const ButtonLink = styled.a`
 `
 
 const Nav = () => (
-  <Wrapper>
-    <List>
-      {links.map(({ key, href, label }) => (
-        <ListItem key={key}>
-          <Link href={href}>
-            <ListItemLink>{label}</ListItemLink>
-          </Link>
+  <div>
+    <TopBar>
+      <MenuButton />
+      <Logo src="/static/logo-white.svg" />
+    </TopBar>
+    <MobileNavWrapper>
+      <List>
+        {links.map(({ key, href, label }) => (
+          <ListItem key={key}>
+            <Link href={href}>
+              <ListItemLink>{label}</ListItemLink>
+            </Link>
+          </ListItem>
+        ))}
+
+        <ListItem>
+          <Divider />
+          <DividerText>or</DividerText>
         </ListItem>
-      ))}
 
-      <ListItem>
-        <Divider />
-        <DividerText>or</DividerText>
-      </ListItem>
-
-      <ListItem>E-Commerce Site Down?</ListItem>
-      <ButtonLink href="tel:+18009680818">
-        (800) 968-0818<br/>
-        <span>24/7 Emergency Hotline</span>
-      </ButtonLink>
-    </List>
-  </Wrapper>
+        <ListItem>E-Commerce Site Down?</ListItem>
+        <ButtonLink href="tel:+18009680818">
+          (800) 968-0818<br/>
+          <span>24/7 Emergency Hotline</span>
+        </ButtonLink>
+      </List>
+    </MobileNavWrapper>
+  </div>
 )
 
 export default Nav
