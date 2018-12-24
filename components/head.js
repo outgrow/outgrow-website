@@ -31,6 +31,25 @@ const Head = props => (
     <meta property="og:image" content={props.ogImage || defaultOGImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <style>{`
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      @font-face {
+        font-family: "Axiforma";
+        src: url("Axiforma-Regular.woff2") format("woff2"),
+             url("Axiforma-Regular.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      body {
+        font-family: "Axiforma", Helvetica, Arial, sans-serif;
+      }
+    `}</style>
   </NextHead>
 )
 

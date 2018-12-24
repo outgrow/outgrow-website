@@ -1,5 +1,6 @@
 import React from "react"
 import Link from "next/link"
+import styled from "styled-components"
 
 const links = [
   { href: "/training", label: "Developer Training" },
@@ -12,18 +13,62 @@ const links = [
   return link
 })
 
+const Wrapper = styled.nav`
+  background: black;
+  height: 100vh;
+`
+
+const List = styled.ul`
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+`
+
+const ListItem = styled.li`
+  text-align: center;
+  padding: .5rem 0;
+`
+
+const ListItemLink = styled.a`
+  color: white;
+  text-decoration: none;
+`
+
+const ButtonLink = styled.a`
+  display: inline-block;
+  background: #016FB9;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+
+  padding: 1rem 2rem;
+  
+  border-radius: 68px;
+  
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+`
+
 const Nav = () => (
-  <nav>
-    <ul>
+  <Wrapper>
+    <List>
       {links.map(({ key, href, label }) => (
-        <li key={key}>
+        <ListItem key={key}>
           <Link href={href}>
-            <a>{label}</a>
+            <ListItemLink>{label}</ListItemLink>
           </Link>
-        </li>
+        </ListItem>
       ))}
-    </ul>
-  </nav>
+
+      
+      <ListItem>E-Commerce Site Down?</ListItem>
+      <ButtonLink href="tel:+18009680818">
+        (800) 968-0818<br/>
+        <span>24/7 Emergency Hotline</span>
+      </ButtonLink>
+    </List>
+  </Wrapper>
 )
 
 export default Nav
