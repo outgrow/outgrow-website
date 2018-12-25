@@ -1,6 +1,6 @@
 import React, { Component }  from "react"
 import Link from "next/link"
-import styled from "styled-components"
+import styled, { css, keyframes } from "styled-components"
 import classNames from "classnames"
 
 const links = [
@@ -13,6 +13,18 @@ const links = [
   link.key = `nav-link-${link.href}-${link.label}`
   return link
 })
+
+const listItemAnimation = keyframes`
+  from {
+    transform: translateY(-15px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`
 
 const TopBar = styled.div`
   position: absolute;
@@ -132,11 +144,19 @@ const List = styled.ul`
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  list-style: none;
 `
 
 const ListItem = styled.li`
   text-align: center;
   padding: .5rem 0;
+  color: white;
+  opacity: 0;
+
+  animation-name: ${listItemAnimation};
+  animation-duration: 300ms;
+  animation-delay: ${props => props.iterationCount * 0.05}s;
+  animation-fill-mode: forwards;
 `
 
 const ListItemLink = styled.a`
@@ -167,14 +187,15 @@ const DividerText = styled.h3`
 `
 
 const ButtonLink = styled.a`
-  display: inline-block;
+  display: block;
+  width: 15rem;
   background: #016FB9;
   color: white;
   text-decoration: none;
   text-align: center;
 
   padding: 1rem 2rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 
   border-radius: 68px;
   
@@ -221,24 +242,26 @@ class Nav extends Component {
         </TopBar>
         {this.state.isMenuOpen && <MobileNavWrapper>
           <List>
-            {links.map(({ key, href, label }) => (
-              <ListItem key={key}>
+            {links.map(({ key, href, label }, index) => (
+              <ListItem key={key} iterationCount={index}>
                 <Link href={href}>
                   <ListItemLink>{label}</ListItemLink>
                 </Link>
               </ListItem>
             ))}
 
-            <ListItem>
+            <ListItem iterationCount={5}>
               <Divider />
               <DividerText>or</DividerText>
             </ListItem>
 
-            <ListItem>E-Commerce Site Down?</ListItem>
-            <ButtonLink href="tel:+18009680818">
-              (800) 968-0818<br/>
-              <span>24/7 Emergency Hotline</span>
-            </ButtonLink>
+            <ListItem style={{ marginTop: "2.5rem" }} iterationCount={6}>E-Commerce Site Down?</ListItem>
+            <ListItem iterationCount={7}>
+              <ButtonLink href="tel:+18009680818">
+                (800) 968-0818<br/>
+                <span>24/7 Emergency Hotline</span>
+              </ButtonLink>
+            </ListItem>
           </List>
         </MobileNavWrapper>}
       </div>
