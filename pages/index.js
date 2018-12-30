@@ -9,10 +9,31 @@ const Home = () => (
     <Nav />
     
     <HomeSection
-      buttonHref="/consulting"
+      backgroundImage="/static/consulting.jpg"
+      buttonColor="1, 111, 185"
+      buttonHref="/ecommerce-consulting"
       buttonText="Learn more"
+      overlayColor="51, 151, 246"
       title="Redefining e-commerce consulting."
-    /> 
+    />
+
+    <HomeSection
+      backgroundImage="/static/training.jpg"
+      buttonColor="221, 28, 26"
+      buttonHref="/ecommerce-training"
+      buttonText="Learn more"
+      overlayColor="221, 28, 26"
+      title="Providing ROI-focused training."
+    />
+
+    <HomeSection
+      backgroundImage="/static/emergency.jpg"
+      buttonColor="12, 164, 165"
+      buttonHref="/emergency-response"
+      buttonText="Learn more"
+      overlayColor="12, 164, 165"
+      title="Emergency? We have your back. 24/7."
+    />
   </div>
 )
 

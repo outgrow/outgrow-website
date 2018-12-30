@@ -14,16 +14,16 @@ const StyledLink = styled.a`
   border-radius: 25px;
 
   text-decoration: none;
-  color: #016FB9;
+  color: rgb(${props => props.color});
   font-weight: 800;
   font-size: 1.2rem;
 
   margin-top: 1rem;
 `
 
-const Button = ({ children, href }) => (
+const Button = ({ children, color, href }) => (
   <Link href={href} passHref prefetch>
-    <StyledLink>{children}</StyledLink>
+    <StyledLink color={color}>{children}</StyledLink>
   </Link>
 )
 

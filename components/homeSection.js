@@ -26,11 +26,11 @@ const Title = styled.h2`
   letter-spacing: -2px;
 `
 
-const HomeSection = ({ title, buttonText, buttonHref }) => (
-  <SectionWithBackgroundImage style={{ backgroundImage: "url(/static/consulting.jpg)" }}>
-    <Overlay style={{ backgroundColor: "rgba(51, 151, 246, .57)" }}>
+const HomeSection = ({ backgroundImage, buttonColor, buttonHref, buttonText, overlayColor, title }) => (
+  <SectionWithBackgroundImage style={{ backgroundImage: `url(${backgroundImage})` }}>
+    <Overlay style={{ backgroundColor: `rgba(${overlayColor}, .57)` }}>
       <Title>{title}</Title>
-      <Button href={buttonHref}>{buttonText}</Button>
+      <Button color={buttonColor} href={buttonHref}>{buttonText}</Button>
     </Overlay>
   </SectionWithBackgroundImage>
 )
