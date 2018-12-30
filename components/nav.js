@@ -132,7 +132,7 @@ const MenuButtonInner = styled.span`
 
 const Logo = styled.img`
   height: 2.5rem;
-  margin: .5rem .5rem 0 0;
+  margin: .6rem .5rem 0 0;
 `
 
 const MobileNavWrapper = styled.nav`
