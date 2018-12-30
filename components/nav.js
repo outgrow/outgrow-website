@@ -4,8 +4,8 @@ import styled, { css, keyframes } from "styled-components"
 import classNames from "classnames"
 
 const links = [
+  { href: "/ecommerce-consulting", label: "Technical Consulting" },
   { href: "/training", label: "Developer Training" },
-  { href: "/consulting", label: "Technical Consulting" },
   { href: "/clients", label: "Our Clients" },
   { href: "/case-studies", label: "Case Studies" },
   { href: "/contact", label: "Contact Us" }
