@@ -6,7 +6,7 @@ import classNames from "classnames"
 const links = [
   { href: "/ecommerce-consulting", label: "Technical Consulting" },
   { href: "/developer-training", label: "Developer Training" },
-  { href: "/clients", label: "Our Clients" },
+  { href: "/emergency-response", label: "Emergency Response" },
   { href: "/case-studies", label: "Case Studies" },
   { href: "/contact", label: "Contact Us" }
 ].map(link => {
