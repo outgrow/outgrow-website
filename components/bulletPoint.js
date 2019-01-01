@@ -5,7 +5,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: flex-start;
 
-  margin: 1rem 0;
+  margin-top: 1rem;
 `
 
 const CheckMark = styled.img`

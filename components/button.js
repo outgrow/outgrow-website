@@ -9,7 +9,7 @@ const StyledLink = styled.a`
 
   background: rgb(${props => props.backgroundColor || "255, 255, 255"});
 
-  padding: .5rem 1.5rem;
+  padding: .5rem 1rem;
 
   border-radius: 25px;
 

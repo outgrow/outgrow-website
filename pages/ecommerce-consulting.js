@@ -44,12 +44,15 @@ const Blue = styled.span`
 `
 
 const ButtonWrapper = styled.div`
-  width: 80%;
-  margin 1.5rem auto;
+  display: inline-block;
+  margin: 1.5rem 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 `
 
 const BulletPointWrapper = styled.div`
-  margin: 2.5rem 0;
+  margin-top: 2.5rem;
 `
 
 const Consulting = () => (
@@ -87,12 +90,8 @@ const Consulting = () => (
         <SliderItem src="/static/bigcommerce-logo.png" />
       </StyledSlider>
 
-      <Paragraph>
-        Our engineers have accumulated <Blue>over 80 years of experience</Blue> on modern technologies like <Blue>Reaction Commerce</Blue>, <Blue>Workarea</Blue>, <Blue>BigCommerce</Blue> and <Blue>Salesforce Commerce Cloud</Blue>.
-      </Paragraph>
-      <Paragraph>
-        Unlike many consultancy companies, we <Blue>focus exclusively</Blue> on these technologies to provide our clients with a <Blue>truly unique expertise</Blue>.
-      </Paragraph>
+      <Paragraph>Our engineers have accumulated <Blue>over 80 years of experience</Blue> on modern technologies like <Blue>Reaction Commerce</Blue>, <Blue>Workarea</Blue>, <Blue>BigCommerce</Blue> and <Blue>Salesforce Commerce Cloud</Blue>.</Paragraph>
+      <Paragraph>Unlike many consultancy companies, we <Blue>focus exclusively</Blue> on these technologies to provide our clients with a <Blue>truly unique expertise</Blue>.</Paragraph>
 
       <ButtonWrapper>
         <Button backgroundColor="1, 111, 185" color="255, 255, 255" href="#">Talk to an expert</Button>
@@ -109,6 +108,27 @@ const Consulting = () => (
         <BulletPoint title="Code reviews" body="Our experts will provide comprehensive code reviews right in your team’s pull requests, on GitHub or any other VCS." />
         <BulletPoint title="Unlimited e-mail & chat" body="Give your technical team the assurance of always getting answers to their technical questions via e-mail or Slack." />
       </BulletPointWrapper>
+
+      <ButtonWrapper>
+        <Button backgroundColor="1, 111, 185" color="255, 255, 255" href="#">Supercharge your team</Button>
+      </ButtonWrapper>
+
+      <Title>Feasability reports.</Title>
+
+      <Paragraph>Are you <Blue>still exploring your options</Blue> for an e-commerce project? A <Blue>custom-tailored feasability report</Blue> will help you make an <Blue>informed business decision</Blue>.</Paragraph>
+      <Paragraph>Taking into account your project’s unique characteristics, <Blue>our experts will help you decide</Blue> which e-commerce technology is right for you by <Blue>estimating development time</Blue>, warning you of <Blue>technical pitfals</Blue>, and more.</Paragraph>
+      
+      <ButtonWrapper>
+        <Button backgroundColor="1, 111, 185" color="255, 255, 255" href="#">Order a report</Button>
+      </ButtonWrapper>
+
+      <Title>Let's talk.</Title>
+
+      <Paragraph>Because every project is different, let us provide <Blue>tailored answers to your questions</Blue>. Speak with one of our consultants today to assess how can out:grow help your business reach new heights.</Paragraph>
+      
+      <ButtonWrapper>
+        <Button backgroundColor="1, 111, 185" color="255, 255, 255" href="#">Get called back</Button>
+      </ButtonWrapper>
     </PageWrapper>
   </div>
 )
