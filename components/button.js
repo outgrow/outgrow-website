@@ -7,7 +7,7 @@ const StyledLink = styled.a`
   align-items: center;
   justify-content: center;
 
-  background: white;
+  background: rgb(${props => props.backgroundColor || "255, 255, 255"});
 
   padding: .5rem 1.5rem;
 
@@ -21,9 +21,9 @@ const StyledLink = styled.a`
   margin-top: 1rem;
 `
 
-const Button = ({ children, color, href }) => (
+const Button = ({ backgroundColor, children, color, href }) => (
   <Link href={href} passHref prefetch>
-    <StyledLink color={color}>{children}</StyledLink>
+    <StyledLink backgroundColor={backgroundColor} color={color}>{children}</StyledLink>
   </Link>
 )
 
