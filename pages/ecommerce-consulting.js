@@ -4,8 +4,6 @@ import dynamic from "next/dynamic"
 import Head from "../components/head"
 import Nav from "../components/nav"
 import Header from "../components/servicePageHeader"
-//import "slick-carousel/slick/slick.css"
-//import "slick-carousel/slick/slick-theme.css"
 
 const Slider = dynamic(import("react-slick"))
 
@@ -19,6 +17,12 @@ const Title = styled.h2`
 
 const PageWrapper = styled.div`
   padding: 0 1.2rem;
+`
+
+const SliderItem = styled.img`
+  height: 2rem;
+  width: auto !important;  
+  margin: 0 .5rem;
 `
 
 const Consulting = () => (
@@ -39,11 +43,20 @@ const Consulting = () => (
     
     <PageWrapper>
       <Title>We know your stack.</Title>
-      <Slider>
-        <img src="/static/reaction-logo.png" />
-        <img src="/static/workarea-logo.png" />
-        <img src="/static/salesforce-cc-logo.png" />
-        <img src="/static/bigcommerce-logo.png" />
+      <Slider {...{
+        autoplay: true,
+        autoplaySpeed: 2000,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        variableWidth: true
+      }}>
+        <SliderItem src="/static/reaction-logo.png" />
+        <SliderItem src="/static/workarea-logo.png" />
+        <SliderItem src="/static/salesforce-cc-logo.png" />
+        <SliderItem src="/static/bigcommerce-logo.png" />
       </Slider>
     </PageWrapper>
   </div>
