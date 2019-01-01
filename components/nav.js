@@ -27,7 +27,7 @@ const listItemAnimation = keyframes`
 `
 
 const TopBar = styled.div`
-  position: absolute;
+  position: ${props => props.isMenuOpen ? "fixed" : "absolute"};
   top: 0;
   width: 100%;
   z-index: 999;
@@ -134,8 +134,11 @@ const Logo = styled.img`
 `
 
 const MobileNavWrapper = styled.nav`
-  background: black;
+  background: rgb(11, 11, 11);
   height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 99;
 `
 
 const List = styled.ul`
@@ -148,7 +151,7 @@ const List = styled.ul`
 const ListItem = styled.li`
   text-align: center;
   padding: .5rem 0;
-  color: white;
+  color: rgb(250, 250, 250);
   opacity: 0;
 
   animation-name: ${listItemAnimation};
@@ -159,7 +162,7 @@ const ListItem = styled.li`
 
 const ListItemLink = styled.a`
   font-size: 1.2rem;
-  color: white;
+  color: rgb(250, 250, 250);
   text-decoration: none;
 `
 
@@ -174,7 +177,7 @@ const Divider = styled.hr`
 const DividerText = styled.h3`
   display: inline-block;
   text-align: center;
-  color: white;
+  color: rgb(250, 250, 250);
   font-weight: normal;
   background: black;
   z-index: 999;
@@ -188,7 +191,7 @@ const ButtonLink = styled.a`
   display: block;
   width: 15rem;
   background: #016FB9;
-  color: white;
+  color: rgb(250, 250, 250);
   text-decoration: none;
   text-align: center;
 
@@ -222,7 +225,7 @@ class Nav extends Component {
   render() {
     return (
       <div>
-        <TopBar>
+        <TopBar isMenuOpen={this.state.isMenuOpen}>
           <MenuButton
             className={classNames({
               "hamburger": true,
