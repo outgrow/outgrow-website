@@ -94,7 +94,7 @@ const Consulting = () => (
       <Paragraph>Unlike many consultancy companies, we <Blue>focus exclusively</Blue> on these technologies to provide our clients with a <Blue>truly unique expertise</Blue>.</Paragraph>
 
       <ButtonWrapper>
-        <Button backgroundColor="1, 111, 185" color="255, 255, 255" href="#">Talk to an expert</Button>
+        <Button backgroundColor="1, 111, 185" color="250, 250, 250" href="#">Talk to an expert</Button>
       </ButtonWrapper>
 
       <Title>Mid-project technical advice.</Title>
@@ -110,7 +110,7 @@ const Consulting = () => (
       </BulletPointWrapper>
 
       <ButtonWrapper>
-        <Button backgroundColor="1, 111, 185" color="255, 255, 255" href="#">Supercharge your team</Button>
+        <Button backgroundColor="1, 111, 185" color="250, 250, 250" href="#">Supercharge your team</Button>
       </ButtonWrapper>
 
       <Title>Feasability reports.</Title>
@@ -119,7 +119,7 @@ const Consulting = () => (
       <Paragraph>Taking into account your project’s unique characteristics, <Blue>our experts will help you decide</Blue> which e-commerce technology is right for you by <Blue>estimating development time</Blue>, warning you of <Blue>technical pitfals</Blue>, and more.</Paragraph>
       
       <ButtonWrapper>
-        <Button backgroundColor="1, 111, 185" color="255, 255, 255" href="#">Order a report</Button>
+        <Button backgroundColor="1, 111, 185" color="250, 250, 250" href="#">Order a report</Button>
       </ButtonWrapper>
 
       <Title>Let's talk.</Title>
@@ -127,7 +127,7 @@ const Consulting = () => (
       <Paragraph>Because every project is different, let us provide <Blue>tailored answers to your questions</Blue>. Speak with one of our consultants today to assess how can out:grow help your business reach new heights.</Paragraph>
       
       <ButtonWrapper>
-        <Button backgroundColor="1, 111, 185" color="255, 255, 255" href="#">Get called back</Button>
+        <Button backgroundColor="1, 111, 185" color="250, 250, 250" href="#">Get called back</Button>
       </ButtonWrapper>
     </PageWrapper>
   </div>

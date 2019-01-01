@@ -34,7 +34,7 @@ const ButtonWrapper = styled.div`
   transform: translateX(-50%);
 `
 
-const Consulting = () => (
+const Training = () => (
   <div>
     <Head title="E-Commerce Developer Training | Private Coaching Calls | On-Site Training | Online Courses | out:grow" />
     <Nav />
@@ -82,5 +82,5 @@ const Consulting = () => (
   </div>
 )
 
-export default Consulting
+export default Training
 

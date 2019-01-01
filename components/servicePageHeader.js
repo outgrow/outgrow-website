@@ -20,7 +20,7 @@ const SectionWithBackgroundImage = styled.div`
 `
 
 const Title = styled.h1`
-  color: white;
+  color: rgb(250, 250, 250);
   font-size: 2.4rem;
   font-weight: 800;
   letter-spacing: -2px;
@@ -28,7 +28,7 @@ const Title = styled.h1`
 `
 
 const Paragraph = styled.p`
-  color: white;
+  color: rgb(250, 250, 250);
   margin-bottom: 1rem;
 `
 

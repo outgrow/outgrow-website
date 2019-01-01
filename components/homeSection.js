@@ -20,7 +20,7 @@ const SectionWithBackgroundImage = styled.div`
 `
 
 const Title = styled.h2`
-  color: white;
+  color: rgb(250, 250, 250);
   font-size: 2.4rem;
   font-weight: 800;
   letter-spacing: -2px;

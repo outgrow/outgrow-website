@@ -15,10 +15,12 @@ const CheckMark = styled.img`
 
 const Title = styled.p`
   margin-bottom: .3rem; 
+  color: rgb(11, 11, 11);
 `
 
 const Body = styled.p`
   font-weight: 100;
+  color: rgb(11, 11, 11);
 `
 
 const BulletPoint = ({ body, title }) => (
