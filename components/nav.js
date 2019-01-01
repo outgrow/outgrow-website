@@ -35,8 +35,6 @@ const TopBar = styled.div`
   align-items: end;
   display: flex;
   justify-content: space-between;
-
-  background: rgba(0, 0, 0, .4);
 `
 
 const MenuButton = styled.button`
