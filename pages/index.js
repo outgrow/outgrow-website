@@ -20,7 +20,7 @@ const Home = () => (
     <HomeSection
       backgroundImage="/static/training.jpg"
       buttonColor="221, 28, 26"
-      buttonHref="/ecommerce-training"
+      buttonHref="/developer-training"
       buttonText="Learn more"
       overlayColor="221, 28, 26"
       title="Providing ROI-focused training."
