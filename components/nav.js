@@ -236,7 +236,11 @@ class Nav extends Component {
               <MenuButtonInner className="hamburger-inner" />
             </MenuButtonBox>
           </MenuButton>
-          <Logo src="/static/logo-white.svg" />
+          <Link href="/">
+            <ListItemLink>
+              <Logo src="/static/logo-white.svg" />
+            </ListItemLink>
+          </Link>
         </TopBar>
         {this.state.isMenuOpen && <MobileNavWrapper>
           <List>
