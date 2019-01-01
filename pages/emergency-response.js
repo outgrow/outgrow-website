@@ -34,7 +34,7 @@ const ButtonWrapper = styled.div`
   transform: translateX(-50%);
 `
 
-const Training = () => (
+const Emergency = () => (
   <div>
     <Head title="E-Commerce Emergency Response | 24/7 Crisis Hotline | Support Plans | out:grow" />
     <Nav />
@@ -73,5 +73,5 @@ const Training = () => (
   </div>
 )
 
-export default Training
+export default Emergency
 

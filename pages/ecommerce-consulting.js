@@ -57,7 +57,7 @@ const BulletPointWrapper = styled.div`
 
 const Consulting = () => (
   <div>
-    <Head title="E-Commerce Consulting & Emergency Response | out:grow" />
+    <Head title="Technical E-Commerce Consulting | Reaction Commerce, Workarea, Salesforce Commerce Cloud, BigCommerce | out:grow" />
     <Nav />
     
     <Header
@@ -105,7 +105,7 @@ const Consulting = () => (
       
       <BulletPointWrapper>
         <BulletPoint title="Private problem-solving calls" body="Benefit from one-on-one or group video calls with our best engineers." />
-        <BulletPoint title="Code reviews" body="Our experts will provide comprehensive code reviews right in your team’s pull requests, on GitHub or any other VCS." />
+        <BulletPoint title="Code reviews" body="Our experts will provide comprehensive code reviews right in your team's pull requests, on GitHub or any other VCS." />
         <BulletPoint title="Unlimited e-mail & chat" body="Give your technical team the assurance of always getting answers to their technical questions via e-mail or Slack." />
       </BulletPointWrapper>
 
@@ -116,7 +116,7 @@ const Consulting = () => (
       <Title>Feasability reports.</Title>
 
       <Paragraph>Are you <Blue>still exploring your options</Blue> for an e-commerce project? A <Blue>custom-tailored feasability report</Blue> will help you make an <Blue>informed business decision</Blue>.</Paragraph>
-      <Paragraph>Taking into account your project’s unique characteristics, <Blue>our experts will help you decide</Blue> which e-commerce technology is right for you by <Blue>estimating development time</Blue>, warning you of <Blue>technical pitfals</Blue>, and more.</Paragraph>
+      <Paragraph>Taking into account your project's unique characteristics, <Blue>our experts will help you decide</Blue> which e-commerce technology is right for you by <Blue>estimating development time</Blue>, warning you of <Blue>technical pitfals</Blue>, and more.</Paragraph>
       
       <ButtonWrapper>
         <Button backgroundColor="1, 111, 185" color="250, 250, 250" href="#">Order a report</Button>
