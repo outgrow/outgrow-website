@@ -4,10 +4,11 @@ import styled, { css, keyframes } from "styled-components"
 import classNames from "classnames"
 
 const links = [
+  { href: "/", label: "Home" },
   { href: "/ecommerce-consulting", label: "Technical Consulting" },
   { href: "/developer-training", label: "Developer Training" },
   { href: "/emergency-response", label: "Emergency Response" },
-  { href: "/case-studies", label: "Case Studies" },
+  //{ href: "/case-studies", label: "Case Studies" },
   { href: "/contact", label: "Contact Us" }
 ].map(link => {
   link.key = `nav-link-${link.href}-${link.label}`
