@@ -118,7 +118,7 @@ class Contact extends Component {
       category: "",
       phoneNumber: "",
       message: "",
-      callbackPreferred: false,
+      callbackPreferred: true,
       preferredTimeForCallback: new Date()
     }
   }
