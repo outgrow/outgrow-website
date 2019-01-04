@@ -90,9 +90,9 @@ const SelectInput = styled.select`
   background: rgb(250, 250, 250);
   color: rgb(11, 11, 11);
 
-  height: 1.3rem;
+  height: 1.8rem;
 
-  padding: .8rem .9rem;
+  padding: .4rem .9rem;
   
   border: none;
   border-radius: 15px;
@@ -211,7 +211,7 @@ class Contact extends Component {
               
 
               <FieldWrapper>
-                <Label htmlFor="message">Message:</Label>
+                <Label htmlFor="message">Message</Label>
                 <Textarea
                   id="message"
                   name="message"
