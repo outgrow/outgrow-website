@@ -172,7 +172,7 @@ class Contact extends Component {
                     name="callbackPreferred"
                     onChange={this.handleCallbackPreferredToggle}
                     type="checkbox"
-                    value={this.state.callbackPreferred}
+                    checked={this.state.callbackPreferred}
                   />
                 </FieldWrapper>
                 
