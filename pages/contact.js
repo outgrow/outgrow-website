@@ -23,7 +23,7 @@ const Title = styled.h2`
   font-size: 2.4rem;
   font-weight: 800;
   letter-spacing: -2px;
-  margin: 1.3rem 0;
+  margin: 1.3rem 0 .4rem 0;
 `
 
 const Overlay = styled.section`
@@ -217,7 +217,7 @@ class Contact extends Component {
                   name="message"
                   onChange={this.handleFieldChange}
                   value={this.state.message}
-                  rows={5}
+                  rows={4}
                 />
               </FieldWrapper>
             </Form>
