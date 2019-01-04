@@ -53,6 +53,9 @@ const Form = styled.form`
 
 const Label = styled.label`
   display: block;
+  
+  margin-bottom: .3rem;
+
   color: rgb(250, 250, 250);
   font-size: 0.9rem;
 `
@@ -71,6 +74,7 @@ const TextInput = styled.input`
 
 const FieldWrapper = styled.div`
   width: 100%;
+  min-height: 3.2rem;
 
   margin: .4rem 0;
 
