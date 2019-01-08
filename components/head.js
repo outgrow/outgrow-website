@@ -51,8 +51,8 @@ const Head = props => (
 
       @font-face {
         font-family: "Axiforma";
-        src: url("Axiforma-Regular.woff2") format("woff2"),
-             url("Axiforma-Regular.woff") format("woff");
+        src: url("/static/Axiforma-Regular.woff2") format("woff2"),
+             url("/static/Axiforma-Regular.woff") format("woff");
         font-weight: normal;
         font-style: normal;
       }

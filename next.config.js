@@ -1,24 +1,7 @@
-module.exports = {
-  webpack: (config, { defaultLoaders }) => {
-    // Fixes npm packages that depend on `fs` module
-    config.node = {
-      fs: "empty"
-    }
-
-    config.module.rules.push({
-      test: /\.css$/,
-      use: [
-        defaultLoaders.babel,
-        {
-          loader: require("styled-jsx/webpack").loader,
-          options: {
-            type: "global"
-          }
-        }
-      ]
-    })
+const withCSS = require("@zeit/next-css")
+const withTM = require("next-plugin-transpile-modules");
  
-    return config
-  }
-}
+module.exports = withCSS(withTM({
+  transpileModules: ["segmented-control"]
+}))
 

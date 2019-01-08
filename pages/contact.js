@@ -1,11 +1,12 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 import dynamic from "next/dynamic"
-import datePickerCss from "react-datepicker/dist/react-datepicker.css";
 import Head from "../components/head"
 import Header from "../components/servicePageHeader"
 import Nav from "../components/nav"
 import Button from "../components/button"
+import "react-datepicker/dist/react-datepicker.css"
+import SegmentedControl from "segmented-control"
 
 let DatePicker = () => null;
 
@@ -23,13 +24,18 @@ const Title = styled.h2`
   font-size: 2.4rem;
   font-weight: 800;
   letter-spacing: -2px;
-  margin: 1.3rem 0 .4rem 0;
+  margin-top: 1.3rem;
+`
+
+const Paragraph = styled.p`
+  color: rgb(250, 250, 250);
+  margin-bottom: .4rem;
 `
 
 const Overlay = styled.section`
   height: 100%;
   width: 100%;
-  padding: 0 1.2rem;
+  padding: 3rem 1.2rem 2rem 1.2rem;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -37,7 +43,6 @@ const Overlay = styled.section`
 `
 
 const SectionWithBackgroundImage = styled.div`
-  height: 100vh;
   width: 100vw;
   background-size: cover;
   background-position: 50%;
@@ -99,7 +104,7 @@ const SelectInput = styled.select`
 `
 
 const CheckboxInput = styled.input`
-
+  background: white;
 `
 
 const Textarea = styled.textarea`
@@ -142,28 +147,32 @@ class Contact extends Component {
         <SectionWithBackgroundImage style={{ backgroundImage: `url(/static/contact.jpg)` }}>
           <Overlay style={{ backgroundColor: `rgba(51, 151, 246, .57)` }}>
             <Title>Get in touch.</Title>
-
+            
+            <Paragraph>Submit this form and an out:grow representative will get back to you at your preferred time. In case of an emergency, please call our 24/7 hotline at (800) 918-0818.</Paragraph>
+            
             <Form onSubmit={this.handleSubmit}>
               <DividedFieldWrapper>
                 <FieldWrapper marginRight>
-                  <Label htmlFor="emailAddress">E-mail Address</Label>
+                  {/*<Label htmlFor="emailAddress">E-mail Address</Label>*/}
                   <TextInput
                     id="emailAddress"
                     name="emailAddress"
                     onChange={this.handleFieldChange} 
                     type="email"
                     value={this.state.emailAddress}
+                    placeholder="E-mail Address"
                   />
                 </FieldWrapper>
 
                 <FieldWrapper marginLeft>
-                  <Label htmlFor="phoneNumber">Phone Number</Label>
+                  {/*<Label htmlFor="phoneNumber">Phone Number</Label>*/}
                   <TextInput
                     id="phoneNumber"
                     name="phoneNumber"
                     onChange={this.handleFieldChange}
                     type="tel"
                     value={this.state.phoneNumber}
+                    placeholder="Phone Number"
                   />
                 </FieldWrapper>
               </DividedFieldWrapper>
@@ -195,29 +204,27 @@ class Contact extends Component {
               </DividedFieldWrapper>    
         
               <FieldWrapper>
-                <Label htmlFor="category">Category</Label>
-                <SelectInput
-                  id="category"
+                {/*<Label htmlFor="category">Category</Label>
+                <SegmentedControl
                   name="category"
-                  onChange={this.handleFieldChange}
-                  value={this.state.category}
-                >
-                  <option>Technical Consulting</option>
-                  <option>Training</option>
-                  <option>Support Plans</option>
-                </SelectInput>
+                  options={[
+                    { label: "Technical Consulting", value: "consulting", default: true },
+                    { label: "Training", value: "training" },
+                    { label: "Support Plans", value: "support" }
+                  ]}
+                  setValue={this.handleCategoryChange}
+                />*/}
               </FieldWrapper>
 
-              
-
-              <FieldWrapper>
-                <Label htmlFor="message">Message</Label>
+              <FieldWrapper style={{ marginTop: ".8rem" }}>
+                {/*<Label htmlFor="message">Message</Label>*/}
                 <Textarea
                   id="message"
                   name="message"
                   onChange={this.handleFieldChange}
                   value={this.state.message}
                   rows={4}
+                  placeholder="Message"
                 />
               </FieldWrapper>
             </Form>
@@ -228,10 +235,28 @@ class Contact extends Component {
           </Overlay>
         </SectionWithBackgroundImage>
 
-        <style jsx>{datePickerCss}</style> 
         <style>{`
           .react-datepicker-popper {
-            transform: translate3d(4px, 90px, 0) !important;
+            transform: translate3d(0, 0, 0) !important;
+            height: 100vh;
+            width: 100vw;
+            background: rgba(11, 11, 11, .5);
+            z-index: 999;
+            margin-top: 0;
+            position: fixed !important;
+          }
+       
+          .react-datepicker {
+            position: relative;
+            left: 50%;
+            top: 25%;
+            transform: translateX(-50%);
+
+            border: none;
+          }
+
+          .react-datepicker__triangle {
+            display: none;
           }
 
           .react-datepicker-wrapper,
@@ -250,6 +275,14 @@ class Contact extends Component {
   
             border: none;
             border-radius: 15px; 
+          }
+
+          .react-datepicker__time {
+            border-radius: 0.3rem;
+          }
+
+          .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list li.react-datepicker__time-list-item {
+            padding: 5px;
           }
         `}</style>
       </div>

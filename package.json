@@ -6,17 +6,18 @@
     "start": "next start"
   },
   "dependencies": {
-    "@zeit/next-css": "^1.0.1",
-    "@zeit/next-sass": "^1.0.1",
+    "@zeit/next-css": "canary",
     "classnames": "^2.2.6",
-    "css-loader": "^2.0.2",
+    "css-loader": "^2.1.0",
     "jquery": "^3.3.1",
     "next": "^7.0.2",
-    "node-sass": "^4.11.0",
+    "next-plugin-transpile-modules": "^1.0.0",
+    "postcss-loader": "^3.0.0",
     "react": "^16.7.0",
     "react-datepicker": "^2.0.0",
     "react-dom": "^16.7.0",
     "react-slick": "^0.23.2",
+    "segmented-control": "^0.1.10",
     "slick-carousel": "^1.8.1",
     "style-loader": "^0.23.1",
     "styled-components": "^4.1.3"
