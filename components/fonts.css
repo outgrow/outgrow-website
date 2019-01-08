@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "Axiforma";
+    src: local("Axiforma Thin"), local("Axiforma-Thin"),
+        url("/static/Axiforma-Thin.woff2") format("woff2"),
+        url("/static/Axiforma-Thin.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Axiforma";
+    src: local("Axiforma Medium"), local("Axiforma-Medium"),
+        url("/static/Axiforma-Medium.woff2") format("woff2"),
+        url("/static/Axiforma-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Axiforma";
+    src: local("Axiforma Black"), local("Axiforma-Black"),
+        url("/static/Axiforma-Black.woff2") format("woff2"),
+        url("/static/Axiforma-Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Axiforma";
+    src: local("Axiforma Light"), local("Axiforma-Light"),
+        url("/static/Axiforma-Light.woff2") format("woff2"),
+        url("/static/Axiforma-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Axiforma";
+    src: local("Axiforma SemiBold"), local("Axiforma-SemiBold"),
+        url("/static/Axiforma-SemiBold.woff2") format("woff2"),
+        url("/static/Axiforma-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Axiforma";
+    src: local("Axiforma Regular"), local("Axiforma-Regular"),
+        url("/static/Axiforma-Regular.woff2") format("woff2"),
+        url("/static/Axiforma-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+

@@ -1,22 +1,23 @@
-import React from 'react'
-import NextHead from 'next/head'
-import { string } from 'prop-types'
+import React from "react"
+import NextHead from "next/head"
+import { string } from "prop-types"
+import "./fonts.css"
 
-const defaultDescription = ''
-const defaultOGURL = ''
-const defaultOGImage = ''
+const defaultDescription = ""
+const defaultOGURL = ""
+const defaultOGImage = ""
 
 const Head = props => (
   <NextHead>
     <meta charSet="UTF-8" />
-    <title>{props.title || 'out:grow'}</title>
+    <title>{props.title || "out:grow"}</title>
     <meta
       name="description"
       content={props.description || defaultDescription}
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta property="og:url" content={props.url || defaultOGURL} />
-    <meta property="og:title" content={props.title || ''} />
+    <meta property="og:title" content={props.title || ""} />
     <meta
       property="og:description"
       content={props.description || defaultDescription}
@@ -47,14 +48,6 @@ const Head = props => (
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-      }
-
-      @font-face {
-        font-family: "Axiforma";
-        src: url("/static/Axiforma-Regular.woff2") format("woff2"),
-             url("/static/Axiforma-Regular.woff") format("woff");
-        font-weight: normal;
-        font-style: normal;
       }
 
       body {
