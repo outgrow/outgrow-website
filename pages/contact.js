@@ -60,8 +60,8 @@ const Form = styled.form`
 
 const Label = styled.label`
   display: block;
-  
-  margin-bottom: .3rem;
+ 
+  width: 100%;
 
   color: rgb(250, 250, 250);
   font-size: 0.9rem;
@@ -80,8 +80,10 @@ const TextInput = styled.input`
 `
 
 const FieldWrapper = styled.div`
+  display: flex;
+  align-items: center;
+
   width: 100%;
-  min-height: 3.2rem;
 
   margin: .4rem 0;
 
@@ -129,7 +131,7 @@ class Contact extends Component {
       category: "",
       phoneNumber: "",
       message: "",
-      callbackPreferred: true,
+      callbackPreferred: false,
       preferredTimeForCallback: new Date()
     }
   }
@@ -184,30 +186,47 @@ class Contact extends Component {
               </DividedFieldWrapper>
 
               <DividedFieldWrapper>
-                <FieldWrapper marginRight={this.state.callbackPreferred}>
-                  <Label htmlFor="callbackPreferred">Call me back</Label>
-                  <CheckboxInput
-                    id="callbackPreferred"
+                <FieldWrapper marginRight>
+                  <Label htmlFor="callbackPreferred">Should we call?</Label>
+                </FieldWrapper>
+
+                <FieldWrapper className="small-segmented-control-container" marginLeft>
+                  <SegmentedControl
+                    className="small"
                     name="callbackPreferred"
-                    onChange={this.handleCallbackPreferredToggle}
-                    type="checkbox"
-                    checked={this.state.callbackPreferred}
+                    options={[
+                      { label: "Yes", value: true, default: true },
+                      { label: "No", value: false }
+                    ]}
+                    setValue={this.handleCallbackPreferredToggle}
+                    style={{
+                      borderRadius: "25px",
+                      color: "rgb(250, 250, 250)",
+                      fontSize: ".8rem",
+                      height: "1.6rem",
+                      transitionDuration: "300ms"
+                    }}
                   />
                 </FieldWrapper>
-                
-                {this.state.callbackPreferred &&
-                  <FieldWrapper marginLeft>
+              </DividedFieldWrapper>
+
+              {this.state.callbackPreferred &&
+                <DividedFieldWrapper>
+                  <FieldWrapper marginRight>
                     <Label htmlFor="preferredTimeForCallback">Preferred time</Label>
+                  </FieldWrapper>
+                  <FieldWrapper marginLeft>
                     <DatePicker
                       id="preferredTimeForCallback"
                       name="preferredTimeForCallback"
                       onChange={this.handlePreferredTimeChange}
                       selected={this.state.preferredTimeForCallback}
+                      dateFormat="MM-dd-yyyy HH:mm"
                       showTimeSelect
                     />
                   </FieldWrapper> 
-                }
-              </DividedFieldWrapper>    
+                </DividedFieldWrapper>
+              }
         
               <FieldWrapper>
                 {/*<Label htmlFor="category">Category</Label>*/}

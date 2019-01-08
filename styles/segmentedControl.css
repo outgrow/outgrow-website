@@ -1,3 +1,7 @@
+.small-segmented-control-container .segmented-control > label {
+  line-height: 1.6rem;
+}
+
 .segmented-control > label:after {
   color: rgb(1, 111, 185) !important;
 }
