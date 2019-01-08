@@ -1,7 +1,7 @@
 import React from "react"
 import NextHead from "next/head"
 import { string } from "prop-types"
-import "./fonts.css"
+import "../styles/fonts.css"
 
 const defaultDescription = ""
 const defaultOGURL = ""
