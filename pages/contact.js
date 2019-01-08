@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 import dynamic from "next/dynamic"
-import SegmentedControl from "segmented-control"
+import { SegmentedControl } from "segmented-control"
 import Head from "../components/head"
 import Header from "../components/servicePageHeader"
 import Nav from "../components/nav"
