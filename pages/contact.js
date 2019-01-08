@@ -114,6 +114,10 @@ const Textarea = styled.textarea`
 
   border: none;
   border-radius: 15px;
+
+  font-family: Axiforma, "sans-serif";
+
+  padding: 0.7rem 1rem;
 `
 
 class Contact extends Component {
