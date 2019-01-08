@@ -1,12 +1,12 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 import dynamic from "next/dynamic"
+import SegmentedControl from "segmented-control"
 import Head from "../components/head"
 import Header from "../components/servicePageHeader"
 import Nav from "../components/nav"
 import Button from "../components/button"
 import "react-datepicker/dist/react-datepicker.css"
-import SegmentedControl from "segmented-control"
 
 let DatePicker = () => null;
 
