@@ -8,6 +8,7 @@ import Nav from "../components/nav"
 import Button from "../components/button"
 import "react-datepicker/dist/react-datepicker.css"
 import "../styles/datePicker.css"
+import "../styles/segmentedControl.css"
 
 let DatePicker = () => null;
 
@@ -209,11 +210,17 @@ class Contact extends Component {
                 <SegmentedControl
                   name="category"
                   options={[
-                    { label: "Technical Consulting", value: "consulting", default: true },
+                    { label: "Consulting", value: "consulting", default: true },
                     { label: "Training", value: "training" },
-                    { label: "Support Plans", value: "support" }
+                    { label: "Support", value: "support" }
                   ]}
                   setValue={this.handleCategoryChange}
+                  style={{
+                    borderRadius: "25px",
+                    color: "rgb(250, 250, 250)",
+                    fontSize: ".8rem",
+                    transitionDuration: "300ms"
+                  }}
                 />
               </FieldWrapper>
 
