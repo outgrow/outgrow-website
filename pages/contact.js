@@ -204,7 +204,7 @@ class Contact extends Component {
               </DividedFieldWrapper>    
         
               <FieldWrapper>
-                {/*<Label htmlFor="category">Category</Label>
+                {/*<Label htmlFor="category">Category</Label>*/}
                 <SegmentedControl
                   name="category"
                   options={[
@@ -213,7 +213,7 @@ class Contact extends Component {
                     { label: "Support Plans", value: "support" }
                   ]}
                   setValue={this.handleCategoryChange}
-                />*/}
+                />
               </FieldWrapper>
 
               <FieldWrapper style={{ marginTop: ".8rem" }}>
