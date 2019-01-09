@@ -29,7 +29,7 @@ const Title = styled.h2`
 const HomeSection = ({ backgroundImage, buttonColor, buttonHref, buttonText, overlayColor, title }) => (
   <SectionWithBackgroundImage style={{ backgroundImage: `url(${backgroundImage})` }}>
     <Overlay style={{ backgroundColor: `rgba(${overlayColor}, .57)` }}>
-      <Title>{title}</Title>
+      <Title dangerouslySetInnerHTML={{ __html: title }} />
       <Button color={buttonColor} href={buttonHref}>{buttonText}</Button>
     </Overlay>
   </SectionWithBackgroundImage>
