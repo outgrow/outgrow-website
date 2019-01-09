@@ -136,7 +136,7 @@ class Contact extends Component {
     }
   }
 
-  handleCallbackPreferredToggle = () => this.setState({ callbackPreferred: !this.state.callbackPreferred })
+  handleCallbackPreferredToggle = (callbackPreferred) => this.setState({ callbackPreferred })
 
   handleFieldChange = (event) => this.setState({ [event.target.name]: event.target.value })
 
