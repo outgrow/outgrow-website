@@ -11,6 +11,7 @@ const Wrapper = styled.div`
 const CheckMark = styled.img`
   width: 5rem;
   margin-right: 1rem;
+  max-width: 1.85rem;
 `
 
 const Title = styled.p`
