@@ -158,7 +158,7 @@ class Contact extends Component {
           <Overlay style={{ backgroundColor: `rgba(51, 151, 246, .57)` }}>
             <Title>Get in touch.</Title>
             
-            <Paragraph>Submit this form and an out:grow representative will get back to you at your preferred time. In case of an emergency, please call our 24/7 hotline at (800) 918-0818.</Paragraph>
+            <Paragraph>Submit this form and an out:grow representative will get back to you at your preferred time. For emergencies, immediately call our 24/7 hotline at (800) 918-0818.</Paragraph>
             
             <Form onSubmit={this.handleSubmit}>
               <DividedFieldWrapper>
