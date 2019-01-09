@@ -1,11 +1,15 @@
 import React from "react"
 import styled from "styled-components"
 import Button from "../components/button"
+import media from "../styles/mediaQueries"
 
 const Overlay = styled.section`
   height: 100%;
   width: 100%;
+
   padding: 0 1.2rem;
+  ${media.smallTablet`padding: 0 3rem;`}
+
   display: flex;
   align-items: flex-start;
   justify-content: center;

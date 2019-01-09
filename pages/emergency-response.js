@@ -4,6 +4,7 @@ import Head from "../components/head"
 import Nav from "../components/nav"
 import Header from "../components/servicePageHeader"
 import Button from "../components/button"
+import media from "../styles/mediaQueries"
 
 const Title = styled.h2`
   color: rgb(12, 164, 165);
@@ -15,6 +16,7 @@ const Title = styled.h2`
 
 const PageWrapper = styled.div`
   padding: 0 1.2rem;
+  ${media.smallTablet`padding: 0 3rem;`}
 `
 
 const Paragraph = styled.p`

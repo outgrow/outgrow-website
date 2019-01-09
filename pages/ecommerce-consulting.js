@@ -6,6 +6,7 @@ import Nav from "../components/nav"
 import Header from "../components/servicePageHeader"
 import Button from "../components/button"
 import BulletPoint from "../components/bulletPoint"
+import media from "../styles/mediaQueries"
 
 const Slider = dynamic(import("react-slick"))
 
@@ -19,6 +20,7 @@ const Title = styled.h2`
 
 const PageWrapper = styled.div`
   padding: 0 1.2rem;
+  ${media.smallTablet`padding: 0 3rem;`}
 `
 
 const StyledSlider = styled(Slider)`

@@ -41,6 +41,7 @@ const Overlay = styled.section`
   width: 100%;
 
   padding: 3rem 1.2rem 2rem 1.2rem;
+  ${media.smallTablet`padding: 3rem 3rem 2rem 3rem;`}
   
   display: flex;
   align-items: flex-start;
