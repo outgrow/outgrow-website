@@ -37,6 +37,8 @@
 
   border: none;
   border-radius: 15px; 
+
+  font-family: Axiforma, Helvetica, "sans-serif";
 }
 
 .react-datepicker__time {

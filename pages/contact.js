@@ -77,6 +77,8 @@ const TextInput = styled.input`
   
   border: none;
   border-radius: 15px;
+
+  font-family: Axiforma, Helvetica, "sans-serif";
 `
 
 const FieldWrapper = styled.div`
