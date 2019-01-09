@@ -6,6 +6,7 @@ import Head from "../components/head"
 import Header from "../components/servicePageHeader"
 import Nav from "../components/nav"
 import Button from "../components/button"
+import media from "../styles/mediaQueries"
 import "react-datepicker/dist/react-datepicker.css"
 import "../styles/datePicker.css"
 import "../styles/segmentedControl.css"
@@ -76,6 +77,8 @@ const TextInput = styled.input`
   
   width: 100%;
   height: 1.3rem;
+
+  ${media.veryLargeSmartphone`height: 1.9rem`}
 
   padding: .8rem .9rem;
   

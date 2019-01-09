@@ -14,7 +14,7 @@ const Home = () => (
       buttonHref="/ecommerce-consulting"
       buttonText="Learn more"
       overlayColor="51, 151, 246"
-      title="Redefining <nobr>e-commerce</nobr> consulting."
+      title="Redefining<br/><nobr>e-commerce</nobr><br/>consulting."
     />
 
     <HomeSection
@@ -23,7 +23,7 @@ const Home = () => (
       buttonHref="/developer-training"
       buttonText="Learn more"
       overlayColor="221, 28, 26"
-      title="Providing <nobr>ROI-focused</nobr> training."
+      title="Providing<br/><nobr>ROI-focused</nobr><br/>training."
     />
 
     <HomeSection
