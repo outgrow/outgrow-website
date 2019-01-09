@@ -31,13 +31,16 @@ const Title = styled.h2`
 
 const Paragraph = styled.p`
   color: rgb(250, 250, 250);
-  margin-bottom: .4rem;
+  margin-bottom: 1.4rem;
 `
 
 const Overlay = styled.section`
+  min-height: 100vh;
   height: 100%;
   width: 100%;
+
   padding: 3rem 1.2rem 2rem 1.2rem;
+  
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -46,6 +49,7 @@ const Overlay = styled.section`
 
 const SectionWithBackgroundImage = styled.div`
   width: 100vw;
+
   background-size: cover;
   background-position: 50%;
 `
