@@ -32,7 +32,7 @@ const Home = () => (
       buttonHref="/emergency-response"
       buttonText="Learn more"
       overlayColor="12, 164, 165"
-      title="Emergency? We have your back. 24/7."
+      title="Emergency?<br/>We have your back. 24/7."
     />
   </div>
 )
