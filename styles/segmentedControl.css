@@ -2,6 +2,16 @@
   line-height: 1.6rem;
 }
 
+@media (min-width: 410px) {
+  .small-segmented-control-container .segmented-control {
+    height: 1.9rem !important;
+  }
+
+  .small-segmented-control-container .segmented-control > label {
+    line-height: 1.9rem;
+  }
+}
+
 .segmented-control > label:after {
   color: rgb(1, 111, 185) !important;
 }
