@@ -1,9 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Head from "../components/head"
-import Nav from "../components/nav"
-import Header from "../components/servicePageHeader"
-import Button from "../components/button"
+import { Button, Head, Nav, ServicePageHeader as Header } from "../components"
 import media from "../styles/mediaQueries"
 
 const Title = styled.h2`

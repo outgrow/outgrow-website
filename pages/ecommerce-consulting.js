@@ -1,12 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import dynamic from "next/dynamic"
-import Head from "../components/head"
-import Nav from "../components/nav"
-import Header from "../components/servicePageHeader"
-import Button from "../components/button"
-import BulletPoint from "../components/bulletPoint"
-import Wire from "../components/wire"
+import { BulletPoint, Button, Head, Nav, ServicePageHeader as Header, Wire } from "../components"
 import media from "../styles/mediaQueries"
 
 const Slider = dynamic(import("react-slick"))
