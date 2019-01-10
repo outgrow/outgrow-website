@@ -6,7 +6,8 @@ import media from "../styles/mediaQueries"
 const Overlay = styled.section`
   height: 100%;
   width: 100%;
-
+  ${media.smallTablet`max-width: 27rem;`}
+  
   padding: 0 1.2rem;
   ${media.smallTablet`padding: 0 3rem;`}
 
