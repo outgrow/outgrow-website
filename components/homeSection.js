@@ -6,7 +6,7 @@ import media from "../styles/mediaQueries"
 const Overlay = styled.section`
   height: 100%;
   width: 100%;
-  ${media.smallTablet`max-width: 23rem;`}
+  ${media.smallTablet`max-width: 27rem;`}
 
   padding: 0 1.2rem;
   ${media.smallTablet`padding: 0 3rem;`}
@@ -27,6 +27,7 @@ const SectionWithBackgroundImage = styled.div`
 const Title = styled.h2`
   color: rgb(250, 250, 250);
   font-size: 2.4rem;
+  ${media.smallTablet`font-size: 3rem;`}
   font-weight: 800;
   letter-spacing: -2px;
 `

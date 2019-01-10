@@ -1,6 +1,7 @@
 import React from "react"
 import Link from "next/link"
 import styled from "styled-components"
+import media from "../styles/mediaQueries"
 
 const StyledLink = styled.a`
   display: flex;
@@ -17,6 +18,7 @@ const StyledLink = styled.a`
   color: rgb(${props => props.color});
   font-weight: 800;
   font-size: 1.2rem;
+  ${media.smallTablet`font-size: 1.4rem;`}
 
   margin-top: 1rem;
 `
