@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Button from "../components/button"
 import media from "../styles/mediaQueries"
+import { white } from "../styles/colors"
 
 const Overlay = styled.section`
   height: 100%;
@@ -25,7 +26,7 @@ const SectionWithBackgroundImage = styled.div`
 `
 
 const Title = styled.h2`
-  color: rgb(250, 250, 250);
+  color: rgb(${white});
   font-size: 2.4rem;
   ${media.smallTablet`font-size: 3rem;`}
   font-weight: 800;
