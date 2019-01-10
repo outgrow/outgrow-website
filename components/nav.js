@@ -3,6 +3,7 @@ import Link from "next/link"
 import styled, { css, keyframes } from "styled-components"
 import classNames from "classnames"
 import media from "../styles/mediaQueries"
+import { black, white } from "../styles/colors"
 
 const links = [
   { href: "/", label: "Home" },
@@ -138,7 +139,7 @@ const Logo = styled.img`
 `
 
 const MobileNavWrapper = styled.nav`
-  background: rgb(11, 11, 11);
+  background: rgb(${black});
   height: 100vh;
   width: 100vw;
   position: fixed;
@@ -155,7 +156,7 @@ const List = styled.ul`
 const ListItem = styled.li`
   text-align: center;
   padding: .5rem 0;
-  color: rgb(250, 250, 250);
+  color: rgb(${white});
   opacity: 0;
 
   animation-name: ${listItemAnimation};
@@ -166,7 +167,7 @@ const ListItem = styled.li`
 
 const ListItemLink = styled.a`
   font-size: 1.2rem;
-  color: rgb(250, 250, 250);
+  color: rgb(${white});
   text-decoration: none;
 `
 
@@ -181,7 +182,7 @@ const Divider = styled.hr`
 const DividerText = styled.h3`
   display: inline-block;
   text-align: center;
-  color: rgb(250, 250, 250);
+  color: rgb(${white});
   font-weight: normal;
   background: black;
   z-index: 999;
@@ -195,7 +196,7 @@ const ButtonLink = styled.a`
   display: block;
   width: 15rem;
   background: #016FB9;
-  color: rgb(250, 250, 250);
+  color: rgb(${white});
   text-decoration: none;
   text-align: center;
 
