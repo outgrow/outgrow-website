@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { black } from "../styles/colors"
 
 const Wrapper = styled.div`
   display: flex;
@@ -16,12 +17,12 @@ const CheckMark = styled.img`
 
 const Title = styled.p`
   margin-bottom: .3rem; 
-  color: rgb(11, 11, 11);
+  color: rgb(${black});
 `
 
 const Body = styled.p`
   font-weight: 100;
-  color: rgb(11, 11, 11);
+  color: rgb(${black});
 `
 
 const BulletPoint = ({ body, title }) => (
