@@ -35,6 +35,7 @@ const SliderItem = styled.img`
   height: 2rem;
   width: auto !important;  
   margin: 0 .5rem;
+  ${media.smallTablet`margin: 0 2rem;`}
 `
 
 const Paragraph = styled.p`
