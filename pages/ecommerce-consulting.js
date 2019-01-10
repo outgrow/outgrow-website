@@ -76,7 +76,7 @@ const Consulting = () => (
       title="Your team. Supercharged."
     />
     
-    <Wire />
+    <Wire color={blue} />
 
     <PageWrapper>
       <Title color={blue}>We know your stack.</Title>
