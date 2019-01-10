@@ -6,6 +6,7 @@ import Nav from "../components/nav"
 import Header from "../components/servicePageHeader"
 import Button from "../components/button"
 import BulletPoint from "../components/bulletPoint"
+import Wire from "../components/wire"
 import media from "../styles/mediaQueries"
 
 const Slider = dynamic(import("react-slick"))
@@ -16,7 +17,9 @@ const Title = styled.h2`
   ${media.smallTablet`font-size: 3rem;`}
   font-weight: 800;
   letter-spacing: -2px;
+  
   margin: 1.3rem 0;
+  ${media.tablet`margin-left: 28rem;`}
 `
 
 const PageWrapper = styled.div`
@@ -26,9 +29,12 @@ const PageWrapper = styled.div`
 
 const StyledSlider = styled(Slider)`
   width: 100vw;
+
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+
+  ${media.tablet`padding-left: 27rem;`}
 `
 
 const SliderItem = styled.img`
@@ -40,7 +46,9 @@ const SliderItem = styled.img`
 
 const Paragraph = styled.p`
   color: rgb(11, 11, 11);
+
   margin-top: 1rem;
+  ${media.tablet`margin-left: 28rem;`}
 `
 
 const Blue = styled.span`
@@ -49,18 +57,26 @@ const Blue = styled.span`
 
 const ButtonWrapper = styled.div`
   display: inline-block;
+  
   margin: 1.5rem 0;
+  
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  
+  ${media.tablet`
+    left: 22rem;
+    transform: none;
+  `}
 `
 
 const BulletPointWrapper = styled.div`
   margin-top: 2.5rem;
+  ${media.tablet`margin-left: 28rem;`}
 `
 
 const Consulting = () => (
-  <div>
+  <div style={{ position: "relative", overflow: "hidden" }}>
     <Head title="Technical E-Commerce Consulting | Reaction Commerce, Workarea, Salesforce Commerce Cloud, BigCommerce | out:grow" />
     <Nav />
     
@@ -75,6 +91,8 @@ const Consulting = () => (
       title="Your team. Supercharged."
     />
     
+    <Wire />
+
     <PageWrapper>
       <Title>We know your stack.</Title>
       <StyledSlider {...{
