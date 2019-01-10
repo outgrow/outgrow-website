@@ -2,6 +2,7 @@ import React, { Component }  from "react"
 import Link from "next/link"
 import styled, { css, keyframes } from "styled-components"
 import classNames from "classnames"
+import media from "../styles/mediaQueries"
 
 const links = [
   { href: "/", label: "Home" },
@@ -131,6 +132,8 @@ const MenuButtonInner = styled.span`
 
 const Logo = styled.img`
   height: 2.5rem;
+  ${media.smallTablet`height: 3rem;`}
+
   margin: .6rem .5rem 0 0;
 `
 

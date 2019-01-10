@@ -18,7 +18,7 @@ const StyledLink = styled.a`
   color: rgb(${props => props.color});
   font-weight: 800;
   font-size: 1.2rem;
-  ${media.smallTablet`font-size: 1.4rem;`}
+  ${media.smallTablet`font-size: 1.3rem;`}
 
   margin-top: 1rem;
 `
