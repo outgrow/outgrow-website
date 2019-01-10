@@ -4,6 +4,7 @@ import dynamic from "next/dynamic"
 import {
   BulletPoint,
   Button,
+  ButtonWrapper,
   Head,
   Nav,
   Paragraph,
@@ -40,21 +41,6 @@ const SliderItem = styled.img`
 
 const Blue = styled.span`
   color: rgb(${blue});
-`
-
-const ButtonWrapper = styled.div`
-  display: inline-block;
-  
-  margin: 1.5rem 0;
-  
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  
-  ${media.tablet`
-    left: 22rem;
-    transform: none;
-  `}
 `
 
 const BulletPointWrapper = styled.div`

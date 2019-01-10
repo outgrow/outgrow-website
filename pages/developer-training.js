@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import {
   Button,
+  ButtonWrapper,
   Head,
   Nav,
   Paragraph,
@@ -18,14 +19,6 @@ const PageWrapper = styled.div`
 
 const Red = styled.span`
   color: rgb(${red});
-`
-
-const ButtonWrapper = styled.div`
-  display: inline-block;
-  margin: 1.5rem 0;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
 `
 
 const Training = () => (
