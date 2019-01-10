@@ -1,17 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import { Button, Head, Nav, ServicePageHeader as Header } from "../components"
+import { Button, Head, Nav, ServicePageHeader as Header, Title } from "../components"
 import media from "../styles/mediaQueries"
 import { red, black, white } from "../styles/colors"
-
-const Title = styled.h2`
-  color: rgb(${red});
-  font-size: 2.4rem;
-  ${media.smallTablet`font-size: 3rem;`}
-  font-weight: 800;
-  letter-spacing: -2px;
-  margin: 1.3rem 0;
-`
 
 const PageWrapper = styled.div`
   padding: 0 1.2rem;
@@ -52,7 +43,7 @@ const Training = () => (
     />
     
     <PageWrapper>
-      <Title>In-person group training.</Title>
+      <Title color={red}>In-person group training.</Title>
 
       <Paragraph>Sometimes, nothing is better than a real person to show you the ropes. Our <Red>in-house group training</Red> program leverage your team’s potential with full-days or half-days of intensive training.</Paragraph>
       <Paragraph><Red>Wherever you are in the world</Red>, our experienced trainers will come to you and <Red>will teach your technical team</Red> anything related to Reaction Commerce, Workarea, Salesforce Commerce Cloud or BigCommerce.</Paragraph>
@@ -61,7 +52,7 @@ const Training = () => (
         <Button backgroundColor={red} color={white} href="#">Book a session</Button>
       </ButtonWrapper>
 
-      <Title>Remote 1-on-1 training.</Title>
+      <Title color={red}>Remote 1-on-1 training.</Title>
 
       <Paragraph>Some situations cannot wait. When only one of your developers needs <Red>training on a specific topic</Red>, you can count on <Red>out:grow</Red> to quickly set up a 1-on-1 via video conference with one of our expert trainers.</Paragraph>
 
@@ -71,7 +62,7 @@ const Training = () => (
         <Button backgroundColor={red} color={white} href="#">Book a 1-on-1</Button>
       </ButtonWrapper>
 
-      <Title>out:grow university.</Title>
+      <Title color={red}>out:grow university.</Title>
 
       <Paragraph>Because not all teams require live training, and because <Red>today’s professional education has to be on-demand</Red>, we have created <Red>out:grow university</Red>.</Paragraph>
       <Paragraph>Leverage our best trainers’s knowledge and expertise thanks to our pre-recorded tutorial series. With flexibility in mind, <Red>out:grow university</Red> is a platform that your team members can use to consume our educational content from <Red>anywhere and at anytime</Red>.</Paragraph>

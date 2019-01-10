@@ -1,17 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import { Button, Head, Nav, ServicePageHeader as Header } from "../components"
+import { Button, Head, Nav, ServicePageHeader as Header, Title } from "../components"
 import media from "../styles/mediaQueries"
 import { green, black, white } from "../styles/colors"
-
-const Title = styled.h2`
-  color: rgb(${green});
-  font-size: 2.4rem;
-  ${media.smallTablet`font-size: 3rem;`}
-  font-weight: 800;
-  letter-spacing: -2px;
-  margin: 1.3rem 0;
-`
 
 const PageWrapper = styled.div`
   padding: 0 1.2rem;
@@ -52,7 +43,7 @@ const Emergency = () => (
     />
     
     <PageWrapper>
-      <Title>24/7 crisis hotline.</Title>
+      <Title color={green}>24/7 crisis hotline.</Title>
 
       <Paragraph>We know what it's like to see an e-commerce site fail during a Superbowl halftime, on New Year's Eve or during Black Friday.</Paragraph>
       <Paragraph>Because in these situations every minute counts, our 24/7 crisis hotline is available to solve any of your development or architectural issues as quickly as possible.</Paragraph>
@@ -61,7 +52,7 @@ const Emergency = () => (
         <Button backgroundColor={green} color={white} href="#">(800) 968-0818</Button>
       </ButtonWrapper>
 
-      <Title>Support plans.</Title>
+      <Title color={green}>Support plans.</Title>
 
       <Paragraph>With an out:grow support plan, get the peace of mind of never seeing your business' e-commerce solutions fail again.</Paragraph>
 

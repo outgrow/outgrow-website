@@ -1,22 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 import dynamic from "next/dynamic"
-import { BulletPoint, Button, Head, Nav, ServicePageHeader as Header, Wire } from "../components"
+import { BulletPoint, Button, Head, Nav, ServicePageHeader as Header, Title, Wire } from "../components"
 import media from "../styles/mediaQueries"
 import { blue, lightBlue, black, white } from "../styles/colors"
 
 const Slider = dynamic(import("react-slick"))
-
-const Title = styled.h2`
-  color: rgb(${blue});
-  font-size: 2.4rem;
-  ${media.smallTablet`font-size: 3rem;`}
-  font-weight: 800;
-  letter-spacing: -2px;
-  
-  margin: 1.3rem 0;
-  ${media.tablet`margin-left: 28rem;`}
-`
 
 const PageWrapper = styled.div`
   padding: 0 1.2rem;
@@ -90,7 +79,7 @@ const Consulting = () => (
     <Wire />
 
     <PageWrapper>
-      <Title>We know your stack.</Title>
+      <Title color={blue}>We know your stack.</Title>
       <StyledSlider {...{
         arrows: false,
         autoplay: true,
@@ -115,7 +104,7 @@ const Consulting = () => (
         <Button backgroundColor={blue} color={white} href="#">Talk to an expert</Button>
       </ButtonWrapper>
 
-      <Title>Mid-project technical advice.</Title>
+      <Title color={blue}>Mid-project technical advice.</Title>
 
       <Paragraph>The biggest issues arise either mid-project, or at a critical pre-delivery stage. Too often, <Blue>these roadblocks cause sensible delays</Blue> and force teams to <Blue>postpone deliveries</Blue>.</Paragraph>
 
@@ -131,7 +120,7 @@ const Consulting = () => (
         <Button backgroundColor={blue} color={white} href="#">Supercharge your team</Button>
       </ButtonWrapper>
 
-      <Title>Feasability reports.</Title>
+      <Title color={blue}>Feasability reports.</Title>
 
       <Paragraph>Are you <Blue>still exploring your options</Blue> for an e-commerce project? A <Blue>custom-tailored feasability report</Blue> will help you make an <Blue>informed business decision</Blue>.</Paragraph>
       <Paragraph>Taking into account your project's unique characteristics, <Blue>our experts will help you decide</Blue> which e-commerce technology is right for you by <Blue>estimating development time</Blue>, warning you of <Blue>technical pitfals</Blue>, and more.</Paragraph>
@@ -140,7 +129,7 @@ const Consulting = () => (
         <Button backgroundColor={blue} color={white} href="#">Order a report</Button>
       </ButtonWrapper>
 
-      <Title>Let's talk.</Title>
+      <Title color={blue}>Let's talk.</Title>
 
       <Paragraph>Because every project is different, let us provide <Blue>tailored answers to your questions</Blue>. Speak with one of our consultants today to assess how can out:grow help your business reach new heights.</Paragraph>
       
