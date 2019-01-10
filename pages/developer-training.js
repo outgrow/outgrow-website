@@ -7,7 +7,8 @@ import {
   Nav,
   Paragraph,
   ServicePageHeader as Header,
-  Title
+  Title,
+  Wire
 } from "../components"
 import media from "../styles/mediaQueries"
 import { red, black, white } from "../styles/colors"
@@ -22,7 +23,7 @@ const Red = styled.span`
 `
 
 const Training = () => (
-  <div>
+  <div style={{ position: "relative", overflow: "hidden" }}>
     <Head title="E-Commerce Developer Training | Private Coaching Calls | On-Site Training | Online Courses | out:grow" />
     <Nav />
     
@@ -37,6 +38,8 @@ const Training = () => (
       title="Learn from the best."
     />
     
+    <Wire color={red} />
+
     <PageWrapper>
       <Title color={red}>In-person group training.</Title>
 

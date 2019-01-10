@@ -7,7 +7,8 @@ import {
   Nav,
   Paragraph,
   ServicePageHeader as Header,
-  Title
+  Title,
+  Wire
 } from "../components"
 import media from "../styles/mediaQueries"
 import { green, black, white } from "../styles/colors"
@@ -22,7 +23,7 @@ const Green = styled.span`
 `
 
 const Emergency = () => (
-  <div>
+  <div style={{ position: "relative", overflow: "hidden" }}>
     <Head title="E-Commerce Emergency Response | 24/7 Crisis Hotline | Support Plans | out:grow" />
     <Nav />
     
@@ -36,7 +37,9 @@ const Emergency = () => (
       overlayColor={green}
       title="We love emergencies."
     />
-    
+   
+    <Wire color={green} />
+
     <PageWrapper>
       <Title color={green}>24/7 crisis hotline.</Title>
 
