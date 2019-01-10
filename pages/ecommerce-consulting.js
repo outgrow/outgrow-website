@@ -1,7 +1,16 @@
 import React from "react"
 import styled from "styled-components"
 import dynamic from "next/dynamic"
-import { BulletPoint, Button, Head, Nav, ServicePageHeader as Header, Title, Wire } from "../components"
+import {
+  BulletPoint,
+  Button,
+  Head,
+  Nav,
+  Paragraph,
+  ServicePageHeader as Header,
+  Title,
+  Wire
+} from "../components"
 import media from "../styles/mediaQueries"
 import { blue, lightBlue, black, white } from "../styles/colors"
 
@@ -27,13 +36,6 @@ const SliderItem = styled.img`
   width: auto !important;  
   margin: 0 .5rem;
   ${media.smallTablet`margin: 0 2rem;`}
-`
-
-const Paragraph = styled.p`
-  color: rgb(${black});
-
-  margin-top: 1rem;
-  ${media.tablet`margin-left: 28rem;`}
 `
 
 const Blue = styled.span`

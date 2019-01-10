@@ -1,17 +1,19 @@
 import React from "react"
 import styled from "styled-components"
-import { Button, Head, Nav, ServicePageHeader as Header, Title } from "../components"
+import {
+  Button,
+  Head,
+  Nav,
+  Paragraph,
+  ServicePageHeader as Header,
+  Title
+} from "../components"
 import media from "../styles/mediaQueries"
 import { red, black, white } from "../styles/colors"
 
 const PageWrapper = styled.div`
   padding: 0 1.2rem;
   ${media.smallTablet`padding: 0 3rem;`}
-`
-
-const Paragraph = styled.p`
-  color: rgb(${black});
-  margin-top: 1rem;
 `
 
 const Red = styled.span`
