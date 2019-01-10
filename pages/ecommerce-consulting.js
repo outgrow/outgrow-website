@@ -13,6 +13,7 @@ const Slider = dynamic(import("react-slick"))
 const Title = styled.h2`
   color: rgb(1, 111, 185);
   font-size: 2.4rem;
+  ${media.smallTablet`font-size: 3rem;`}
   font-weight: 800;
   letter-spacing: -2px;
   margin: 1.3rem 0;

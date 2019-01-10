@@ -26,6 +26,7 @@ const SectionWithBackgroundImage = styled.div`
 const Title = styled.h1`
   color: rgb(250, 250, 250);
   font-size: 2.4rem;
+  ${media.smallTablet`font-size: 3rem;`}
   font-weight: 800;
   letter-spacing: -2px;
   margin-bottom: 1.3rem;
