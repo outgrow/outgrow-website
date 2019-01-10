@@ -2,9 +2,10 @@ import React from "react"
 import styled from "styled-components"
 import { Button, Head, Nav, ServicePageHeader as Header } from "../components"
 import media from "../styles/mediaQueries"
+import { green, black, white } from "../styles/colors"
 
 const Title = styled.h2`
-  color: rgb(12, 164, 165);
+  color: rgb(${green});
   font-size: 2.4rem;
   ${media.smallTablet`font-size: 3rem;`}
   font-weight: 800;
@@ -18,12 +19,12 @@ const PageWrapper = styled.div`
 `
 
 const Paragraph = styled.p`
-  color: rgb(11, 11, 11);
+  color: rgb(${black});
   margin-top: 1rem;
 `
 
 const Green = styled.span`
-  color: rgb(12, 164, 165);
+  color: rgb(${green});
 `
 
 const ButtonWrapper = styled.div`
@@ -45,8 +46,8 @@ const Emergency = () => (
         "Site down? Failed production deployment? Can’t keep up with the pace on Black Friday? Whatever your emergency is, we at out:grow have your back.",
         "Subscribe to a support plan and our teams will be available around the clock for your needs. Not an out:grow client? Dial our 24/7 emergency hotline and our teams will solve your issue."
       ]}
-      buttonTextColor="12, 164, 165"
-      overlayColor="12, 164, 165"
+      buttonTextColor={green}
+      overlayColor={green}
       title="We love emergencies."
     />
     
@@ -57,7 +58,7 @@ const Emergency = () => (
       <Paragraph>Because in these situations every minute counts, our 24/7 crisis hotline is available to solve any of your development or architectural issues as quickly as possible.</Paragraph>
 
       <ButtonWrapper>
-        <Button backgroundColor="12, 164, 165" color="250, 250, 250" href="#">(800) 968-0818</Button>
+        <Button backgroundColor={green} color={white} href="#">(800) 968-0818</Button>
       </ButtonWrapper>
 
       <Title>Support plans.</Title>
@@ -67,7 +68,7 @@ const Emergency = () => (
       <Paragraph>If you're an agency, safely provide your clients with 24/7 support and let your team focus on what matters.</Paragraph>
      
       <ButtonWrapper>
-        <Button backgroundColor="12, 164, 165" color="250, 250, 250" href="#">Get a quote</Button>
+        <Button backgroundColor={green} color={white} href="#">Get a quote</Button>
       </ButtonWrapper>
     </PageWrapper>
   </div>

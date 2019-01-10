@@ -2,9 +2,10 @@ import React from "react"
 import styled from "styled-components"
 import { Button, Head, Nav, ServicePageHeader as Header } from "../components"
 import media from "../styles/mediaQueries"
+import { red, black, white } from "../styles/colors"
 
 const Title = styled.h2`
-  color: rgb(221, 28, 26);
+  color: rgb(${red});
   font-size: 2.4rem;
   ${media.smallTablet`font-size: 3rem;`}
   font-weight: 800;
@@ -18,12 +19,12 @@ const PageWrapper = styled.div`
 `
 
 const Paragraph = styled.p`
-  color: rgb(11, 11, 11);
+  color: rgb(${black});
   margin-top: 1rem;
 `
 
 const Red = styled.span`
-  color: rgb(221, 28, 26);
+  color: rgb(${red});
 `
 
 const ButtonWrapper = styled.div`
@@ -45,8 +46,8 @@ const Training = () => (
         "A well-trained team is the very root of well-built projects. Make your project managers and developers learn from the best with out:grow’s training programs.",
         "While consulting is essential during critical times, training is the way to go for preventing issues from arising."
       ]}
-      buttonTextColor="221, 28, 26"
-      overlayColor="221, 28, 26"
+      buttonTextColor={red}
+      overlayColor={red}
       title="Learn from the best."
     />
     
@@ -57,7 +58,7 @@ const Training = () => (
       <Paragraph><Red>Wherever you are in the world</Red>, our experienced trainers will come to you and <Red>will teach your technical team</Red> anything related to Reaction Commerce, Workarea, Salesforce Commerce Cloud or BigCommerce.</Paragraph>
 
       <ButtonWrapper>
-        <Button backgroundColor="221, 28, 26" color="250, 250, 250" href="#">Book a session</Button>
+        <Button backgroundColor={red} color={white} href="#">Book a session</Button>
       </ButtonWrapper>
 
       <Title>Remote 1-on-1 training.</Title>
@@ -67,7 +68,7 @@ const Training = () => (
       <Paragraph>Thanks to the use of <Red>screen sharing</Red>, we make our training sessions more efficient, <Red>allowing to keep your costs low</Red>. And with our <Red>per-minute billing</Red>, you keep total control on your overhead. No more surprises.</Paragraph>
      
       <ButtonWrapper>
-        <Button backgroundColor="221, 28, 26" color="250, 250, 250" href="#">Book a 1-on-1</Button>
+        <Button backgroundColor={red} color={white} href="#">Book a 1-on-1</Button>
       </ButtonWrapper>
 
       <Title>out:grow university.</Title>
@@ -76,7 +77,7 @@ const Training = () => (
       <Paragraph>Leverage our best trainers’s knowledge and expertise thanks to our pre-recorded tutorial series. With flexibility in mind, <Red>out:grow university</Red> is a platform that your team members can use to consume our educational content from <Red>anywhere and at anytime</Red>.</Paragraph>
       
       <ButtonWrapper>
-        <Button backgroundColor="221, 28, 26" color="250, 250, 250" href="#">Sign up</Button>
+        <Button backgroundColor={red} color={white} href="#">Sign up</Button>
       </ButtonWrapper>
     </PageWrapper>
   </div>

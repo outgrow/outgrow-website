@@ -3,11 +3,12 @@ import styled from "styled-components"
 import dynamic from "next/dynamic"
 import { BulletPoint, Button, Head, Nav, ServicePageHeader as Header, Wire } from "../components"
 import media from "../styles/mediaQueries"
+import { blue, lightBlue, black, white } from "../styles/colors"
 
 const Slider = dynamic(import("react-slick"))
 
 const Title = styled.h2`
-  color: rgb(1, 111, 185);
+  color: rgb(${blue});
   font-size: 2.4rem;
   ${media.smallTablet`font-size: 3rem;`}
   font-weight: 800;
@@ -40,14 +41,14 @@ const SliderItem = styled.img`
 `
 
 const Paragraph = styled.p`
-  color: rgb(11, 11, 11);
+  color: rgb(${black});
 
   margin-top: 1rem;
   ${media.tablet`margin-left: 28rem;`}
 `
 
 const Blue = styled.span`
-  color: rgb(1, 111, 185);
+  color: rgb(${blue});
 `
 
 const ButtonWrapper = styled.div`
@@ -81,8 +82,8 @@ const Consulting = () => (
         "Throughought the lifecycle of a project, all technical teams face issues and challenges that they are not prepared for, causing them to get stuck and lose precious time.",
         "Our industry-renowned consulting service gives your team access to our engineers’ invaluable experience, and ensures that your project is kept on track."
       ]}
-      buttonTextColor="1, 111, 185"
-      overlayColor="51, 151, 246"
+      buttonTextColor={blue}
+      overlayColor={lightBlue}
       title="Your team. Supercharged."
     />
     
@@ -111,7 +112,7 @@ const Consulting = () => (
       <Paragraph>Unlike many consultancy companies, we <Blue>focus exclusively</Blue> on these technologies to provide our clients with a <Blue>truly unique expertise</Blue>.</Paragraph>
 
       <ButtonWrapper>
-        <Button backgroundColor="1, 111, 185" color="250, 250, 250" href="#">Talk to an expert</Button>
+        <Button backgroundColor={blue} color={white} href="#">Talk to an expert</Button>
       </ButtonWrapper>
 
       <Title>Mid-project technical advice.</Title>
@@ -127,7 +128,7 @@ const Consulting = () => (
       </BulletPointWrapper>
 
       <ButtonWrapper>
-        <Button backgroundColor="1, 111, 185" color="250, 250, 250" href="#">Supercharge your team</Button>
+        <Button backgroundColor={blue} color={white} href="#">Supercharge your team</Button>
       </ButtonWrapper>
 
       <Title>Feasability reports.</Title>
@@ -136,7 +137,7 @@ const Consulting = () => (
       <Paragraph>Taking into account your project's unique characteristics, <Blue>our experts will help you decide</Blue> which e-commerce technology is right for you by <Blue>estimating development time</Blue>, warning you of <Blue>technical pitfals</Blue>, and more.</Paragraph>
       
       <ButtonWrapper>
-        <Button backgroundColor="1, 111, 185" color="250, 250, 250" href="#">Order a report</Button>
+        <Button backgroundColor={blue} color={white} href="#">Order a report</Button>
       </ButtonWrapper>
 
       <Title>Let's talk.</Title>
@@ -144,7 +145,7 @@ const Consulting = () => (
       <Paragraph>Because every project is different, let us provide <Blue>tailored answers to your questions</Blue>. Speak with one of our consultants today to assess how can out:grow help your business reach new heights.</Paragraph>
       
       <ButtonWrapper>
-        <Button backgroundColor="1, 111, 185" color="250, 250, 250" href="#">Get called back</Button>
+        <Button backgroundColor={blue} color={white} href="#">Get called back</Button>
       </ButtonWrapper>
     </PageWrapper>
   </div>
