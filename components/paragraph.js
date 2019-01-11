@@ -7,5 +7,6 @@ export default styled.p`
 
   margin-top: 1rem;
   ${media.tablet`margin-left: 28rem;`}
+  ${media.laptop`margin-right: 8rem;`}
 `
 

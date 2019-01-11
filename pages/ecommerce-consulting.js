@@ -30,6 +30,7 @@ const StyledSlider = styled(Slider)`
   transform: translateX(-50%);
 
   ${media.tablet`padding-left: 27rem;`}
+  ${media.laptop`margin: 3rem 0;`}
 `
 
 const SliderItem = styled.img`
@@ -37,6 +38,10 @@ const SliderItem = styled.img`
   width: auto !important;  
   margin: 0 .5rem;
   ${media.smallTablet`margin: 0 2rem;`}
+  ${media.laptop`
+    height: 3rem;
+    margin: 0 2.5rem;
+  `}
 `
 
 const Blue = styled.span`
@@ -46,6 +51,7 @@ const Blue = styled.span`
 const BulletPointWrapper = styled.div`
   margin-top: 2.5rem;
   ${media.tablet`margin-left: 28rem;`}
+  ${media.laptop`margin-right: 8rem;`}
 `
 
 const Consulting = () => (
