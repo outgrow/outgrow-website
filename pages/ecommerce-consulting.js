@@ -51,7 +51,7 @@ const Blue = styled.span`
 const BulletPointWrapper = styled.div`
   margin-top: 2.5rem;
   ${media.tablet`margin-left: 28rem;`}
-  ${media.laptop`margin-right: 8rem;`}
+  ${media.laptop`margin-right: 13rem;`}
 `
 
 const Consulting = () => (
