@@ -62,7 +62,7 @@ const Emergency = () => (
       <Paragraph>Because in these situations every minute counts, our 24/7 crisis hotline is available to solve any of your development or architectural issues as quickly as possible.</Paragraph>
 
       <ButtonWrapper>
-        <Button backgroundColor={green} color={white} href="+12816884769">
+        <Button backgroundColor={green} color={white} href="tel:+12816884769">
           <ButtonIcon src="/static/phone.png" alt="Call" />
           <ButtonText>
             +1 (281) OUT-GROW
