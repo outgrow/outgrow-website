@@ -3,15 +3,14 @@ import Link from "next/link"
 import styled, { css, keyframes } from "styled-components"
 import classNames from "classnames"
 import media from "../styles/mediaQueries"
-import { black, white } from "../styles/colors"
+import { blue, black, white } from "../styles/colors"
 
 const links = [
-  { href: "/", label: "Home" },
+  { href: "/", label: "Home", hideOnDesktop: true },
   { href: "/ecommerce-consulting", label: "Technical Consulting" },
   { href: "/developer-training", label: "Developer Training" },
-  { href: "/emergency-response", label: "Emergency Response" },
-  //{ href: "/case-studies", label: "Case Studies" },
-  { href: "/contact", label: "Contact Us" }
+  { href: "/emergency-response", label: "Emergency Response", overBackground: true },
+  { href: "/contact", label: "Contact Us", overBackground: true }
 ].map(link => {
   link.key = `nav-link-${link.href}-${link.label}`
   return link
@@ -169,6 +168,7 @@ const ListItemLink = styled.a`
   font-size: 1.2rem;
   color: rgb(${white});
   text-decoration: none;
+  cursor: pointer;
 `
 
 const Divider = styled.hr`
@@ -244,6 +244,7 @@ class Nav extends Component {
               <MenuButtonInner className="hamburger-inner" />
             </MenuButtonBox>
           </MenuButton>
+
           <Link href="/">
             <ListItemLink>
               <Logo src="/static/logo-white.svg" />

@@ -2,6 +2,7 @@ import React from "react"
 import Head from "../components/head"
 import Nav from "../components/nav"
 import HomeSection from "../components/homeSection"
+import { blue, lightBlue, red, green } from "../styles/colors"
 
 const Home = () => (
   <div>
@@ -10,28 +11,28 @@ const Home = () => (
     
     <HomeSection
       backgroundImage="/static/consulting.jpg"
-      buttonColor="1, 111, 185"
+      buttonColor={blue}
       buttonHref="/ecommerce-consulting"
       buttonText="Learn more"
-      overlayColor="51, 151, 246"
+      overlayColor={lightBlue}
       title="Redefining<br/><nobr>e-commerce</nobr><br/>consulting."
     />
 
     <HomeSection
       backgroundImage="/static/training.jpg"
-      buttonColor="221, 28, 26"
+      buttonColor={red}
       buttonHref="/developer-training"
       buttonText="Learn more"
-      overlayColor="221, 28, 26"
+      overlayColor={red}
       title="Providing<br/><nobr>ROI-focused</nobr><br/>training."
     />
 
     <HomeSection
       backgroundImage="/static/emergency.jpg"
-      buttonColor="12, 164, 165"
+      buttonColor={green}
       buttonHref="/emergency-response"
       buttonText="Learn more"
-      overlayColor="12, 164, 165"
+      overlayColor={green}
       title="Emergency?<br/>We have your back. 24/7."
     />
   </div>
