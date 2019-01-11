@@ -193,14 +193,16 @@ const DividerText = styled.h3`
 `
 
 const ButtonLink = styled.a`
-  display: block;
-  width: 15rem;
-  background: #016FB9;
-  color: rgb(${white});
-  text-decoration: none;
-  text-align: center;
+  display: flex;
+  align-items: center;
 
-  padding: 1rem 2rem;
+  width: 16rem;
+  
+  background: #016FB9;
+  
+  text-decoration: none; 
+  
+  padding: 1rem;
   margin-top: 1rem;
 
   border-radius: 68px;
@@ -208,10 +210,25 @@ const ButtonLink = styled.a`
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+`
 
-  span {
-    font-size: .8rem;
-  }
+const ButtonText = styled.p`
+  color: rgb(${white});
+
+  text-align: center;
+  font-weight: 800;
+
+  padding-right: .5rem;
+`
+
+const ButtonCaption = styled.span`
+  font-size: .8rem;
+  font-weight: 400;
+`
+
+const ButtonIcon = styled.img`
+  width: 1.8rem;
+  margin-right: 1rem;
 `
 
 class Nav extends Component {
@@ -268,9 +285,12 @@ class Nav extends Component {
 
             <ListItem style={{ marginTop: "2.5rem" }} iterationCount={6}>E-Commerce Site Down?</ListItem>
             <ListItem iterationCount={7}>
-              <ButtonLink href="tel:+18009680818">
-                (800) 968-0818<br/>
-                <span>24/7 Emergency Hotline</span>
+              <ButtonLink href="tel:+12816884769">
+                <ButtonIcon src="/static/phone.png" alt="Call" />
+                <ButtonText>
+                  +1 (281) OUT-GROW<br/>
+                  <ButtonCaption>24/7 Emergency Hotline</ButtonCaption>
+                </ButtonText>
               </ButtonLink>
             </ListItem>
           </List>

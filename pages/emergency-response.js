@@ -22,6 +22,21 @@ const Green = styled.span`
   color: rgb(${green});
 `
 
+const ButtonIcon = styled.img`
+  width: 1.8rem;
+  margin-right: 1rem;
+`
+
+const ButtonText = styled.p`
+  text-align: center;
+  padding-right: .5rem;
+`
+
+const ButtonCaption = styled.p`
+  font-size: .8rem;
+  font-weight: 400;
+`
+
 const Emergency = () => (
   <div style={{ position: "relative", overflow: "hidden" }}>
     <Head title="E-Commerce Emergency Response | 24/7 Crisis Hotline | Support Plans | out:grow" />
@@ -47,7 +62,13 @@ const Emergency = () => (
       <Paragraph>Because in these situations every minute counts, our 24/7 crisis hotline is available to solve any of your development or architectural issues as quickly as possible.</Paragraph>
 
       <ButtonWrapper>
-        <Button backgroundColor={green} color={white} href="#">(800) 968-0818</Button>
+        <Button backgroundColor={green} color={white} href="+12816884769">
+          <ButtonIcon src="/static/phone.png" alt="Call" />
+          <ButtonText>
+            +1 (281) OUT-GROW
+            <ButtonCaption>24/7 Emergency Hotline</ButtonCaption>
+          </ButtonText>
+        </Button>
       </ButtonWrapper>
 
       <Title color={green}>Support plans.</Title>
