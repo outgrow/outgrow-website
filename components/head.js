@@ -3,7 +3,7 @@ import NextHead from "next/head"
 import { string } from "prop-types"
 import "../styles/fonts.css"
 
-const defaultDescription = ""
+const defaultDescription = "out:grow provides consulting services to internet retailers and web agencies, offering pre-project feasibility studies, architectural engineering, technical mid-project consulting, code reviews and performance audits."
 const defaultOGURL = ""
 const defaultOGImage = ""
 
