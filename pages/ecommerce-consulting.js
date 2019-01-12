@@ -17,6 +17,8 @@ import { blue, lightBlue, black, white } from "../styles/colors"
 
 const Slider = dynamic(import("react-slick"))
 
+dynamic(import("slick-carousel/slick/slick.css"))
+
 const PageWrapper = styled.div`
   padding: 0 1.2rem;
   ${media.smallTablet`padding: 0 3rem;`}

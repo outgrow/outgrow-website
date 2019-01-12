@@ -34,8 +34,6 @@ const Head = props => (
     <link rel="manifest" href="/static/site.webmanifest" />
     <link rel="mask-icon" href="/static/safari-pinned-tab.svg" color="#1d1d1d" />
     <link rel="shortcut icon" href="/static/favicon.ico" />
-    <link rel="stylesheet" type="text/css" charSet="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
     <meta name="apple-mobile-web-app-title" content="out:grow" />
     <meta name="application-name" content="out:grow" />
     <meta name="msapplication-TileColor" content="#1d1d1d" />
