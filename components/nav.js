@@ -254,7 +254,7 @@ class Nav extends Component {
               "hamburger--spring": true,
               "is-active": this.state.isMenuOpen
             })}
-            name="menu"
+            aria-label="menu"
             type="button"
             onClick={this.handleToggleMenu}
           >
