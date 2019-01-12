@@ -254,6 +254,7 @@ class Nav extends Component {
               "hamburger--spring": true,
               "is-active": this.state.isMenuOpen
             })}
+            name="menu"
             type="button"
             onClick={this.handleToggleMenu}
           >
