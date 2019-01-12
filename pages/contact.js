@@ -4,15 +4,16 @@ import dynamic from "next/dynamic"
 import { SegmentedControl } from "segmented-control"
 import { Button, Head, Nav, ServicePageHeader as Header } from "../components"
 import media from "../styles/mediaQueries"
-import "react-datepicker/dist/react-datepicker.css"
-import "../styles/datePicker.css"
-import "../styles/segmentedControl.css"
 
 let DatePicker = () => null;
 
 // Only import react-datepicker if running on client
 if (typeof window !== "undefined") {
   DatePicker = dynamic(import("react-datepicker"))
+
+  dynamic(import("react-datepicker/dist/react-datepicker.css"))
+  dynamic(import("../styles/datePicker.css"))
+  dynamic(import("../styles/segmentedControl.css"))
 }
 
 const PageWrapper = styled.div`
