@@ -264,7 +264,7 @@ class Nav extends Component {
 
           <Link href="/">
             <ListItemLink>
-              <Logo src="/static/logo-white.svg" />
+              <Logo alt="Outgrow logo" src="/static/logo-white.svg" />
             </ListItemLink>
           </Link>
         </TopBar>
