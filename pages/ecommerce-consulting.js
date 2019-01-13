@@ -97,7 +97,7 @@ const Consulting = () => (
       <Paragraph>Unlike many consultancy companies, we <Blue>focus exclusively</Blue> on these technologies to provide our clients with a <Blue>truly unique expertise</Blue>.</Paragraph>
 
       <ButtonWrapper>
-        <Button backgroundColor={blue} color={white} href="#">Talk to an expert</Button>
+        <Button backgroundColor={blue} color={white} href="/contact">Talk to an expert</Button>
       </ButtonWrapper>
 
       <Title color={blue}>Mid-project technical advice.</Title>
@@ -113,7 +113,7 @@ const Consulting = () => (
       </BulletPointWrapper>
 
       <ButtonWrapper>
-        <Button backgroundColor={blue} color={white} href="#">Supercharge your team</Button>
+        <Button backgroundColor={blue} color={white} href="/contact">Supercharge your team</Button>
       </ButtonWrapper>
 
       <Title color={blue}>Feasability reports.</Title>
@@ -122,7 +122,7 @@ const Consulting = () => (
       <Paragraph>Taking into account your project's unique characteristics, <Blue>our experts will help you decide</Blue> which e-commerce technology is right for you by <Blue>estimating development time</Blue>, warning you of <Blue>technical pitfals</Blue>, and more.</Paragraph>
       
       <ButtonWrapper>
-        <Button backgroundColor={blue} color={white} href="#">Order a report</Button>
+        <Button backgroundColor={blue} color={white} href="/contact">Order a report</Button>
       </ButtonWrapper>
 
       <Title color={blue}>Let's talk.</Title>
@@ -130,7 +130,7 @@ const Consulting = () => (
       <Paragraph>Because every project is different, let us provide <Blue>tailored answers to your questions</Blue>. Speak with one of our consultants today to assess how can out:grow help your business reach new heights.</Paragraph>
       
       <ButtonWrapper>
-        <Button backgroundColor={blue} color={white} href="#">Get called back</Button>
+        <Button backgroundColor={blue} color={white} href="/contact">Get called back</Button>
       </ButtonWrapper>
     </PageWrapper>
   </div>

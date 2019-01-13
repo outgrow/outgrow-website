@@ -47,7 +47,7 @@ const Training = () => (
       <Paragraph><Red>Wherever you are in the world</Red>, our experienced trainers will come to you and <Red>will teach your technical team</Red> anything related to Reaction Commerce, Workarea, Salesforce Commerce Cloud or BigCommerce.</Paragraph>
 
       <ButtonWrapper>
-        <Button backgroundColor={red} color={white} href="#">Book a session</Button>
+        <Button backgroundColor={red} color={white} href="/contact">Book a session</Button>
       </ButtonWrapper>
 
       <Title color={red}>Remote 1-on-1 training.</Title>
@@ -57,7 +57,7 @@ const Training = () => (
       <Paragraph>Thanks to the use of <Red>screen sharing</Red>, we make our training sessions more efficient, <Red>allowing to keep your costs low</Red>. And with our <Red>per-minute billing</Red>, you keep total control on your overhead. No more surprises.</Paragraph>
      
       <ButtonWrapper>
-        <Button backgroundColor={red} color={white} href="#">Book a 1-on-1</Button>
+        <Button backgroundColor={red} color={white} href="/contact">Book a 1-on-1</Button>
       </ButtonWrapper>
 
       <Title color={red}>out:grow university.</Title>
@@ -66,7 +66,7 @@ const Training = () => (
       <Paragraph>Leverage our best trainers’s knowledge and expertise thanks to our pre-recorded tutorial series. With flexibility in mind, <Red>out:grow university</Red> is a platform that your team members can use to consume our educational content from <Red>anywhere and at anytime</Red>.</Paragraph>
       
       <ButtonWrapper>
-        <Button backgroundColor={red} color={white} href="#">Sign up</Button>
+        <Button backgroundColor={red} color={white} href="/contact">Sign up</Button>
       </ButtonWrapper>
     </PageWrapper>
   </div>

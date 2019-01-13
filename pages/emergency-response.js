@@ -78,7 +78,7 @@ const Emergency = () => (
       <Paragraph>If you're an agency, safely provide your clients with 24/7 support and let your team focus on what matters.</Paragraph>
      
       <ButtonWrapper>
-        <Button backgroundColor={green} color={white} href="#">Get a quote</Button>
+        <Button backgroundColor={green} color={white} href="/contact">Get a quote</Button>
       </ButtonWrapper>
     </PageWrapper>
   </div>
