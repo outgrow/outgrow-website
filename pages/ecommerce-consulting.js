@@ -20,7 +20,7 @@ const Slider = dynamic(import("react-slick"))
 dynamic(import("slick-carousel/slick/slick.css"))
 
 const PageWrapper = styled.div`
-  padding: 0 1.2rem;
+  padding: 1.2rem;
   ${media.smallTablet`padding: 0 3rem;`}
 `
 
@@ -74,8 +74,8 @@ const Consulting = () => (
     
     <Wire color={blue} />
 
-    <PageWrapper>
-      <Title color={blue}>We know your stack.</Title>
+    <PageWrapper id="section-content">
+      <Title color={blue} noMarginTop>We know your stack.</Title>
       <StyledSlider {...{
         arrows: false,
         autoplay: true,

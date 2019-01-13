@@ -51,6 +51,10 @@ const Head = props => (
       body {
         font-family: "Axiforma", Helvetica, Arial, sans-serif;
       }
+
+      html {
+        scroll-behavior: smooth;
+      }
     `}</style>
   </NextHead>
 )

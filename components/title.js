@@ -11,5 +11,6 @@ export default styled.h2`
 
   margin: 1.3rem 0;
   ${media.tablet`margin-left: 28rem;`}
+  ${props => props.noMarginTop && `margin-top: 0;`}
 `
 

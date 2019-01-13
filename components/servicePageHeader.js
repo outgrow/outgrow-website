@@ -51,7 +51,7 @@ const ServicePageHeader = ({ backgroundImage, body, buttonTextColor, overlayColo
         <Paragraph key={index}>{bodyParagraph}</Paragraph>
       ))}
       <ButtonWrapper>
-        <Button color={buttonTextColor} href="#">Learn more</Button>
+        <Button color={buttonTextColor} href="#section-content">Learn more</Button>
       </ButtonWrapper>
     </Overlay>
   </SectionWithBackgroundImage>
