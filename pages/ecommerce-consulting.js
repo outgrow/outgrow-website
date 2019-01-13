@@ -21,7 +21,7 @@ dynamic(import("slick-carousel/slick/slick.css"))
 
 const PageWrapper = styled.div`
   padding: 1.2rem;
-  ${media.smallTablet`padding: 0 3rem;`}
+  ${media.smallTablet`padding: 3rem;`}
 `
 
 const StyledSlider = styled(Slider)`

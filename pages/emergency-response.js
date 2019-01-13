@@ -14,8 +14,8 @@ import media from "../styles/mediaQueries"
 import { green, black, white } from "../styles/colors"
 
 const PageWrapper = styled.div`
-  padding: 0 1.2rem;
-  ${media.smallTablet`padding: 0 3rem;`}
+  padding: 1.2rem;
+  ${media.smallTablet`padding: 3rem;`}
 `
 
 const Green = styled.span`
@@ -55,7 +55,7 @@ const Emergency = () => (
    
     <Wire color={green} />
 
-    <PageWrapper>
+    <PageWrapper id="section-content">
       <Title color={green}>24/7 crisis hotline.</Title>
 
       <Paragraph>We know what it's like to see an e-commerce site fail during a Superbowl halftime, on New Year's Eve or during Black Friday.</Paragraph>

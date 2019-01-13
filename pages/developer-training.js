@@ -14,8 +14,8 @@ import media from "../styles/mediaQueries"
 import { red, black, white } from "../styles/colors"
 
 const PageWrapper = styled.div`
-  padding: 0 1.2rem;
-  ${media.smallTablet`padding: 0 3rem;`}
+  padding: 1.2rem;
+  ${media.smallTablet`padding: 3rem;`}
 `
 
 const Red = styled.span`
@@ -40,7 +40,7 @@ const Training = () => (
     
     <Wire color={red} />
 
-    <PageWrapper>
+    <PageWrapper id="section-content">
       <Title color={red}>In-person group training.</Title>
 
       <Paragraph>Sometimes, nothing is better than a real person to show you the ropes. Our <Red>in-house group training</Red> program leverage your team’s potential with full-days or half-days of intensive training.</Paragraph>
