@@ -179,111 +179,106 @@ class Contact extends Component {
           title="Get in touch."
         />
         <PageWrapper id="section-content">
-            <Form onSubmit={this.handleSubmit}>
-              <DividedFieldWrapper>
-                <FieldWrapper marginRight>
-                  {/*<Label htmlFor="emailAddress">E-mail Address</Label>*/}
-                  <TextInput
-                    id="emailAddress"
-                    name="emailAddress"
-                    onChange={this.handleFieldChange} 
-                    type="email"
-                    value={this.state.emailAddress}
-                    placeholder="E-mail Address"
-                  />
-                </FieldWrapper>
+          <Form onSubmit={this.handleSubmit}>
+            <DividedFieldWrapper>
+              <FieldWrapper marginRight>
+                <TextInput
+                  id="emailAddress"
+                  name="emailAddress"
+                  onChange={this.handleFieldChange} 
+                  type="email"
+                  value={this.state.emailAddress}
+                  placeholder="E-mail Address"
+                />
+              </FieldWrapper>
 
-                <FieldWrapper marginLeft>
-                  {/*<Label htmlFor="phoneNumber">Phone Number</Label>*/}
-                  <TextInput
-                    id="phoneNumber"
-                    name="phoneNumber"
-                    onChange={this.handleFieldChange}
-                    type="tel"
-                    value={this.state.phoneNumber}
-                    placeholder="Phone Number"
-                  />
-                </FieldWrapper>
-              </DividedFieldWrapper>
+              <FieldWrapper marginLeft>
+                <TextInput
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  onChange={this.handleFieldChange}
+                  type="tel"
+                  value={this.state.phoneNumber}
+                  placeholder="Phone Number"
+                />
+              </FieldWrapper>
+            </DividedFieldWrapper>
 
-              <DividedFieldWrapper>
-                <FieldWrapper marginRight>
-                  <Label htmlFor="callbackPreferred">Should we call?</Label>
-                </FieldWrapper>
+            <DividedFieldWrapper>
+              <FieldWrapper marginRight>
+                <Label htmlFor="callbackPreferred">Should we call?</Label>
+              </FieldWrapper>
 
-                <FieldWrapper className="small-segmented-control-container" marginLeft>
-                  <SegmentedControl
-                    className="small"
-                    name="callbackPreferred"
-                    options={[
-                      { label: "Yes", value: true, default: true },
-                      { label: "No", value: false }
-                    ]}
-                    setValue={this.handleCallbackPreferredToggle}
-                    style={{
-                      borderRadius: "25px",
-                      color: "rgb(250, 250, 250)",
-                      fontSize: ".8rem",
-                      height: "1.6rem",
-                      transitionDuration: "300ms"
-                    }}
-                  />
-                </FieldWrapper>
-              </DividedFieldWrapper>
-
-              {this.state.callbackPreferred &&
-                <DividedFieldWrapper>
-                  <FieldWrapper marginRight>
-                    <Label htmlFor="preferredTimeForCallback">Preferred time</Label>
-                  </FieldWrapper>
-                  <FieldWrapper marginLeft>
-                    <DatePicker
-                      id="preferredTimeForCallback"
-                      name="preferredTimeForCallback"
-                      onChange={this.handlePreferredTimeChange}
-                      selected={this.state.preferredTimeForCallback}
-                      dateFormat="MM-dd-yyyy HH:mm"
-                      showTimeSelect
-                    />
-                  </FieldWrapper> 
-                </DividedFieldWrapper>
-              }
-        
-              <FieldWrapper>
-                {/*<Label htmlFor="category">Category</Label>*/}
+              <FieldWrapper className="small-segmented-control-container" marginLeft>
                 <SegmentedControl
-                  name="category"
+                  className="small"
+                  name="callbackPreferred"
                   options={[
-                    { label: "Consulting", value: "consulting", default: true },
-                    { label: "Training", value: "training" },
-                    { label: "Support", value: "support" }
+                    { label: "Yes", value: true, default: true },
+                    { label: "No", value: false }
                   ]}
-                  setValue={this.handleCategoryChange}
+                  setValue={this.handleCallbackPreferredToggle}
                   style={{
                     borderRadius: "25px",
                     color: "rgb(250, 250, 250)",
                     fontSize: ".8rem",
+                    height: "1.6rem",
                     transitionDuration: "300ms"
                   }}
                 />
               </FieldWrapper>
+            </DividedFieldWrapper>
+            {this.state.callbackPreferred &&
+              <DividedFieldWrapper>
+                <FieldWrapper marginRight>
+                  <Label htmlFor="preferredTimeForCallback">Preferred time</Label>
+                </FieldWrapper>
+                <FieldWrapper marginLeft>
+                  <DatePicker
+                    id="preferredTimeForCallback"
+                    name="preferredTimeForCallback"
+                    onChange={this.handlePreferredTimeChange}
+                    selected={this.state.preferredTimeForCallback}
+                    dateFormat="MM-dd-yyyy HH:mm"
+                    showTimeSelect
+                  />
+                </FieldWrapper> 
+              </DividedFieldWrapper>
+            }
+        
+            <FieldWrapper>
+              <SegmentedControl
+                name="category"
+                options={[
+                  { label: "Consulting", value: "consulting", default: true },
+                  { label: "Training", value: "training" },
+                  { label: "Support", value: "support" }
+                ]}
+                setValue={this.handleCategoryChange}
+                style={{
+                  borderRadius: "25px",
+                  color: "rgb(250, 250, 250)",
+                  fontSize: ".8rem",
+                  transitionDuration: "300ms"
+                }}
+              />
+            </FieldWrapper>
 
-              <FieldWrapper style={{ marginTop: ".8rem" }}>
-                {/*<Label htmlFor="message">Message</Label>*/}
-                <Textarea
-                  id="message"
-                  name="message"
-                  onChange={this.handleFieldChange}
-                  value={this.state.message}
-                  rows={4}
-                  placeholder="Message"
-                />
-              </FieldWrapper>
+            <FieldWrapper style={{ marginTop: ".8rem" }}>
+              <Textarea
+                id="message"
+                name="message"
+                onChange={this.handleFieldChange}
+                value={this.state.message}
+                rows={4}
+                placeholder="Message"
+              />
+            </FieldWrapper>
 
-              <ButtonWrapper>
-                <Button color="1, 111, 185" href="#">Send</Button>
-              </ButtonWrapper>
-            </Form>
+            <ButtonWrapper>
+              <Button color="1, 111, 185" href="#">Send</Button>
+            </ButtonWrapper>
+          </Form>
         </PageWrapper>
       </div>
     )
