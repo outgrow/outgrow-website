@@ -220,7 +220,7 @@ class Contact extends Component {
                   setValue={this.handleCallbackPreferredToggle}
                   style={{
                     borderRadius: "25px",
-                    color: "rgb(250, 250, 250)",
+                    color: `rgb(${white})`,
                     fontSize: ".8rem",
                     height: "1.6rem",
                     transitionDuration: "300ms"
@@ -257,7 +257,7 @@ class Contact extends Component {
                 setValue={this.handleCategoryChange}
                 style={{
                   borderRadius: "25px",
-                  color: "rgb(250, 250, 250)",
+                  color: `rgb(${white})`,
                   fontSize: ".8rem",
                   transitionDuration: "300ms"
                 }}
@@ -276,7 +276,7 @@ class Contact extends Component {
             </FieldWrapper>
 
             <ButtonWrapper>
-              <Button color="1, 111, 185" href="#">Send</Button>
+              <Button color={blue} href="#">Send</Button>
             </ButtonWrapper>
           </Form>
         </PageWrapper>
