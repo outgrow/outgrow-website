@@ -22,47 +22,6 @@ const PageWrapper = styled.div`
   ${media.smallTablet`padding: 3rem;`}
 `
 
-const Title = styled.h2`
-  color: rgb(${white});
-  font-size: 2.4rem;
-  ${media.smallTablet`font-size: 3rem;`}
-  font-weight: 800;
-  letter-spacing: -2px;
-  margin-top: 1.3rem;
-`
-
-const Paragraph = styled.p`
-  color: rgb(${white});
-  margin-bottom: 1.4rem;
-`
-
-const Overlay = styled.section`
-  min-height: 100vh;
-  height: 100%;
-  width: 100%;
-
-  padding: 3rem 1.2rem 2rem 1.2rem;
-  ${media.smallTablet`padding: 3rem 3rem 2rem 3rem;`}
-  
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-
-  ${media.tablet`
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-  `}
-`
-
-const SectionWithBackgroundImage = styled.div`
-  width: 100vw;
-
-  background-size: cover;
-  background-position: 50%;
-`
-
 const ButtonWrapper = styled.div`
   margin: .5rem auto 0 auto;
 `
