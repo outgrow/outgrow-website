@@ -37,7 +37,7 @@ const Label = styled.label`
  
   width: 100%;
 
-  color: rgb(${blue});
+  color: rgb(${black});
   font-size: 0.9rem;
 `
 
@@ -55,6 +55,8 @@ const TextInput = styled.input`
   border-radius: 15px;
 
   font-family: Axiforma, Helvetica, "sans-serif";
+
+  background: rgb(${white});
 `
 
 const FieldWrapper = styled.div`
@@ -82,6 +84,8 @@ const Textarea = styled.textarea`
   font-family: Axiforma, "sans-serif";
 
   padding: 0.7rem 1rem;
+
+  background: rgb(${white});
 `
 
 class Contact extends Component {
@@ -163,7 +167,7 @@ class Contact extends Component {
                   setValue={this.handleCallbackPreferredToggle}
                   style={{
                     borderRadius: "25px",
-                    color: `rgb(${white})`,
+                    color: `rgb(${blue})`,
                     fontSize: ".8rem",
                     height: "1.6rem",
                     transitionDuration: "300ms"
@@ -200,7 +204,7 @@ class Contact extends Component {
                 setValue={this.handleCategoryChange}
                 style={{
                   borderRadius: "25px",
-                  color: `rgb(${white})`,
+                  color: `rgb(${blue})`,
                   fontSize: ".8rem",
                   transitionDuration: "300ms"
                 }}
@@ -219,7 +223,7 @@ class Contact extends Component {
             </FieldWrapper>
 
             <ButtonWrapper>
-              <Button color={blue} href="#">Send</Button>
+              <Button backgroundColor={blue} color={white} href="#">Send</Button>
             </ButtonWrapper>
           </Form>
         </PageWrapper>
