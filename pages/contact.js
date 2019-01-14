@@ -37,7 +37,7 @@ const Label = styled.label`
  
   width: 100%;
 
-  color: rgb(${white});
+  color: rgb(${blue});
   font-size: 0.9rem;
 `
 
@@ -71,22 +71,6 @@ const FieldWrapper = styled.div`
 
 const DividedFieldWrapper = styled(FieldWrapper)`
   display: flex;
-`
-
-const SelectInput = styled.select`
-  background: rgb(${white});
-  color: rgb(${black});
-
-  height: 1.8rem;
-
-  padding: .4rem .9rem;
-  
-  border: none;
-  border-radius: 15px;
-`
-
-const CheckboxInput = styled.input`
-  background: white;
 `
 
 const Textarea = styled.textarea`
