@@ -43,7 +43,7 @@ const ButtonWrapper = styled.div`
   margin: .5rem auto 0 auto;
 `
 
-const ServicePageHeader = ({ backgroundImage, body, buttonTextColor, overlayColor, title }) => (
+const ServicePageHeader = ({ backgroundImage, body, buttonText, buttonTextColor, overlayColor, title }) => (
   <SectionWithBackgroundImage style={{ backgroundImage: `url(${backgroundImage})` }}>
     <Overlay style={{ backgroundColor: `rgba(${overlayColor}, .57)` }}>
       <Title>{title}</Title>
@@ -51,7 +51,7 @@ const ServicePageHeader = ({ backgroundImage, body, buttonTextColor, overlayColo
         <Paragraph key={index}>{bodyParagraph}</Paragraph>
       ))}
       <ButtonWrapper>
-        <Button color={buttonTextColor} href="#section-content">Learn more</Button>
+        <Button color={buttonTextColor} href="#section-content">{buttonText || "Learn more"}</Button>
       </ButtonWrapper>
     </Overlay>
   </SectionWithBackgroundImage>
