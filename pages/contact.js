@@ -2,7 +2,15 @@ import React, { Component } from "react"
 import styled from "styled-components"
 import dynamic from "next/dynamic"
 import { SegmentedControl } from "segmented-control"
-import { Button, Head, Nav, ServicePageHeader as Header, Title } from "../components"
+import {
+  Button,
+  Head,
+  Nav,
+  Paragraph,
+  ServicePageHeader as Header,
+  Title,
+  Wire
+} from "../components"
 import { white, black, blue, lightBlue } from "../styles/colors"
 import media from "../styles/mediaQueries"
 
@@ -24,6 +32,37 @@ const PageWrapper = styled.div`
 
 const ButtonWrapper = styled.div`
   margin: .5rem auto 0 auto;
+`
+
+const Locations = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  margin-top: 1.5rem;
+
+  ${media.tablet`margin-left: 28rem;`}
+`
+
+const Location = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-basis: 0;
+  flex-grow: 1;
+`
+
+const LocationTitle = styled.h3`
+  
+`
+
+const LocationIcon = styled.img`
+  width: 5rem;
+  margin: .7rem 0;
+`
+
+const LocationAddress = styled.p`
+  font-size: .8rem;
+  font-weight: 100;
 `
 
 const Form = styled.form`
@@ -120,13 +159,48 @@ class Contact extends Component {
         
         <Header
           backgroundImage="/static/contact.jpg"
-          body={["Submit this form and an out:grow representative will get back to you at your preferred time. For emergencies, immediately call our 24/7 hotline at +1 (281) OUT-GROW."]}
+          body={[
+            "Submit the form below and an out:grow representative will get back to you at your preferred time. Alternatively, set up a face-to-face meeting at one of our locations around the world.",
+            "For emergencies, do not wait and call our 24/7 hotline at +1 (281) OUT-GROW."
+          ]}
           buttonText="Reach out"
           buttonTextColor={blue}
           overlayColor={lightBlue}
           title="Get in touch."
         />
+
+        <Wire color={blue} />
+
         <PageWrapper id="section-content">
+          <Title color={blue}>Our locations.</Title>
+
+          <Paragraph>As a global company helping global clients, we at out:grow provide 24/7 services to retailers and agencies around the world thanks to our offices in Los Angeles and Dubai.</Paragraph>
+
+          <Locations>
+            <Location style={{ marginRight: ".5rem" }}>
+              <LocationTitle>Los Angeles</LocationTitle>
+              <LocationIcon alt="Los Angeles, California" src="/static/california.png" />
+              <LocationAddress>
+                601 S. Figueroa Street<br/>
+                Suite 4050<br/>
+                Los Angeles, CA 90071<br/>
+                United States of America
+              </LocationAddress>
+            </Location>
+           
+            <Location style={{ marginLeft: ".5rem" }}>
+              <LocationTitle>Dubai</LocationTitle>
+              <LocationIcon alt="Dubai, United Arab Emirates" src="/static/uae.png" />
+              <LocationAddress>
+                The Offices 3<br/>
+                One Central, World Trade Center<br/>
+                Sheikh Zayed Road<br/>
+                Dubai<br/>
+                United Arab Emirates
+              </LocationAddress>
+            </Location>
+          </Locations>
+
           <Title color={blue}>Let us help.</Title>
           <Form onSubmit={this.handleSubmit}>
             <DividedFieldWrapper>
