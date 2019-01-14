@@ -92,7 +92,7 @@ const TextInput = styled.input`
 
   padding: .8rem .9rem;
   
-  border: none;
+  border: 1px solid rgb(${blue});
   border-radius: 15px;
 
   font-family: Axiforma, Helvetica, "sans-serif";
@@ -119,7 +119,7 @@ const DividedFieldWrapper = styled(FieldWrapper)`
 const Textarea = styled.textarea`
   width: 100%;
 
-  border: none;
+  border: 1px solid rgb(${blue});
   border-radius: 15px;
 
   font-family: Axiforma, "sans-serif";
