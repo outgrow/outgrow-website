@@ -3,6 +3,7 @@ import styled from "styled-components"
 import dynamic from "next/dynamic"
 import { SegmentedControl } from "segmented-control"
 import { Button, Head, Nav, ServicePageHeader as Header } from "../components"
+import { white, black, blue, lightBlue } from "../styles/colors"
 import media from "../styles/mediaQueries"
 
 let DatePicker = () => null;
@@ -17,11 +18,12 @@ if (typeof window !== "undefined") {
 }
 
 const PageWrapper = styled.div`
-  padding: 0 1.2rem;
+  padding: 1.2rem;
+  ${media.smallTablet`padding: 3rem;`}
 `
 
 const Title = styled.h2`
-  color: rgb(250, 250, 250);
+  color: rgb(${white});
   font-size: 2.4rem;
   ${media.smallTablet`font-size: 3rem;`}
   font-weight: 800;
@@ -30,7 +32,7 @@ const Title = styled.h2`
 `
 
 const Paragraph = styled.p`
-  color: rgb(250, 250, 250);
+  color: rgb(${white});
   margin-bottom: 1.4rem;
 `
 
@@ -46,6 +48,12 @@ const Overlay = styled.section`
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+
+  ${media.tablet`
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  `}
 `
 
 const SectionWithBackgroundImage = styled.div`
@@ -61,6 +69,8 @@ const ButtonWrapper = styled.div`
 
 const Form = styled.form`
   width: 100%;
+  
+  ${media.tablet`max-width: 60%;`}
 `
 
 const Label = styled.label`
@@ -68,7 +78,7 @@ const Label = styled.label`
  
   width: 100%;
 
-  color: rgb(250, 250, 250);
+  color: rgb(${white});
   font-size: 0.9rem;
 `
 
@@ -105,8 +115,8 @@ const DividedFieldWrapper = styled(FieldWrapper)`
 `
 
 const SelectInput = styled.select`
-  background: rgb(250, 250, 250);
-  color: rgb(11, 11, 11);
+  background: rgb(${white});
+  color: rgb(${black});
 
   height: 1.8rem;
 
@@ -161,12 +171,14 @@ class Contact extends Component {
         <Head title="E-Commerce Consultancy | Get a Quote — Contact Our Team Now | out:grow" />
         <Nav />
         
-        <SectionWithBackgroundImage style={{ backgroundImage: `url(/static/contact.jpg)` }}>
-          <Overlay style={{ backgroundColor: `rgba(51, 151, 246, .57)` }}>
-            <Title>Get in touch.</Title>
-            
-            <Paragraph>Submit this form and an out:grow representative will get back to you at your preferred time. For emergencies, immediately call our 24/7 hotline at (800) 918-0818.</Paragraph>
-            
+        <Header
+          backgroundImage="/static/contact.jpg"
+          body={["Submit this form and an out:grow representative will get back to you at your preferred time. For emergencies, immediately call our 24/7 hotline at (800) 918-0818."]}
+          buttonTextColor={blue}
+          overlayColor={lightBlue}
+          title="Get in touch."
+        />
+        <PageWrapper id="section-content">
             <Form onSubmit={this.handleSubmit}>
               <DividedFieldWrapper>
                 <FieldWrapper marginRight>
@@ -267,13 +279,12 @@ class Contact extends Component {
                   placeholder="Message"
                 />
               </FieldWrapper>
+
+              <ButtonWrapper>
+                <Button color="1, 111, 185" href="#">Send</Button>
+              </ButtonWrapper>
             </Form>
-          
-            <ButtonWrapper>
-              <Button color="1, 111, 185" href="#">Send</Button>
-            </ButtonWrapper>
-          </Overlay>
-        </SectionWithBackgroundImage>
+        </PageWrapper>
       </div>
     )
   }
