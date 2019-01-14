@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import styled from "styled-components"
 import dynamic from "next/dynamic"
 import { SegmentedControl } from "segmented-control"
-import { Button, Head, Nav, ServicePageHeader as Header } from "../components"
+import { Button, Head, Nav, ServicePageHeader as Header, Title } from "../components"
 import { white, black, blue, lightBlue } from "../styles/colors"
 import media from "../styles/mediaQueries"
 
@@ -120,12 +120,14 @@ class Contact extends Component {
         
         <Header
           backgroundImage="/static/contact.jpg"
-          body={["Submit this form and an out:grow representative will get back to you at your preferred time. For emergencies, immediately call our 24/7 hotline at (800) 918-0818."]}
+          body={["Submit this form and an out:grow representative will get back to you at your preferred time. For emergencies, immediately call our 24/7 hotline at +1 (281) OUT-GROW."]}
+          buttonText="Reach out"
           buttonTextColor={blue}
           overlayColor={lightBlue}
           title="Get in touch."
         />
         <PageWrapper id="section-content">
+          <Title color={blue}>Let us help.</Title>
           <Form onSubmit={this.handleSubmit}>
             <DividedFieldWrapper>
               <FieldWrapper marginRight>

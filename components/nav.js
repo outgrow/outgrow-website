@@ -131,10 +131,10 @@ const MenuButtonInner = styled.span`
 `
 
 const Logo = styled.img`
-  height: 2.5rem;
-  ${media.smallTablet`height: 3rem;`}
+  height: 1.5rem;
+  ${media.smallTablet`height: 2rem;`}
 
-  margin: .6rem .5rem 0 0;
+  margin: 1rem .5rem 0 0;
 `
 
 const MobileNavWrapper = styled.nav`
