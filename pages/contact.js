@@ -155,7 +155,7 @@ class Contact extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{ position: "relative" }}>
         <Head title="E-Commerce Consultancy | Get a Quote — Contact Our Team Now | out:grow" />
         <Nav />
         

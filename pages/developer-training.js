@@ -23,7 +23,7 @@ const Red = styled.span`
 `
 
 const Training = () => (
-  <div style={{ position: "relative", overflow: "hidden" }}>
+  <div style={{ position: "relative" }}>
     <Head title="E-Commerce Developer Training | Private Coaching Calls | On-Site Training | Online Courses | out:grow" />
     <Nav />
     

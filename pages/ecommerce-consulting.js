@@ -57,7 +57,7 @@ const BulletPointWrapper = styled.div`
 `
 
 const Consulting = () => (
-  <div style={{ position: "relative", overflow: "hidden" }}>
+  <div style={{ position: "relative" }}>
     <Head title="Technical E-Commerce Consulting | Reaction Commerce, Workarea, Salesforce Commerce Cloud, BigCommerce | out:grow" />
     <Nav />
     

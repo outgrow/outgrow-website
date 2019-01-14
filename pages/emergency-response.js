@@ -38,7 +38,7 @@ const ButtonCaption = styled.p`
 `
 
 const Emergency = () => (
-  <div style={{ position: "relative", overflow: "hidden" }}>
+  <div style={{ position: "relative" }}>
     <Head title="E-Commerce Emergency Response | 24/7 Crisis Hotline | Support Plans | out:grow" />
     <Nav />
     
