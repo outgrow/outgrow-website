@@ -68,7 +68,9 @@ const LocationAddress = styled.p`
 const Form = styled.form`
   width: 100%;
   
-  ${media.tablet`max-width: 60%;`}
+  ${media.tablet`max-width: 50%;`}
+
+  ${media.tablet`margin-left: 28rem;`}
 `
 
 const Label = styled.label`
