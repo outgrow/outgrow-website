@@ -12,7 +12,7 @@ import {
   Title,
   Wire
 } from "../components"
-import { white, black, blue, lightBlue } from "../styles/colors"
+import { white, black, blue, lightBlue, red } from "../styles/colors"
 import media from "../styles/mediaQueries"
 
 let DatePicker = () => null;
@@ -130,17 +130,29 @@ const Textarea = styled.textarea`
   background: rgb(${white});
 `
 
+const Error = styled.p`
+  color: rgb(${red});
+  font-size: .9rem;
+  margin-top: 1rem;
+`
+
+const defaultState = {
+  emailAddress: "",
+  category: "",
+  phoneNumber: "",
+  message: "",
+  callbackPreferred: false,
+  preferredTimeForCallback: new Date(),
+  error: false
+}
+
 class Contact extends Component {
   constructor() {
     super()
 
     this.state = {
-      emailAddress: "",
-      category: "",
-      phoneNumber: "",
-      message: "",
-      callbackPreferred: false,
-      preferredTimeForCallback: new Date()
+      ...defaultState,
+      sent: false
     }
   }
 
@@ -151,6 +163,8 @@ class Contact extends Component {
 
   handleCallbackPreferredToggle = (callbackPreferred) => this.setState({ callbackPreferred })
 
+  handleCategoryChange = (category) => this.setState({ category })
+
   handleFieldChange = (event) => this.setState({ [event.target.name]: event.target.value })
 
   handlePreferredTimeChange = (preferredTimeForCallback) => this.setState({ preferredTimeForCallback })
@@ -158,7 +172,18 @@ class Contact extends Component {
   handleSubmit = (event) => {
     event.preventDefault()
 
-    this.stitchClient.callFunction("sendContactRequest", [this.state])
+    this.stitchClient.callFunction("sendContactRequest", [this.state]).then((result) => {
+      if (typeof result !== "undefined" && typeof result.MessageId === "string") {
+        this.setState({
+          ...defaultState,
+          sent: result
+        })
+      } else {
+        this.setState({
+          error: true
+        })
+      }
+    })
   }
 
   render() {
@@ -311,8 +336,10 @@ class Contact extends Component {
             </FieldWrapper>
 
             <ButtonWrapper>
-              <Button backgroundColor={blue} color={white} type="submit">Send</Button>
+              <Button backgroundColor={blue} color={white} type="submit" disabled={this.state.sent || this.state.error}>Send</Button>
             </ButtonWrapper>
+
+            {this.state.error && <Error>We're sorry, something wrong happened. Please send your inquiry manually to contact@outgrow.io while our engineers are fixing this.</Error>}
           </Form>
         </PageWrapper>
       </div>
