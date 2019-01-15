@@ -157,8 +157,15 @@ class Contact extends Component {
   }
 
   componentDidMount() {
-    this.stitchClient = Stitch.initializeDefaultAppClient("outgrow-hunql")
-    this.stitchClient.auth.loginWithCredential(new AnonymousCredential())
+    try {
+      const client = Stitch.defaultAppClient;
+
+      // Stitch client is already initiated if this didn't crash
+    } catch(err) {
+      // Threw error because client is not initiated
+      const stitchClient = Stitch.initializeDefaultAppClient("outgrow-hunql")
+      stitchClient.auth.loginWithCredential(new AnonymousCredential())
+    }
   }
 
   handleCallbackPreferredToggle = (callbackPreferred) => this.setState({ callbackPreferred })
@@ -172,18 +179,24 @@ class Contact extends Component {
   handleSubmit = (event) => {
     event.preventDefault()
 
-    this.stitchClient.callFunction("sendContactRequest", [this.state]).then((result) => {
-      if (typeof result !== "undefined" && typeof result.MessageId === "string") {
-        this.setState({
-          ...defaultState,
-          sent: result
-        })
-      } else {
+    Stitch.defaultAppClient.callFunction("sendContactRequest", [this.state])
+      .then((result) => {
+        if (typeof result !== "undefined" && typeof result.MessageId === "string") {
+          this.setState({
+            ...defaultState,
+            sent: result
+          })
+        } else {
+          this.setState({
+            error: true
+          })
+        }
+      })
+      .catch((err) => {
         this.setState({
           error: true
         })
-      }
-    })
+      })
   }
 
   render() {
