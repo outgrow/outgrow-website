@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import styled from "styled-components"
 import dynamic from "next/dynamic"
 import { SegmentedControl } from "segmented-control"
+import { Stitch, AnonymousCredential } from "mongodb-stitch-browser-sdk"
 import {
   Button,
   Head,
@@ -143,14 +144,21 @@ class Contact extends Component {
     }
   }
 
+  componentDidMount() {
+    this.stitchClient = Stitch.initializeDefaultAppClient("outgrow-hunql")
+    this.stitchClient.auth.loginWithCredential(new AnonymousCredential())
+  }
+
   handleCallbackPreferredToggle = (callbackPreferred) => this.setState({ callbackPreferred })
 
   handleFieldChange = (event) => this.setState({ [event.target.name]: event.target.value })
 
   handlePreferredTimeChange = (preferredTimeForCallback) => this.setState({ preferredTimeForCallback })
 
-  handleSubmit = () => {
+  handleSubmit = (event) => {
+    event.preventDefault()
 
+    this.stitchClient.callFunction("sendContactRequest", this.state)
   }
 
   render() {
