@@ -336,7 +336,14 @@ class Contact extends Component {
             </FieldWrapper>
 
             <ButtonWrapper>
-              <Button backgroundColor={blue} color={white} type="submit" disabled={this.state.sent || this.state.error}>Send</Button>
+              <Button
+                backgroundColor={blue}
+                color={white}
+                type="submit"
+                disabled={this.state.sent || this.state.error}
+              >
+                {this.state.sent ? "Thank you!" : "Send"}
+              </Button>
             </ButtonWrapper>
 
             {this.state.error && <Error>We're sorry, something wrong happened. Please send your inquiry manually to contact@outgrow.io while our engineers are fixing this.</Error>}
