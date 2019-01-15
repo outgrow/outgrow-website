@@ -2,13 +2,14 @@ import React from "react"
 import Link from "next/link"
 import styled from "styled-components"
 import media from "../styles/mediaQueries"
+import { grey, white } from "../styles/colors"
 
 const StyledLink = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background: rgb(${props => props.backgroundColor || "255, 255, 255"});
+  background: rgb(${props => props.backgroundColor || white});
 
   padding: .5rem 1rem;
 
@@ -28,7 +29,8 @@ const StyledButton = styled.button`
   align-items: center;
   justify-content: center;
 
-  background: rgb(${props => props.backgroundColor || "255, 255, 255"});
+  background: rgb(${props => props.backgroundColor || white});
+  ${props => props.disabled && `background: rgb(${grey});`}
 
   padding: .5rem 2rem;
 
@@ -44,7 +46,7 @@ const StyledButton = styled.button`
   margin-top: 1rem;
 `
 
-const Button = ({ backgroundColor, children, color, href, type }) => {
+const Button = ({ backgroundColor, children, color, href, type, disabled }) => {
   if (typeof href !== "undefined") {
     return (
       <Link href={href} passHref prefetch>
@@ -58,6 +60,7 @@ const Button = ({ backgroundColor, children, color, href, type }) => {
       backgroundColor={backgroundColor}
       color={color}
       type={type}
+      disabled={disabled}
     >
       {children}
     </StyledButton>
