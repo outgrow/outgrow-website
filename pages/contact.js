@@ -214,6 +214,7 @@ class Contact extends Component {
                   type="email"
                   value={this.state.emailAddress}
                   placeholder="E-mail Address"
+                  required
                 />
               </FieldWrapper>
 
@@ -225,6 +226,7 @@ class Contact extends Component {
                   type="tel"
                   value={this.state.phoneNumber}
                   placeholder="Phone Number"
+                  required
                 />
               </FieldWrapper>
             </DividedFieldWrapper>
@@ -301,7 +303,7 @@ class Contact extends Component {
             </FieldWrapper>
 
             <ButtonWrapper>
-              <Button backgroundColor={blue} color={white} href="#">Send</Button>
+              <Button backgroundColor={blue} color={white} type="submit">Send</Button>
             </ButtonWrapper>
           </Form>
         </PageWrapper>
