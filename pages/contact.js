@@ -158,7 +158,7 @@ class Contact extends Component {
   handleSubmit = (event) => {
     event.preventDefault()
 
-    this.stitchClient.callFunction("sendContactRequest", this.state)
+    this.stitchClient.callFunction("sendContactRequest", [this.state])
   }
 
   render() {
