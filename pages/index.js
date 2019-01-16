@@ -6,7 +6,7 @@ import { blue, lightBlue, red, green } from "../styles/colors"
 
 const Home = () => (
   <div>
-    <Head title="E-Commerce Consulting & Emergency Response | out:grow" />
+    <Head title="Technical E-Commerce Consulting, Training & Emergency Response | out:grow" />
     <Nav />
     
     <HomeSection
