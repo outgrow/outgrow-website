@@ -34,7 +34,7 @@ const TopBar = styled.div`
   width: 100%;
   z-index: 999;
 
-  align-items: end;
+  align-items: start;
   display: flex;
   justify-content: space-between;
 `
