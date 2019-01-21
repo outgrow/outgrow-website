@@ -3,6 +3,7 @@ import styled from "styled-components"
 import {
   Button,
   ButtonWrapper,
+  Footer,
   Head,
   Nav,
   Paragraph,
@@ -81,6 +82,8 @@ const Emergency = () => (
         <Button backgroundColor={green} color={white} href="/contact">Get a quote</Button>
       </ButtonWrapper>
     </PageWrapper>
+
+    <Footer color={green} />
   </div>
 )
 

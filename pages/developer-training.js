@@ -3,6 +3,7 @@ import styled from "styled-components"
 import {
   Button,
   ButtonWrapper,
+  Footer,
   Head,
   Nav,
   Paragraph,
@@ -69,6 +70,8 @@ const Training = () => (
         <Button backgroundColor={red} color={white} href="/contact">Sign up</Button>
       </ButtonWrapper>
     </PageWrapper>
+
+    <Footer color={red} />
   </div>
 )
 

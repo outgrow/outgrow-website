@@ -4,7 +4,7 @@ import Link from "next/link"
 import { blue, white } from "../styles/colors"
 
 const Footer = styled.footer`
-  background: rgb(${blue});
+  background: rgb(${props => props.color || blue});
 
   color: rgb(${white});
 
@@ -35,8 +35,8 @@ const Copyright = styled.p`
   font-size: .9rem;
 `
 
-const AppFooter = () => (
-  <Footer>
+const AppFooter = ({ color }) => (
+  <Footer color={color}>
     <nav>
       <List>
         <ListItem>

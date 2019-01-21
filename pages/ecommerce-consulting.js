@@ -5,6 +5,7 @@ import {
   BulletPoint,
   Button,
   ButtonWrapper,
+  Footer,
   Head,
   Nav,
   Paragraph,
@@ -133,6 +134,8 @@ const Consulting = () => (
         <Button backgroundColor={blue} color={white} href="/contact">Get called back</Button>
       </ButtonWrapper>
     </PageWrapper>
+
+    <Footer color={blue} />
   </div>
 )
 
