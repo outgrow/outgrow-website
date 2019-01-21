@@ -2,6 +2,7 @@ import React from "react"
 import Head from "../components/head"
 import Nav from "../components/nav"
 import HomeSection from "../components/homeSection"
+import Footer from "../components/footer"
 import { blue, lightBlue, red, green } from "../styles/colors"
 
 const Home = () => (
@@ -35,6 +36,8 @@ const Home = () => (
       overlayColor={green}
       title="Emergency?<br/>We have your back. 24/7."
     />
+
+    <Footer />
   </div>
 )
 
