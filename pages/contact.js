@@ -14,6 +14,7 @@ import {
 } from "../components"
 import { white, black, blue, lightBlue, red } from "../styles/colors"
 import media from "../styles/mediaQueries"
+import { reportConversion } from "../utils/googleAds"
 
 let DatePicker = () => null;
 
@@ -182,6 +183,8 @@ class Contact extends Component {
     Stitch.defaultAppClient.callFunction("sendContactRequest", [this.state])
       .then((result) => {
         if (typeof result !== "undefined" && typeof result.MessageId === "string") {
+          reportConversion()
+
           this.setState({
             ...defaultState,
             sent: result
