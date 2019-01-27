@@ -1,5 +1,6 @@
 import Document, { Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
+import { initializeGoogleAds } from "./utils/googleAds"
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
@@ -14,11 +15,17 @@ export default class MyDocument extends Document {
     return { ...page, styleTags };
   }
 
+  componentDidMount() {
+    initializeGoogleAds();
+  }
+
   render() {
     return (
       <html lang="en">
         <Head>
           {this.props.styleTags}
+         
+          <script async src="https://www.googletagmanager.com/gtag/js?id=AW-767784789" />
         </Head>
         <body>
           <Main />
