@@ -18,6 +18,7 @@
     "react": "^16.7.0",
     "react-datepicker": "^2.0.0",
     "react-dom": "^16.7.0",
+    "react-fullstory": "^1.0.3",
     "react-slick": "^0.23.2",
     "segmented-control": "^0.1.10",
     "slick-carousel": "^1.8.1",
