@@ -264,7 +264,7 @@ class Nav extends Component {
           </MenuButton>
 
           <Link href="/">
-            <ListItemLink>
+            <ListItemLink onClick={this.handleToggleMenu}>
               <Logo alt="Outgrow logo" src="/static/logo-white.svg" />
             </ListItemLink>
           </Link>
@@ -274,7 +274,7 @@ class Nav extends Component {
             {links.map(({ key, href, label }, index) => (
               <ListItem key={key} iterationCount={index}>
                 <Link href={href}>
-                  <ListItemLink>{label}</ListItemLink>
+                  <ListItemLink onClick={this.handleToggleMenu}>{label}</ListItemLink>
                 </Link>
               </ListItem>
             ))}
