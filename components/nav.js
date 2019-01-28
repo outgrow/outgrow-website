@@ -244,6 +244,10 @@ class Nav extends Component {
     isMenuOpen: !this.state.isMenuOpen
   })
 
+  handleCloseMenu = () => this.setState({
+    isMenuOpen: false
+  })
+
   render() {
     return (
       <div>
@@ -264,7 +268,7 @@ class Nav extends Component {
           </MenuButton>
 
           <Link href="/">
-            <ListItemLink onClick={this.handleToggleMenu}>
+            <ListItemLink onClick={this.handleCloseMenu}>
               <Logo alt="Outgrow logo" src="/static/logo-white.svg" />
             </ListItemLink>
           </Link>
@@ -274,7 +278,7 @@ class Nav extends Component {
             {links.map(({ key, href, label }, index) => (
               <ListItem key={key} iterationCount={index}>
                 <Link href={href}>
-                  <ListItemLink onClick={this.handleToggleMenu}>{label}</ListItemLink>
+                  <ListItemLink onClick={this.handleCloseMenu}>{label}</ListItemLink>
                 </Link>
               </ListItem>
             ))}
