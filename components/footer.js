@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Link from "next/link"
 import { blue, white } from "../styles/colors"
+import media from "../styles/mediaQueries"
 
 const Footer = styled.footer`
   background: rgb(${props => props.color || blue});
@@ -12,13 +13,20 @@ const Footer = styled.footer`
   padding: 1rem 2rem;
 
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-flow: column;
+  ${media.smallTablet`flex-flow: row;`}
+  align-items: flex-start;
+  ${media.smallTablet`
+    align-items: center;
+    justify-content: space-between;
+  `}
 `
 
 const List = styled.ul`
   list-style: none;
-  ${props => props.right && `text-align: right;`}
+  ${media.smallTablet`
+    ${props => props.right && `text-align: right;`}
+  `}
 `
 
 const ListItem = styled.li`
@@ -33,6 +41,9 @@ const ListItemLink = styled.a`
 
 const Copyright = styled.p`
   font-size: .9rem;
+  ${media.smallTablet`text-align: center;`}
+
+  margin: 1rem 0;
 `
 
 const AppFooter = ({ color }) => (
