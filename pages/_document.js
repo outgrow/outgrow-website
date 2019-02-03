@@ -22,7 +22,7 @@ export default class MyDocument extends Document {
          
           <script async src="https://www.googletagmanager.com/gtag/js?id=AW-767784789" />
         </Head>
-        <body>
+        <body style={{ overflowX: "hidden" }}>
           <Main />
           <NextScript />
         </body>
