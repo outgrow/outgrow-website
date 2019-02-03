@@ -189,6 +189,11 @@ class Contact extends Component {
             ...defaultState,
             sent: result
           })
+        } else if (typeof result !== "undefined" && result.error === true && typeof result.message === "string") {
+          this.setState({
+            error: true,
+            errorMessage: result.message
+          })
         } else {
           this.setState({
             error: true
@@ -243,9 +248,9 @@ class Contact extends Component {
               <LocationTitle>Dubai</LocationTitle>
               <LocationIcon alt="Dubai, United Arab Emirates" src="/static/uae.png" />
               <LocationAddress>
-                The Offices 3<br/>
+                3rd Floor, The Offices 3<br/>
                 One Central, World Trade Center<br/>
-                Sheikh Zayed Road<br/>
+                P.O. Box 9573<br/>
                 Dubai<br/>
                 United Arab Emirates
               </LocationAddress>
@@ -362,7 +367,7 @@ class Contact extends Component {
               </Button>
             </ButtonWrapper>
 
-            {this.state.error && <Error>We're sorry, something wrong happened. Please send your inquiry manually to contact@outgrow.io while our engineers are fixing this.</Error>}
+            {this.state.error && <Error>{this.state.errorMessage || "We're sorry, something wrong happened. Please send your inquiry manually to contact@outgrow.io while our engineers are fixing this."}</Error>}
           </Form>
         </PageWrapper>
       </div>
