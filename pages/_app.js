@@ -29,7 +29,7 @@ class CustomApp extends App {
         <Component {...pageProps} />
         {process.browser && window.location.hostname === "outgrow.io" && <FullStory key="fullstory" org="J1X09" />}
         <MessengerCustomerChat
-          pageId="2484584108224578"
+          pageId="377149002832117"
           appId="facebook-jssdk"
           htmlRef="messenger-customer-chat"
           themeColor="#016FB9" 
