@@ -368,6 +368,9 @@ class Contact extends Component {
             </ButtonWrapper>
 
             {this.state.error && <Error>{this.state.errorMessage || "We're sorry, something wrong happened. Please send your inquiry manually to contact@outgrow.io while our engineers are fixing this."}</Error>}
+            
+            {/* LinkedIn conversion tracking pixel rendered on sent */}
+            {this.state.sent && <img height={1} width={1} style={{ display: "none"}} alt="" src="https://dc.ads.linkedin.com/collect/?pid=672676&conversionId=669228&fmt=gif" />}
           </Form>
         </PageWrapper>
       </div>
