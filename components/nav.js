@@ -9,8 +9,9 @@ const links = [
   { href: "/", label: "Home", hideOnDesktop: true },
   { href: "/ecommerce-consulting", label: "Technical Consulting" },
   { href: "/developer-training", label: "Developer Training" },
-  { href: "/emergency-response", label: "Emergency Response", overBackground: true },
-  { href: "/contact", label: "Contact Us", overBackground: true }
+  { href: "/emergency-response", label: "Emergency Response" },
+  { href: "/contact", label: "Contact Us" },
+  { href: "/careers", label: "Careers" }
 ].map(link => {
   link.key = `nav-link-${link.href}-${link.label}`
   return link
