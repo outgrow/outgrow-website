@@ -70,6 +70,11 @@ const AppFooter = ({ color }) => (
             <ListItemLink>Contact Us</ListItemLink>
           </Link>
         </ListItem>
+        <ListItem>
+          <Link href="/careers">
+            <ListItemLink>Careers</ListItemLink>
+          </Link>
+        </ListItem>
       </List>
     </nav>
 
