@@ -6,7 +6,6 @@ import {
   Footer,
   Head,
   Nav,
-  Paragraph,
   ServicePageHeader as Header,
   Title,
   Wire
@@ -21,21 +20,6 @@ const PageWrapper = styled.div`
 
 const Blue = styled.span`
   color: rgb(${blue});
-`
-
-const ButtonIcon = styled.img`
-  width: 1.8rem;
-  margin-right: 1rem;
-`
-
-const ButtonText = styled.p`
-  text-align: center;
-  padding-right: .5rem;
-`
-
-const ButtonCaption = styled.p`
-  font-size: .8rem;
-  font-weight: 400;
 `
 
 const JobList = styled.ul`
