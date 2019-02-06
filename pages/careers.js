@@ -40,7 +40,7 @@ const ButtonCaption = styled.p`
 
 const JobList = styled.ul`
   list-style: none;
-  margin-left: 28rem;
+  ${media.tablet`margin-left: 28rem;`}
   margin-top: 3rem;
 `
 
