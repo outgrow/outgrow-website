@@ -1,10 +1,10 @@
 import React from "react"
 import App, { Container } from "next/app"
+import dynamic from "next/dynamic"
 import Router from "next/router"
 import withGA from "next-ga"
 import FullStory from "react-fullstory"
 import MessengerCustomerChat from "react-messenger-customer-chat"
-import linkedInTag from "react-linkedin-insight"
 import { initializeGoogleAds } from "../utils/googleAds"
 
 class CustomApp extends App {
@@ -20,7 +20,17 @@ class CustomApp extends App {
 
   componentDidMount() {
     initializeGoogleAds()
-    linkedInTag.init("672676")
+
+    window._linkedin_data_partner_ids = ["672676"]
+
+    const script = document.getElementsByTagName('script')[0]
+    const tagScript = document.createElement('script')
+
+    tagScript.type = 'text/javascript'
+    tagScript.async = true
+    tagScript.src = 'https://snap.licdn.com/li.lms-analytics/insight.min.js'
+    
+    script.parentNode.insertBefore(tagScript, script)
   }
 
   render() {
