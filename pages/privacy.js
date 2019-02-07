@@ -12,6 +12,10 @@ const NavWrapper = styled.div`
   margin-bottom: 2rem;
 `
 
+const MainTitle = styled.h1`
+  margin: 1.5rem 4rem;
+`
+
 const Title = styled.h2`
   margin: 1rem 4rem;
 `
@@ -28,7 +32,7 @@ const Privacy = () => (
 
     <Head title="Privacy Policy | out:grow" />
 
-    <Title>Privacy Policy of out:grow</Title>
+    <MainTitle>Privacy Policy of out:grow</MainTitle>
 
     <Paragraph>out:grow operates the outgrow.io website, which provides the SERVICE.</Paragraph>
 
