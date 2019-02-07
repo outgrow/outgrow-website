@@ -75,6 +75,11 @@ const AppFooter = ({ color }) => (
             <ListItemLink>Careers</ListItemLink>
           </Link>
         </ListItem>
+        <ListItem>
+          <Link href="/privacy">
+            <ListItemLink>Privacy Policy</ListItemLink>
+          </Link>
+        </ListItem>
       </List>
     </nav>
 
