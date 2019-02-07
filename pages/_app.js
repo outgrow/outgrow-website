@@ -4,6 +4,7 @@ import Router from "next/router"
 import withGA from "next-ga"
 import FullStory from "react-fullstory"
 import MessengerCustomerChat from "react-messenger-customer-chat"
+import linkedInTag from "react-linkedin-insight"
 import { initializeGoogleAds } from "../utils/googleAds"
 
 class CustomApp extends App {
@@ -19,6 +20,7 @@ class CustomApp extends App {
 
   componentDidMount() {
     initializeGoogleAds()
+    linkedInTag.init("672676")
   }
 
   render() {
