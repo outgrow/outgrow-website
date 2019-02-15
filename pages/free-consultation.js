@@ -62,7 +62,7 @@ class FreeConsultation extends Component {
           <Paragraph style={{ marginBottom: "2rem" }}>Whether you have technical questions on Reaction Commerce, BigCommerce, Workarea, Salesforce Commerce Cloud, or you want to discuss how our engineers can help you bring your projects to life — book your free 30-minute consultation below. Slots are available 7 days a week, 24 hours a day.</Paragraph>
           <Calendly
             className="calendly-inline-widget"
-            data-url="https://calendly.com/outgrow-free-consultation"
+            data-url="https://calendly.com/outgrow-free-consultation/30-min"
           />
         </PageWrapper>
     
