@@ -46,8 +46,8 @@ const ReactionCommerce = () => (
     <Header
       backgroundImage="/static/contact.jpg"
       body={[
-        "Are you currently evaluating Reaction Commerce as a solution for your next project? Looking for a demo of the platform to make your own opinion?",
-        "You're at the right place. Our expert Reaction Commerce consultants will show you around."
+        "Whether you're evaluating Reaction Commerce or need technical help with an existing project, you're at the right place.",
+        "Over the past years, our engineers have helped countless clients build amazing projects on Reaction. Trust the #1 experts on the market."
       ]}
       buttonText="Discover our services"
       buttonTextColor={blue}
