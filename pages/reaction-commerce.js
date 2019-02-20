@@ -64,7 +64,7 @@ const ReactionCommerce = () => (
       <Paragraph>Our experts have walked countless retailers and agencies through their technological choices, and we would be glad to make you benefit from this experience. Book a free 30-minute consultation with them and we'll help you assess which platform would be the best fit given your project's unique characteristics.</Paragraph>
 
       <ButtonWrapper>
-        <Button backgroundColor={blue} color={white} href="/is-reaction-commerce-right/">Evaluate your options</Button>
+        <Button backgroundColor={blue} color={white} href="/is-reaction-commerce-right">Evaluate your options</Button>
       </ButtonWrapper>
 
       <Title color={blue}>Reaction Commerce demo.</Title>
@@ -72,7 +72,7 @@ const ReactionCommerce = () => (
       <Paragraph>Are you unsure of what Reaction can bring to your specific use cases? We'll show you around. Let us walk you through its main features and capabilities, focusing on your project's needs and answering all of your questions. Click the button below to learn more and book a free demo session.</Paragraph>
 
       <ButtonWrapper>
-        <Button backgroundColor={blue} color={white} href="/reaction-commerce-demo/">Get a demo</Button>
+        <Button backgroundColor={blue} color={white} href="/reaction-commerce-demo">Get a demo</Button>
       </ButtonWrapper>
 
       <Title color={blue}>Expert help on Reaction Commerce.</Title>
@@ -80,7 +80,7 @@ const ReactionCommerce = () => (
       <Paragraph>Has your Reaction project come to a stall? Are your development teams struggling on technical issues? We've seen that happen, and we've helped numerous clients put their projects back on track in tough conditions. Let our team of experts assess the current state of your project in a free 30-minute consultation.</Paragraph>
 
       <ButtonWrapper>
-        <Button backgroundColor={blue} color={white} href="/reaction-commerce-help/">Let us help</Button>
+        <Button backgroundColor={blue} color={white} href="/reaction-commerce-help">Let us help</Button>
       </ButtonWrapper>
 
       <Title color={blue}>Reaction emergency hotline.</Title>

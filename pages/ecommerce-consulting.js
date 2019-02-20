@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import dynamic from "next/dynamic"
+import Link from "next/link"
 import {
   BulletPoint,
   Button,
@@ -32,7 +33,7 @@ const StyledSlider = styled(Slider)`
   left: 50%;
   transform: translateX(-50%);
 
-  ${media.tablet`padding-left: 27rem;`}
+  ${media.tablet`padding-left: 27.5rem;`}
   ${media.laptop`margin: 3rem 0;`}
 `
 
@@ -55,6 +56,16 @@ const BulletPointWrapper = styled.div`
   margin-top: 2.5rem;
   ${media.tablet`margin-left: 28rem;`}
   ${media.laptop`margin-right: 13rem;`}
+`
+
+const StyledLink = styled.a`
+  text-decoration: none;
+  color: rgb(${black});
+
+  &:hover {
+    ${props => props.withUnderline && `text-decoration: underline;`}
+    text-decoration-color: rgb(${blue});
+  }
 `
 
 const Consulting = () => (
@@ -88,13 +99,19 @@ const Consulting = () => (
         centerMode: true,
         variableWidth: true
       }}>
-        <SliderItem src="/static/reaction-logo.png" />
+        <div>
+          <Link href="/reaction-commerce" passHref prefetch>
+            <StyledLink>
+              <SliderItem src="/static/reaction-logo.png" />
+            </StyledLink>
+          </Link>
+        </div>
         <SliderItem src="/static/workarea-logo.png" />
         <SliderItem src="/static/salesforce-cc-logo.png" />
         <SliderItem src="/static/bigcommerce-logo.png" />
       </StyledSlider>
 
-      <Paragraph>Our engineers have accumulated <Blue>over 80 years of experience</Blue> on modern technologies like <Blue>Reaction Commerce</Blue>, <Blue>Workarea</Blue>, <Blue>BigCommerce</Blue> and <Blue>Salesforce Commerce Cloud</Blue>.</Paragraph>
+      <Paragraph>Our engineers have accumulated <Blue>over 80 years of experience</Blue> on modern technologies like <Link href="/reaction-commerce" passHref prefetch><StyledLink withUnderline><Blue>Reaction Commerce</Blue></StyledLink></Link>, <Blue>Workarea</Blue>, <Blue>BigCommerce</Blue> and <Blue>Salesforce Commerce Cloud</Blue>.</Paragraph>
       <Paragraph>Unlike many consultancy companies, we <Blue>focus exclusively</Blue> on these technologies to provide our clients with a <Blue>truly unique expertise</Blue>.</Paragraph>
 
       <ButtonWrapper>
