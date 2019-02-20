@@ -33,7 +33,8 @@ const ButtonText = styled.p`
   padding-right: .5rem;
 `
 
-const ButtonCaption = styled.p`
+const ButtonCaption = styled.span`
+  display: block;
   font-size: .8rem;
   font-weight: 400;
 `
