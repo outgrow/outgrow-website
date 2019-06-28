@@ -41,9 +41,9 @@ const ButtonCaption = styled.span`
 
 const Emergency = () => (
   <div style={{ position: "relative" }}>
-    <Head title="E-Commerce Emergency Response | 24/7 Crisis Hotline | Support Plans | out:grow" />
+    <Head title="E-Commerce Emergency Support | 24/7 Crisis Hotline | Support Plans | out:grow" />
     <Nav />
-    
+
     <Header
       backgroundImage="/static/emergency.jpg"
       body={[
@@ -54,7 +54,7 @@ const Emergency = () => (
       overlayColor={green}
       title="We love emergencies."
     />
-   
+
     <Wire color={green} />
 
     <PageWrapper id="section-content">
@@ -78,7 +78,7 @@ const Emergency = () => (
       <Paragraph>With an out:grow support plan, get the peace of mind of never seeing your business' e-commerce solutions fail again.</Paragraph>
 
       <Paragraph>If you're an agency, safely provide your clients with 24/7 support and let your team focus on what matters.</Paragraph>
-     
+
       <ButtonWrapper>
         <Button backgroundColor={green} color={white} href="/contact">Get a quote</Button>
       </ButtonWrapper>

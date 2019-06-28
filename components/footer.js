@@ -61,8 +61,8 @@ const AppFooter = ({ color }) => (
           </Link>
         </ListItem>
         <ListItem>
-          <Link href="/emergency-response">
-            <ListItemLink>Emergency Response</ListItemLink>
+          <Link href="/support-plans">
+            <ListItemLink>Support Plans</ListItemLink>
           </Link>
         </ListItem>
         <ListItem>
@@ -84,7 +84,7 @@ const AppFooter = ({ color }) => (
     </nav>
 
     <Copyright>Copyright &copy; 2019 Outgrow LLC</Copyright>
-    
+
     <List right>
       <ListItem>
         <ListItemLink href="tel:+12816884769">+1 (281) 688-4769</ListItemLink>

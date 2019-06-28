@@ -7,9 +7,9 @@ import { blue, lightBlue, red, green } from "../styles/colors"
 
 const Home = () => (
   <div>
-    <Head title="Technical E-Commerce Consulting, Training & Emergency Response | out:grow" />
+    <Head title="Technical E-Commerce Consulting, Training & Emergency Support | out:grow" />
     <Nav />
-    
+
     <HomeSection
       backgroundImage="/static/consulting.jpg"
       buttonColor={blue}
@@ -31,7 +31,7 @@ const Home = () => (
     <HomeSection
       backgroundImage="/static/emergency.jpg"
       buttonColor={green}
-      buttonHref="/emergency-response"
+      buttonHref="/support-plans"
       buttonText="Learn more"
       overlayColor={green}
       title="Emergency?<br/>We have your back. 24/7."

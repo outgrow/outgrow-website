@@ -9,7 +9,7 @@ const links = [
   { href: "/", label: "Home", hideOnDesktop: true },
   { href: "/ecommerce-consulting", label: "Technical Consulting" },
   { href: "/developer-training", label: "Developer Training" },
-  { href: "/emergency-response", label: "Emergency Response" },
+  { href: "/support-plans", label: "Support Plans" },
   { href: "/contact", label: "Contact Us" },
   { href: "/careers", label: "Careers" }
 ].map(link => {
