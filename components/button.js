@@ -20,8 +20,6 @@ const StyledLink = styled.a`
   font-weight: 800;
   font-size: 1.2rem;
   ${media.smallTablet`font-size: 1.3rem;`}
-
-  margin-top: 1rem;
 `
 
 const StyledButton = styled.button`
@@ -42,11 +40,9 @@ const StyledButton = styled.button`
   font-weight: 800;
   font-size: 1.2rem;
   ${media.smallTablet`font-size: 1.3rem;`}
-
-  margin-top: 1rem;
 `
 
-const Button = ({ backgroundColor, children, color, href, type, disabled }) => {
+const Button = ({ backgroundColor, children, color, href, type, disabled, onClick }) => {
   if (typeof href !== "undefined") {
     return (
       <Link href={href} passHref prefetch>
@@ -54,13 +50,14 @@ const Button = ({ backgroundColor, children, color, href, type, disabled }) => {
       </Link>
     )
   }
-  
+
   return (
     <StyledButton
       backgroundColor={backgroundColor}
       color={color}
       type={type}
       disabled={disabled}
+      onClick={onClick}
     >
       {children}
     </StyledButton>

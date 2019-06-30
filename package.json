@@ -22,7 +22,7 @@
     "react-fullstory": "^1.0.3",
     "react-messenger-customer-chat": "^0.7.2",
     "react-slick": "^0.23.2",
-    "segmented-control": "^0.1.10",
+    "segmented-control": "^0.1.11",
     "slick-carousel": "^1.8.1",
     "style-loader": "^0.23.1",
     "styled-components": "^4.1.3"

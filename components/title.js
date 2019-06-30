@@ -10,7 +10,7 @@ export default styled.h2`
   letter-spacing: -2px;
 
   margin: 1.3rem 0;
-  ${media.tablet`margin-left: 28rem;`}
+  ${props => !props.noMarginLeft && media.tablet`margin-left: 28rem;`}
   ${props => props.noMarginTop && `margin-top: 0;`}
 `
 
