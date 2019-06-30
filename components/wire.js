@@ -13,6 +13,6 @@ export default styled.div`
   top: 100vh;
   left: 0;
   
-  height: calc(100% - 100vh);
+  height: calc(100% - 100vh - 12rem);
 `
 

@@ -61,7 +61,7 @@ const AppFooter = ({ color }) => (
           </Link>
         </ListItem>
         <ListItem>
-          <Link href="/support-plans">
+          <Link href="/reaction-commerce-support-plans">
             <ListItemLink>Support Plans</ListItemLink>
           </Link>
         </ListItem>
