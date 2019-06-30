@@ -33,11 +33,17 @@ const Title = styled.h2`
   letter-spacing: -2px;
 `
 
+const ButtonWrapper = styled.div`
+  margin-top: 1rem;
+`
+
 const HomeSection = ({ backgroundImage, buttonColor, buttonHref, buttonText, overlayColor, title }) => (
   <SectionWithBackgroundImage style={{ backgroundImage: `url(${backgroundImage})` }}>
     <Overlay style={{ backgroundColor: `rgba(${overlayColor}, .57)` }}>
       <Title dangerouslySetInnerHTML={{ __html: title }} />
-      <Button color={buttonColor} href={buttonHref}>{buttonText}</Button>
+      <ButtonWrapper>
+        <Button color={buttonColor} href={buttonHref}>{buttonText}</Button>
+      </ButtonWrapper>
     </Overlay>
   </SectionWithBackgroundImage>
 )

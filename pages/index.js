@@ -14,7 +14,7 @@ const Home = () => (
       backgroundImage="/static/consulting.jpg"
       buttonColor={blue}
       buttonHref="/ecommerce-consulting"
-      buttonText="Learn more"
+      buttonText="Consulting"
       overlayColor={lightBlue}
       title="Redefining<br/><nobr>e-commerce</nobr><br/>consulting."
     />
@@ -23,7 +23,7 @@ const Home = () => (
       backgroundImage="/static/training.jpg"
       buttonColor={red}
       buttonHref="/developer-training"
-      buttonText="Learn more"
+      buttonText="Training"
       overlayColor={red}
       title="Providing<br/><nobr>ROI-focused</nobr><br/>training."
     />
@@ -32,7 +32,7 @@ const Home = () => (
       backgroundImage="/static/emergency.jpg"
       buttonColor={green}
       buttonHref="/support-plans"
-      buttonText="Learn more"
+      buttonText="Support plans"
       overlayColor={green}
       title="Emergency?<br/>We have your back. 24/7."
     />
