@@ -16,3 +16,7 @@
   color: rgb(250, 250, 250) !important;
 }
 
+.segmented-control > label:after,
+.segmented-control > label {
+  white-space: pre !important;
+}

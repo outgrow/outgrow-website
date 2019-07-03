@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import dynamic from "next/dynamic";
 import { SegmentedControl } from "segmented-control"
 import styled from "styled-components"
 import { Stitch, AnonymousCredential } from "mongodb-stitch-browser-sdk"
@@ -15,7 +16,11 @@ import {
 } from "../components"
 import media from "../styles/mediaQueries"
 import { green, black, white } from "../styles/colors"
-import {reportConversion} from "../utils/googleAds";
+import { reportConversion } from "../utils/googleAds";
+
+if (typeof window !== "undefined") {
+  dynamic(import("../styles/segmentedControl.css"))
+}
 
 const PageWrapper = styled.div`
   padding: 1.2rem;
@@ -119,6 +124,11 @@ const Back = styled(PaymentSwitcher)`
   ${props => props.marginLeft && `margin-left: 1rem;`}
 `
 
+const SubLabel = styled.p`
+  font-weight: lighter;
+  font-size: 1rem;
+`
+
 class Emergency extends Component {
   constructor() {
     super()
@@ -130,6 +140,7 @@ class Emergency extends Component {
       responseTime: 0,
       hours: 0,
       advanceNotice: 72,
+      timeZone: "dubai",
       dedicatedExperts: false,
       showPriceMonthly: true,
       monthlyPrice: "$0",
@@ -164,7 +175,7 @@ class Emergency extends Component {
   handleUpdatePrice = () => {
     let price = 0
 
-    const { chatSupport, dedicatedExperts } = this.state
+    const { chatSupport, dedicatedExperts, timeZone } = this.state
     const hours = parseInt(this.state.hours)
     const advanceNotice = parseInt(this.state.advanceNotice)
     const responseTime = parseInt(this.state.responseTime)
@@ -174,7 +185,7 @@ class Emergency extends Component {
     }
 
     if (hours) {
-      let faceTimeTotal = 800 * hours
+      let faceTimeTotal = 1000 * hours
 
       if (hours > 10 && hours <= 15) {
         faceTimeTotal = faceTimeTotal * 0.95
@@ -185,18 +196,18 @@ class Emergency extends Component {
       }
 
       price += faceTimeTotal
-    }
 
-    if (advanceNotice === 24) {
-      price += 3000
-    }
+      if (advanceNotice === 24) {
+        price += 3000
+      }
 
-    if (advanceNotice === 5) {
-      price += 6000
-    }
+      if (advanceNotice === 5) {
+        price += 6000
+      }
 
-    if (advanceNotice === 1) {
-      price += 10000
+      if (advanceNotice === 1) {
+        price += 10000
+      }
     }
 
     if (chatSupport) {
@@ -220,7 +231,11 @@ class Emergency extends Component {
     if (dedicatedExperts && hours && hours > 0) {
       price = price * 1.35
     } else if (dedicatedExperts) {
-      price = price * 1.15
+      price = price * 1.2
+    }
+
+    if (timeZone === "247") {
+      price = price * 2.35
     }
 
     const currency = { style: "currency", currency: "USD", minimumFractionDigits: 0 };
@@ -333,7 +348,8 @@ class Emergency extends Component {
               <Title color={green} noMarginLeft>Let's figure out your needs.</Title>
 
               <FieldWrapper>
-                <label htmlFor="chat-support">Unlimited chat support (via Slack or your team's preferred tool)</label>
+                <label htmlFor="chat-support">Unlimited chat support</label>
+                <SubLabel>Our experts will be reachable on your company's Slack or any other chat solution, as well as by e-mail.</SubLabel>
                 <SegmentedControl
                   name="chat-support"
                   options={[
@@ -347,6 +363,7 @@ class Emergency extends Component {
 
               <FieldWrapper>
                 <label htmlFor="response-time">Guaranteed chat response time</label>
+                <SubLabel>We'll be legally bound to respect this response time within your chosen working hours (see below).</SubLabel>
                 <SegmentedControl
                   name="response-time"
                   options={[
@@ -363,11 +380,13 @@ class Emergency extends Component {
 
               <FieldWrapper>
                 <label htmlFor="hours">Yearly face-time hours: {this.state.hours}</label>
+                <SubLabel>Your team can use these hours throughout the year for problem-solving calls using screen-sharing.</SubLabel>
                 <Slider type="range" id="hours" min="0" max="20" step="1" name="hours" onChange={this.handleInputChange} value={this.state.hours}/>
               </FieldWrapper>
 
               <FieldWrapper>
                 <label htmlFor="advance-notice">Minimum advance notice to book a face-time session</label>
+                <SubLabel>Your team will have to respect this minimum delay when booking their face-time sessions.</SubLabel>
                 <SegmentedControl
                   name="advance-notice"
                   options={[
@@ -383,6 +402,7 @@ class Emergency extends Component {
 
               <FieldWrapper>
                 <label htmlFor="dedicated-experts">Dedicated experts</label>
+                <SubLabel>We'll make sure that your developers always deal with the same people at out:grow.</SubLabel>
                 <SegmentedControl
                   name="dedicated-experts"
                   options={[
@@ -390,6 +410,21 @@ class Emergency extends Component {
                     { label: "No", value: false, default: true }
                   ]}
                   setValue={(value) => this.handleSegmentedControlChange("dedicatedExperts", value)}
+                  style={{ color: `rgb(${green}` }}
+                />
+              </FieldWrapper>
+
+              <FieldWrapper>
+                <label htmlFor="time-zone">Operating time zone</label>
+                <SubLabel>Our experts will be reachable by your team during these working hours.</SubLabel>
+                <SegmentedControl
+                  name="time-zone"
+                  options={[
+                    { label: 'Los Angeles\u000D\u000AMon-Fri 9AM-5PM PST', value: "losangeles" },
+                    { label: "Dubai\u000D\u000ASun-Thu 9AM-5PM GMT+4", value: "dubai", default: true },
+                    { label: "24/7\u000D\u000AIncluding bank holidays", value: "247" }
+                  ]}
+                  setValue={(value) => this.handleSegmentedControlChange("timeZone", value)}
                   style={{ color: `rgb(${green}` }}
                 />
               </FieldWrapper>
