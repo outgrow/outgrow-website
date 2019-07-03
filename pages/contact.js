@@ -5,6 +5,7 @@ import { SegmentedControl } from "segmented-control"
 import { Stitch, AnonymousCredential } from "mongodb-stitch-browser-sdk"
 import {
   Button,
+  Footer,
   Head,
   Nav,
   Paragraph,
@@ -212,7 +213,7 @@ class Contact extends Component {
       <div style={{ position: "relative" }}>
         <Head title="E-Commerce Consultancy | Get a Quote — Contact Our Team Now | out:grow" />
         <Nav />
-        
+
         <Header
           backgroundImage="/static/contact.jpg"
           body={[
@@ -243,7 +244,7 @@ class Contact extends Component {
                 United States of America
               </LocationAddress>
             </Location>
-           
+
             <Location style={{ marginLeft: ".5rem" }}>
               <LocationTitle>Dubai</LocationTitle>
               <LocationIcon alt="Dubai, United Arab Emirates" src="/static/uae.png" />
@@ -264,7 +265,7 @@ class Contact extends Component {
                 <TextInput
                   id="emailAddress"
                   name="emailAddress"
-                  onChange={this.handleFieldChange} 
+                  onChange={this.handleFieldChange}
                   type="email"
                   value={this.state.emailAddress}
                   placeholder="E-mail Address"
@@ -323,10 +324,10 @@ class Contact extends Component {
                     dateFormat="MM-dd-yyyy HH:mm"
                     showTimeSelect
                   />
-                </FieldWrapper> 
+                </FieldWrapper>
               </DividedFieldWrapper>
             }
-        
+
             <FieldWrapper>
               <SegmentedControl
                 name="category"
@@ -368,11 +369,13 @@ class Contact extends Component {
             </ButtonWrapper>
 
             {this.state.error && <Error>{this.state.errorMessage || "We're sorry, something wrong happened. Please send your inquiry manually to contact@outgrow.io while our engineers are fixing this."}</Error>}
-            
+
             {/* LinkedIn conversion tracking pixel rendered on sent */}
             {this.state.sent && <img height={1} width={1} style={{ display: "none"}} alt="" src="https://dc.ads.linkedin.com/collect/?pid=672676&conversionId=669228&fmt=gif" />}
           </Form>
         </PageWrapper>
+
+        <Footer color={blue} />
       </div>
     )
   }
