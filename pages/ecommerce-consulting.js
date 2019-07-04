@@ -70,7 +70,7 @@ const StyledLink = styled.a`
 
 const Consulting = () => (
   <div style={{ position: "relative" }}>
-    <Head title="Technical E-Commerce Consulting | Reaction Commerce, Workarea, Salesforce Commerce Cloud, BigCommerce | out:grow" />
+    <Head title="Technical E-Commerce Consulting | Reaction Commerce, Salesforce Commerce Cloud, BigCommerce | out:grow" />
     <Nav />
 
     <Header
@@ -106,12 +106,11 @@ const Consulting = () => (
             </StyledLink>
           </Link>
         </div>
-        <SliderItem src="/static/workarea-logo.png" />
         <SliderItem src="/static/salesforce-cc-logo.png" />
         <SliderItem src="/static/bigcommerce-logo.png" />
       </StyledSlider>
 
-      <Paragraph>Our engineers have accumulated <Blue>over 80 years of experience</Blue> on modern technologies like <Link href="/reaction-commerce" passHref prefetch><StyledLink withUnderline><Blue>Reaction Commerce</Blue></StyledLink></Link>, <Blue>Workarea</Blue>, <Blue>BigCommerce</Blue> and <Blue>Salesforce Commerce Cloud</Blue>.</Paragraph>
+      <Paragraph>Our engineers have accumulated <Blue>over 80 years of experience</Blue> on modern technologies like <Link href="/reaction-commerce" passHref prefetch><StyledLink withUnderline><Blue>Reaction Commerce</Blue></StyledLink></Link>, <Blue>BigCommerce</Blue> and <Blue>Salesforce Commerce Cloud</Blue>.</Paragraph>
       <Paragraph>Unlike many consultancy companies, we <Blue>focus exclusively</Blue> on these technologies to provide our clients with a <Blue>truly unique expertise</Blue>.</Paragraph>
 
       <ButtonWrapper>

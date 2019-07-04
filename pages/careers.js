@@ -36,7 +36,7 @@ const Emergency = () => (
   <div style={{ position: "relative" }}>
     <Head title="Careers | We Are Hiring! | out:grow" />
     <Nav />
-    
+
     <Header
       backgroundImage="/static/emergency.jpg"
       body={[
@@ -47,19 +47,18 @@ const Emergency = () => (
       overlayColor={blue}
       title="An offer you can't refuse."
     />
-   
+
     <Wire color={blue} />
 
     <PageWrapper id="section-content">
       <Title color={blue}>We're hiring.</Title>
-      
+
       <JobList>
         <Job>Business Developer - South-East Asia & Middle East</Job>
         <Job>Business Developer - Americas</Job>
         <Job>Salesforce Commerce Cloud (Demandware) Developer - Worldwide</Job>
         <Job>Reaction Commerce Developer - Worldwide</Job>
         <Job>BigCommerce Developer - Worldwide</Job>
-        <Job>Workarea Developer - Worldwide</Job>
         <Job>Key Account Manager - Worldwide</Job>
       </JobList>
 
@@ -72,7 +71,7 @@ const Emergency = () => (
           {"Apply now"}
         </Button>
       </ButtonWrapper>
-    </PageWrapper>  
+    </PageWrapper>
 
     <Footer color={blue} />
   </div>
