@@ -110,7 +110,7 @@ const Consulting = () => (
         <SliderItem src="/static/bigcommerce-logo.png" />
       </StyledSlider>
 
-      <Paragraph>Our engineers have accumulated <Blue>over 80 years of experience</Blue> on modern technologies like <Link href="/reaction-commerce" passHref prefetch><StyledLink withUnderline><Blue>Reaction Commerce</Blue></StyledLink></Link>, <Blue>BigCommerce</Blue> and <Blue>Salesforce Commerce Cloud</Blue>.</Paragraph>
+      <Paragraph>Our engineers have accumulated <Blue>dozens of years of experience</Blue> on modern technologies like <Link href="/reaction-commerce" passHref prefetch><StyledLink withUnderline><Blue>Reaction Commerce</Blue></StyledLink></Link>, <Blue>BigCommerce</Blue> and <Blue>Salesforce Commerce Cloud</Blue>.</Paragraph>
       <Paragraph>Unlike many consultancy companies, we <Blue>focus exclusively</Blue> on these technologies to provide our clients with a <Blue>truly unique expertise</Blue>.</Paragraph>
 
       <ButtonWrapper>
