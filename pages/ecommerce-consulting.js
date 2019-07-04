@@ -72,7 +72,7 @@ const Consulting = () => (
   <div style={{ position: "relative" }}>
     <Head title="Technical E-Commerce Consulting | Reaction Commerce, Workarea, Salesforce Commerce Cloud, BigCommerce | out:grow" />
     <Nav />
-    
+
     <Header
       backgroundImage="/static/consulting.jpg"
       body={[
@@ -83,7 +83,7 @@ const Consulting = () => (
       overlayColor={lightBlue}
       title="Your team. Supercharged."
     />
-    
+
     <Wire color={blue} />
 
     <PageWrapper id="section-content">
@@ -123,7 +123,7 @@ const Consulting = () => (
       <Paragraph>The biggest issues arise either mid-project, or at a critical pre-delivery stage. Too often, <Blue>these roadblocks cause sensible delays</Blue> and force teams to <Blue>postpone deliveries</Blue>.</Paragraph>
 
       <Paragraph>Here’s how <Blue>out:grow ensures that your developers never get stuck</Blue> so that your project stays on track:</Paragraph>
-      
+
       <BulletPointWrapper>
         <BulletPoint title="Private problem-solving calls" body="Benefit from one-on-one or group video calls with our best engineers." />
         <BulletPoint title="Code reviews" body="Our experts will provide comprehensive code reviews right in your team's pull requests, on GitHub or any other VCS." />
@@ -138,7 +138,7 @@ const Consulting = () => (
 
       <Paragraph>Are you <Blue>still exploring your options</Blue> for an e-commerce project? A <Blue>custom-tailored feasability report</Blue> will help you make an <Blue>informed business decision</Blue>.</Paragraph>
       <Paragraph>Taking into account your project's unique characteristics, <Blue>our experts will help you decide</Blue> which e-commerce technology is right for you by <Blue>estimating development time</Blue>, warning you of <Blue>technical pitfals</Blue>, and more.</Paragraph>
-      
+
       <ButtonWrapper>
         <Button backgroundColor={blue} color={white} href="/contact">Order a report</Button>
       </ButtonWrapper>
@@ -146,7 +146,7 @@ const Consulting = () => (
       <Title color={blue}>Let's talk.</Title>
 
       <Paragraph>Because every project is different, let us provide <Blue>tailored answers to your questions</Blue>. Speak with one of our consultants today to assess how can out:grow help your business reach new heights.</Paragraph>
-      
+
       <ButtonWrapper>
         <Button backgroundColor={blue} color={white} href="/contact">Get called back</Button>
       </ButtonWrapper>

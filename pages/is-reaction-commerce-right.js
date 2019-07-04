@@ -35,7 +35,7 @@ class ReactionCommerce extends Component {
     tagScript.type = "text/javascript"
     tagScript.async = true
     tagScript.src = "https://assets.calendly.com/assets/external/widget.js"
-    
+
     script.parentNode.insertBefore(tagScript, script)
   }
 
@@ -58,11 +58,11 @@ class ReactionCommerce extends Component {
         />
 
         <Wire color={blue} />
-  
+
         <PageWrapper id="section-content">
           <Title color={blue}>Why Reaction Commerce?</Title>
-    
-          <Paragraph>In the world of e-commerce solutions, two very distinct categories stand out. On one hand, the older, open-source, often PHP (Magento, OpenCart) or ASP.Net (NopCommerce) based solutions on which total control is given in terms of deployment. And on the other hand, the newer, proprietary, cloud-based SaaS solutions such as Salesforce Commerce Cloud, Workarea and BigCommerce.</Paragraph>
+
+          <Paragraph>In the world of e-commerce solutions, two very distinct categories stand out. On one hand, the older, open-source, often PHP (Magento, OpenCart) or ASP.Net (NopCommerce) based solutions on which total control is given in terms of deployment. And on the other hand, the newer, proprietary, cloud-based SaaS solutions such as Salesforce Commerce Cloud and BigCommerce.</Paragraph>
 
           <Paragraph>In this scattered market, enterprise retailers usually end up choosing SaaS solutions because of their more modern architecture and technologies. However, this choice is made at the expense of flexibility and hosting costs.</Paragraph>
 

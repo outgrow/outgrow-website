@@ -32,14 +32,14 @@ class FreeConsultation extends Component {
     tagScript.type = "text/javascript"
     tagScript.async = true
     tagScript.src = "https://assets.calendly.com/assets/external/widget.js"
-    
+
     script.parentNode.insertBefore(tagScript, script)
   }
 
   render() {
     return (
       <div style={{ position: "relative" }}>
-        <Head title="Get a Free Consultation With Our Experts | Top Engineers Specialized in Reaction Commerce, BigCommerce, Workarea & Salesforce Commerce Cloud | out:grow" />
+        <Head title="Get a Free Consultation With Our Experts | Top Engineers Specialized in Reaction Commerce, BigCommerce & Salesforce Commerce Cloud | out:grow" />
 
         <Nav />
 
@@ -53,19 +53,19 @@ class FreeConsultation extends Component {
           overlayColor={lightBlue}
           title="Get a free consultation."
         />
-   
+
         <Wire color={blue} />
 
         <PageWrapper id="section-content">
           <Title color={blue}>Let's answer your questions.</Title>
-     
+
           <Paragraph style={{ marginBottom: "2rem" }}>Whether you have technical questions on Reaction Commerce, BigCommerce, Workarea, Salesforce Commerce Cloud, or you want to discuss how our engineers can help you bring your projects to life — book your free 30-minute consultation below. Slots are available 7 days a week, 24 hours a day.</Paragraph>
           <Calendly
             className="calendly-inline-widget"
             data-url="https://calendly.com/outgrow-free-consultation/30-min"
           />
         </PageWrapper>
-    
+
         <Footer />
       </div>
     )

@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Button from "./button"
+import ScrollDownIndicator from "./scrollDownIndicator";
 import media from "../styles/mediaQueries"
 import { white } from "../styles/colors"
 
@@ -54,6 +55,7 @@ const ServicePageHeader = ({ backgroundImage, body, buttonText, buttonTextColor,
         <Button color={buttonTextColor} href="#section-content">{buttonText || "Learn more"}</Button>
       </ButtonWrapper>
     </Overlay>
+    <ScrollDownIndicator />
   </SectionWithBackgroundImage>
 )
 
