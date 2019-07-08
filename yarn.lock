@@ -4273,6 +4273,12 @@ react-slick@^0.23.2:
     prettier "^1.14.3"
     resize-observer-polyfill "^1.5.0"
 
+react-visibility-sensor@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/react-visibility-sensor/-/react-visibility-sensor-5.1.0.tgz#3d3cec7df0c39da7a92ce12590be04a13dce8e14"
+  dependencies:
+    prop-types "^15.6.2"
+
 react@^16.7.0:
   version "16.7.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.7.0.tgz#b674ec396b0a5715873b350446f7ea0802ab6381"

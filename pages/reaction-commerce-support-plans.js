@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import { SegmentedControl } from "segmented-control"
 import styled from "styled-components"
 import { Stitch, AnonymousCredential } from "mongodb-stitch-browser-sdk"
+import VisibilitySensor from "react-visibility-sensor"
 import {
   Button,
   ButtonWrapper,
@@ -87,7 +88,32 @@ const Price = styled.span`
 const PaymentSwitcher = styled.a`
   display: block;
   margin: 1.5rem 0;
-  color: rgb(${black});
+  color: rgb(${props => props.isFloating ? white : black});
+  ${media.tablet`color: rgb(${black});`}
+`
+
+const HelpPhone = styled.p`
+  a {
+    color: rgb(${black});
+  }
+  
+  ${props => props.isFloating && `
+    font-size: .8rem;
+    font-weight: lighter;
+    
+    a {
+      color: rgb(${white});
+    }
+  `}
+  
+  ${media.tablet`
+    font-size: 1rem;
+    font-weight: normal;
+    
+    a {
+      color: rgb(${black});
+    }
+  `}
 `
 
 const SavingsIndicator = styled.p`
@@ -99,8 +125,38 @@ const PriceBreakdown = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: ${props => props.isSticky ? `sticky` : `relative`};
+  bottom: 0;
+  z-index: 99;
   
   ${media.tablet`flex-direction: row;`}
+  
+  ${props => props.isFloating && `
+    background: rgb(${green});
+    color: rgb(${white});
+    width: 100vw;
+    transform: translateX(-1.2rem);    
+    padding: 1.2rem;
+  `}
+  
+  ${media.smallTablet`
+    ${props => props.isFloating && `
+      transform: translateX(-3rem);
+      padding: 1.5rem 3rem;
+    `}
+  `}
+
+  ${media.tablet`
+    position: relative;
+    
+    ${props => props.isFloating && `
+      background: transparent;
+      color: rgb(${black});
+      width: auto;
+      transform: translateX(0);
+      padding: 0;
+    `}
+  `}
 `
 
 const TextInput = styled.input`
@@ -116,7 +172,7 @@ const SideBySide = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  
+
   ${media.tablet`flex-direction: row;`}
 `
 
@@ -129,7 +185,7 @@ const SubLabel = styled.p`
   font-size: 1rem;
 `
 
-class Emergency extends Component {
+class SupportPlans extends Component {
   constructor() {
     super()
 
@@ -317,6 +373,21 @@ class Emergency extends Component {
       })
   }
 
+  togglePriceBreakdownSticky = (shouldBeSticky) => {
+    if (!this.state.isPriceBreakdownSticky && shouldBeSticky) {
+      this.setState({
+        isPriceBreakdownSticky: shouldBeSticky
+      })
+    }
+  }
+
+  togglePriceBreakdownFloating = (isNotFloating) => {
+    this.setState({
+      isPriceBreakdownFloating: !isNotFloating,
+      isPriceBreakdownSticky: isNotFloating
+    })
+  }
+
   render() {
     return (
       <div style={{ position: "relative" }}>
@@ -364,18 +435,20 @@ class Emergency extends Component {
               <FieldWrapper>
                 <label htmlFor="response-time">Guaranteed chat response time</label>
                 <SubLabel>We'll be legally bound to respect this response time within your chosen working hours (see below).</SubLabel>
-                <SegmentedControl
-                  name="response-time"
-                  options={[
-                    { label: "30 min.", value: 30, disabled: !this.state.chatSupport },
-                    { label: "1 hour", value: 60, disabled: !this.state.chatSupport },
-                    { label: "2 hours", value: 120, disabled: !this.state.chatSupport },
-                    { label: "3 hours", value: 180, disabled: !this.state.chatSupport },
-                    { label: "None", value: 0, default: true }
-                  ]}
-                  setValue={(value) => this.handleSegmentedControlChange("responseTime", value)}
-                  style={{ color: `rgb(${green}` }}
-                />
+                <VisibilitySensor onChange={this.togglePriceBreakdownSticky}>
+                  <SegmentedControl
+                    name="response-time"
+                    options={[
+                      { label: "30 min.", value: 30, disabled: !this.state.chatSupport },
+                      { label: "1 hour", value: 60, disabled: !this.state.chatSupport },
+                      { label: "2 hours", value: 120, disabled: !this.state.chatSupport },
+                      { label: "3 hours", value: 180, disabled: !this.state.chatSupport },
+                      { label: "None", value: 0, default: true }
+                    ]}
+                    setValue={(value) => this.handleSegmentedControlChange("responseTime", value)}
+                    style={{ color: `rgb(${green}` }}
+                  />
+                </VisibilitySensor>
               </FieldWrapper>
 
               <FieldWrapper>
@@ -429,7 +502,11 @@ class Emergency extends Component {
                 />
               </FieldWrapper>
 
-              <PriceBreakdown>
+              <PriceBreakdown
+                isFloating={this.state.isPriceBreakdownFloating}
+                isSticky={this.state.isPriceBreakdownSticky}
+                ref={this.priceBreakdown}
+              >
                 <div>
                   <p>Your total is <Price>{
                     this.state.showPriceMonthly ?
@@ -438,18 +515,32 @@ class Emergency extends Component {
                   }</Price>
                   </p>
 
-                  {!this.state.showPriceMonthly && <SavingsIndicator>You are saving {this.state.yearlySavings} by paying yearly.</SavingsIndicator>}
+                  {!this.state.showPriceMonthly &&
+                    <SavingsIndicator>You are saving {this.state.yearlySavings} by paying yearly.</SavingsIndicator>
+                  }
 
-                  <PaymentSwitcher href="#" onClick={this.handleSwitchPricing}>Pay {this.state.showPriceMonthly ? "yearly and get 10% off" : "monthly for more flexibility"}</PaymentSwitcher>
+                  <PaymentSwitcher
+                    href="#"
+                    onClick={this.handleSwitchPricing}
+                    isFloating={this.state.isPriceBreakdownFloating}
+                  >
+                    Pay {this.state.showPriceMonthly ? "yearly and get 10% off" : "monthly for more flexibility"}
+                  </PaymentSwitcher>
                 </div>
                 <div>
-                  <p>Need help? Call our 24/7 sales team at +1 (281) OUT-GROW.</p>
+                  <HelpPhone
+                    isFloating={this.state.isPriceBreakdownFloating}
+                  >
+                    Need help? Call our 24/7 sales team at <a href="tel:+12816884769">+1 (281) OUT-GROW</a>.
+                  </HelpPhone>
                 </div>
               </PriceBreakdown>
 
-              <ButtonWrapper keepLeft>
-                <Button backgroundColor={green} color={white} onClick={this.handleNextStep}>Sign Up Online</Button>
-              </ButtonWrapper>
+              <VisibilitySensor onChange={this.togglePriceBreakdownFloating}>
+                <ButtonWrapper keepLeft>
+                  <Button backgroundColor={green} color={white} onClick={this.handleNextStep}>Sign Up Online</Button>
+                </ButtonWrapper>
+              </VisibilitySensor>
             </Form>
           }
 
@@ -540,5 +631,5 @@ class Emergency extends Component {
   }
 }
 
-export default Emergency
+export default SupportPlans
 
