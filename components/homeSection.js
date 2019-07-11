@@ -1,6 +1,5 @@
-import React, { Component } from "react"
+import React from "react"
 import styled from "styled-components"
-import VisibilitySensor from "react-visibility-sensor"
 import Button from "../components/button"
 import media from "../styles/mediaQueries"
 import { white } from "../styles/colors"
@@ -51,37 +50,19 @@ const ButtonWrapper = styled.div`
   margin-top: 1rem;
 `
 
-class HomeSection extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      imageFormat: ""
-    };
-  }
-
-  render() {
-    const { backgroundImage, buttonColor, buttonHref, buttonText, overlayColor, title } = this.props;
-
-    return (
-      <SectionWithBackgroundImage
-        backgroundImage={backgroundImage}
-        backgroundColor={buttonColor}
-      >
-        <Overlay style={{backgroundColor: `rgba(${overlayColor}, .57)`}}>
-          <VisibilitySensor
-            onChange={this.handleLoadBackgroundImage}
-          >
-            <Title dangerouslySetInnerHTML={{__html: title}}/>
-          </VisibilitySensor>
-          <ButtonWrapper>
-            <Button color={buttonColor} href={buttonHref}>{buttonText}</Button>
-          </ButtonWrapper>
-        </Overlay>
-      </SectionWithBackgroundImage>
-    )
-  }
-}
+const HomeSection = ({ backgroundImage, buttonColor, buttonHref, buttonText, overlayColor, title }) => (
+  <SectionWithBackgroundImage
+    backgroundImage={backgroundImage}
+    backgroundColor={buttonColor}
+  >
+    <Overlay style={{backgroundColor: `rgba(${overlayColor}, .57)`}}>
+      <Title dangerouslySetInnerHTML={{__html: title}}/>
+      <ButtonWrapper>
+        <Button color={buttonColor} href={buttonHref}>{buttonText}</Button>
+      </ButtonWrapper>
+    </Overlay>
+  </SectionWithBackgroundImage>
+)
 
 export default HomeSection
 
