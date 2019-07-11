@@ -45,7 +45,7 @@ const StyledButton = styled.button`
 const Button = ({ backgroundColor, children, color, href, type, disabled, onClick }) => {
   if (typeof href !== "undefined") {
     return (
-      <Link href={href} passHref prefetch>
+      <Link href={href} passHref>
         <StyledLink backgroundColor={backgroundColor} color={color}>{children}</StyledLink>
       </Link>
     )
