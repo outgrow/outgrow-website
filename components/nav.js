@@ -1,9 +1,8 @@
 import React, { Component }  from "react"
 import Link from "next/link"
-import styled, { css, keyframes } from "styled-components"
-import classNames from "classnames"
+import styled, { keyframes } from "styled-components"
 import media from "../styles/mediaQueries"
-import { blue, black, white } from "../styles/colors"
+import { black, white } from "../styles/colors"
 
 const links = [
   { href: "/", label: "Home", hideOnDesktop: true },
@@ -254,11 +253,7 @@ class Nav extends Component {
       <div>
         <TopBar isMenuOpen={this.state.isMenuOpen}>
           <MenuButton
-            className={classNames({
-              "hamburger": true,
-              "hamburger--spring": true,
-              "is-active": this.state.isMenuOpen
-            })}
+            className={`hamburger hamburger--spring ${this.state.isMenuOpen ? "is-active" : ""}`}
             aria-label="menu"
             type="button"
             onClick={this.handleToggleMenu}
