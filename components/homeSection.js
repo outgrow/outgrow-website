@@ -1,5 +1,6 @@
-import React from "react"
+import React, { Component } from "react"
 import styled from "styled-components"
+import VisibilitySensor from "react-visibility-sensor"
 import Button from "../components/button"
 import media from "../styles/mediaQueries"
 import { white } from "../styles/colors"
@@ -23,6 +24,19 @@ const SectionWithBackgroundImage = styled.div`
   width: 100vw;
   background-size: cover;
   background-position: 50%;
+  ${props => props.backgroundColor && `background-color: rgb(${props.backgroundColor});`}
+  
+  html.webplossless & {
+    ${props => props.backgroundImage && `background-image: url(${props.backgroundImage}.webp);`}
+  }
+  
+  html.jpeg2000 & {
+    ${props => props.backgroundImage && `background-image: url(${props.backgroundImage}.jp2);`}
+  }
+  
+  html.no-jpeg2000.no-webplossless & {
+    ${props => props.backgroundImage && `background-image: url(${props.backgroundImage}.jpg);`}
+  }
 `
 
 const Title = styled.h2`
@@ -37,16 +51,37 @@ const ButtonWrapper = styled.div`
   margin-top: 1rem;
 `
 
-const HomeSection = ({ backgroundImage, buttonColor, buttonHref, buttonText, overlayColor, title }) => (
-  <SectionWithBackgroundImage style={{ backgroundImage: `url(${backgroundImage})` }}>
-    <Overlay style={{ backgroundColor: `rgba(${overlayColor}, .57)` }}>
-      <Title dangerouslySetInnerHTML={{ __html: title }} />
-      <ButtonWrapper>
-        <Button color={buttonColor} href={buttonHref}>{buttonText}</Button>
-      </ButtonWrapper>
-    </Overlay>
-  </SectionWithBackgroundImage>
-)
+class HomeSection extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      imageFormat: ""
+    };
+  }
+
+  render() {
+    const { backgroundImage, buttonColor, buttonHref, buttonText, overlayColor, title } = this.props;
+
+    return (
+      <SectionWithBackgroundImage
+        backgroundImage={backgroundImage}
+        backgroundColor={buttonColor}
+      >
+        <Overlay style={{backgroundColor: `rgba(${overlayColor}, .57)`}}>
+          <VisibilitySensor
+            onChange={this.handleLoadBackgroundImage}
+          >
+            <Title dangerouslySetInnerHTML={{__html: title}}/>
+          </VisibilitySensor>
+          <ButtonWrapper>
+            <Button color={buttonColor} href={buttonHref}>{buttonText}</Button>
+          </ButtonWrapper>
+        </Overlay>
+      </SectionWithBackgroundImage>
+    )
+  }
+}
 
 export default HomeSection
 

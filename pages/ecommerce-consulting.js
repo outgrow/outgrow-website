@@ -102,12 +102,12 @@ const Consulting = () => (
         <div>
           <Link href="/reaction-commerce" passHref prefetch>
             <StyledLink>
-              <SliderItem src="/static/reaction-logo.png" />
+              <SliderItem src="/static/reaction-logo.png" loading="lazy" />
             </StyledLink>
           </Link>
         </div>
-        <SliderItem src="/static/salesforce-cc-logo.png" />
-        <SliderItem src="/static/bigcommerce-logo.png" />
+        <SliderItem src="/static/salesforce-cc-logo.png" loading="lazy"/>
+        <SliderItem src="/static/bigcommerce-logo.png" loading="lazy" />
       </StyledSlider>
 
       <Paragraph>Our engineers have accumulated <Blue>dozens of years of experience</Blue> on modern technologies like <Link href="/reaction-commerce" passHref prefetch><StyledLink withUnderline><Blue>Reaction Commerce</Blue></StyledLink></Link>, <Blue>BigCommerce</Blue> and <Blue>Salesforce Commerce Cloud</Blue>.</Paragraph>
