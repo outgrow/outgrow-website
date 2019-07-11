@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 import dynamic from "next/dynamic"
-import { SegmentedControl } from "segmented-control"
 import { Stitch, AnonymousCredential } from "mongodb-stitch-browser-sdk"
 import {
   Button,
@@ -17,16 +16,12 @@ import { white, black, blue, lightBlue, red } from "../styles/colors"
 import media from "../styles/mediaQueries"
 import { reportConversion } from "../utils/googleAds"
 
-let DatePicker = () => null;
+const DatePicker = dynamic(() => import("react-datepicker"))
+const SegmentedControl = dynamic(() => import("segmented-control").then(mod => mod.SegmentedControl), { ssr: false })
 
-// Only import react-datepicker if running on client
-if (typeof window !== "undefined") {
-  DatePicker = dynamic(import("react-datepicker"))
-
-  dynamic(import("react-datepicker/dist/react-datepicker.css"))
-  dynamic(import("../styles/datePicker.css"))
-  dynamic(import("../styles/segmentedControl.css"))
-}
+dynamic(() => import("react-datepicker/dist/react-datepicker.css"))
+dynamic(() => import("../styles/datePicker.css"))
+dynamic(() => import("../styles/segmentedControl.css"))
 
 const PageWrapper = styled.div`
   padding: 1.2rem;
