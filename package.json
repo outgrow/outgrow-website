@@ -24,7 +24,7 @@
   "devDependencies": {
     "@zeit/next-css": "canary",
     "css-loader": "^2.1.0",
-    "nextjs-sitemap-generator": "^0.0.4",
+    "nextjs-sitemap-generator": "^0.0.6",
     "postcss-loader": "^3.0.0",
     "style-loader": "^0.23.1"
   }
