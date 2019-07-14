@@ -6,16 +6,6 @@ import FullStory from "react-fullstory"
 import { initializeGoogleAds } from "../utils/googleAds"
 
 class CustomApp extends App {
-  static async getInitialProps({ Component, router, ctx }) {
-    let pageProps = {}
-
-    if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx)
-    }
-
-    return { pageProps }
-  }
-
   componentDidMount() {
     initializeGoogleAds()
 
