@@ -30,7 +30,7 @@ class FreeConsultation extends Component {
     const tagScript = document.createElement("script")
 
     tagScript.type = "text/javascript"
-    tagScript.async = true
+    tagScript.defer = true
     tagScript.src = "https://assets.calendly.com/assets/external/widget.js"
 
     script.parentNode.insertBefore(tagScript, script)

@@ -22,7 +22,7 @@ export default class MyDocument extends Document {
 
           <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossOrigin="true" />
           <link rel="preconnect" href="https://www.googleadservices.com" crossOrigin="true"  />
-          <script async src="https://www.googletagmanager.com/gtag/js?id=AW-767784789" />
+          <script defer src="https://www.googletagmanager.com/gtag/js?id=AW-767784789" />
         </Head>
         <body style={{ overflowX: "hidden" }}>
           <Main />

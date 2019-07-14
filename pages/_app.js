@@ -15,7 +15,7 @@ class CustomApp extends App {
     const tagScript = document.createElement("script")
 
     tagScript.type = "text/javascript"
-    tagScript.async = true
+    tagScript.defer = true
     tagScript.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js"
 
     script.parentNode.insertBefore(tagScript, script)
