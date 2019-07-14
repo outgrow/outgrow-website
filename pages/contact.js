@@ -1,7 +1,8 @@
 import React, { Component } from "react"
 import styled from "styled-components"
-import dynamic from "next/dynamic"
 import { Stitch, AnonymousCredential } from "mongodb-stitch-browser-sdk"
+import SegmentedControlWithoutStyles from "segmented-control/dist/SegmentedControlWithoutStyles"
+import DatePicker from "react-datepicker"
 import {
   Button,
   Footer,
@@ -15,13 +16,10 @@ import {
 import { white, black, blue, lightBlue, red } from "../styles/colors"
 import media from "../styles/mediaQueries"
 import { reportConversion } from "../utils/googleAds"
-
-const DatePicker = dynamic(() => import("react-datepicker"))
-const SegmentedControl = dynamic(() => import("segmented-control").then(mod => mod.SegmentedControl), { ssr: false })
-
-dynamic(() => import("react-datepicker/dist/react-datepicker.css"))
-dynamic(() => import("../styles/datePicker.css"))
-dynamic(() => import("../styles/segmentedControl.css"))
+import "segmented-control/dist/SegmentedControl.css"
+import "../styles/segmentedControl.css"
+import "react-datepicker/dist/react-datepicker.css"
+import "../styles/datePicker.css"
 
 const PageWrapper = styled.div`
   padding: 1.2rem;
@@ -287,7 +285,7 @@ class Contact extends Component {
               </FieldWrapper>
 
               <FieldWrapper className="small-segmented-control-container" marginLeft>
-                <SegmentedControl
+                <SegmentedControlWithoutStyles
                   className="small"
                   name="callbackPreferred"
                   options={[
@@ -324,7 +322,7 @@ class Contact extends Component {
             }
 
             <FieldWrapper>
-              <SegmentedControl
+              <SegmentedControlWithoutStyles
                 name="category"
                 options={[
                   { label: "Consulting", value: "consulting", default: true },

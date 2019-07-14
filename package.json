@@ -17,15 +17,15 @@
     "react-fullstory": "^1.1.1",
     "react-slick": "^0.24.0",
     "react-visibility-sensor": "^5.1.0",
-    "segmented-control": "^0.1.11",
+    "segmented-control": "^0.1.12",
     "slick-carousel": "^1.8.1",
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
     "@zeit/next-css": "canary",
     "css-loader": "^2.1.0",
-    "postcss-loader": "^3.0.0",
     "nextjs-sitemap-generator": "^0.0.4",
+    "postcss-loader": "^3.0.0",
     "style-loader": "^0.23.1"
   }
 }

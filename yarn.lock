@@ -4837,9 +4837,10 @@ schema-utils@^1.0.0:
     ajv-errors "^1.0.0"
     ajv-keywords "^3.1.0"
 
-segmented-control@^0.1.11:
-  version "0.1.11"
-  resolved "https://registry.yarnpkg.com/segmented-control/-/segmented-control-0.1.11.tgz#0e3845ddc8f1f678ba88737998af7d7c3073ecb4"
+segmented-control@^0.1.12:
+  version "0.1.12"
+  resolved "https://registry.yarnpkg.com/segmented-control/-/segmented-control-0.1.12.tgz#91f61a0a874d06f5e550423115b69709dadbae1a"
+  integrity sha512-PPy66hyifyAWbyFSNCr8RgFrgl6JDbmFNC8nzTOXQ0J3kKogLDuZfJS1weE8No2tC/6yTY9xa2BSBdEtXoXAHw==
   dependencies:
     create-react-class "^15.6.3"
     formsy-react "^1.1.4"

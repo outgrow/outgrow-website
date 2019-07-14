@@ -1,6 +1,5 @@
 import React, { Component } from "react"
-import dynamic from "next/dynamic";
-import { SegmentedControl } from "segmented-control"
+import SegmentedControlWithoutStyles from "segmented-control/dist/SegmentedControlWithoutStyles"
 import styled from "styled-components"
 import { Stitch, AnonymousCredential } from "mongodb-stitch-browser-sdk"
 import VisibilitySensor from "react-visibility-sensor"
@@ -17,11 +16,9 @@ import {
 } from "../components"
 import media from "../styles/mediaQueries"
 import { green, black, white } from "../styles/colors"
-import { reportConversion } from "../utils/googleAds";
-
-if (typeof window !== "undefined") {
-  dynamic(import("../styles/segmentedControl.css"))
-}
+import { reportConversion } from "../utils/googleAds"
+import "segmented-control/dist/SegmentedControl.css"
+import "../styles/segmentedControl.css"
 
 const PageWrapper = styled.div`
   padding: 1.2rem;
@@ -421,7 +418,7 @@ class SupportPlans extends Component {
               <FieldWrapper>
                 <label htmlFor="chat-support">Unlimited chat support</label>
                 <SubLabel>Our experts will be reachable on your company's Slack or any other chat solution, as well as by e-mail.</SubLabel>
-                <SegmentedControl
+                <SegmentedControlWithoutStyles
                   name="chat-support"
                   options={[
                     { label: "Yes", value: true },
@@ -436,7 +433,7 @@ class SupportPlans extends Component {
                 <label htmlFor="response-time">Guaranteed chat response time</label>
                 <SubLabel>We'll be legally bound to respect this response time within your chosen working hours (see below).</SubLabel>
                 <VisibilitySensor onChange={this.togglePriceBreakdownSticky}>
-                  <SegmentedControl
+                  <SegmentedControlWithoutStyles
                     name="response-time"
                     options={[
                       { label: "30 min.", value: 30, disabled: !this.state.chatSupport },
@@ -460,7 +457,7 @@ class SupportPlans extends Component {
               <FieldWrapper>
                 <label htmlFor="advance-notice">Minimum advance notice to book a face-time session</label>
                 <SubLabel>Your team will have to respect this minimum delay when booking their face-time sessions.</SubLabel>
-                <SegmentedControl
+                <SegmentedControlWithoutStyles
                   name="advance-notice"
                   options={[
                     { label: "1 hour", value: 1 },
@@ -476,7 +473,7 @@ class SupportPlans extends Component {
               <FieldWrapper>
                 <label htmlFor="dedicated-experts">Dedicated experts</label>
                 <SubLabel>We'll make sure that your developers always deal with the same people at out:grow.</SubLabel>
-                <SegmentedControl
+                <SegmentedControlWithoutStyles
                   name="dedicated-experts"
                   options={[
                     { label: "Yes", value: true },
@@ -490,7 +487,7 @@ class SupportPlans extends Component {
               <FieldWrapper>
                 <label htmlFor="time-zone">Operating time zone</label>
                 <SubLabel>Our experts will be reachable by your team during these working hours.</SubLabel>
-                <SegmentedControl
+                <SegmentedControlWithoutStyles
                   name="time-zone"
                   options={[
                     { label: 'Los Angeles\u000D\u000AMon-Fri 9AM-5PM PST', value: "losangeles" },
