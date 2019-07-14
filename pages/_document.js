@@ -19,7 +19,9 @@ export default class MyDocument extends Document {
       <html lang="en">
         <Head>
           {this.props.styleTags}
-         
+
+          <link rel="preconnect" href="https://googleads.g.doubleclick.net" />
+          <link rel="preconnect" href="https://www.googleadservices.com" />
           <script async src="https://www.googletagmanager.com/gtag/js?id=AW-767784789" />
         </Head>
         <body style={{ overflowX: "hidden" }}>
