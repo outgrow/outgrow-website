@@ -4,7 +4,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "next export"
+    "export": "next export && node ./sitemapGenerator.js"
   },
   "dependencies": {
     "jquery": "^3.4.1",
