@@ -184,7 +184,7 @@ const DividerText = styled.h3`
   text-align: center;
   color: rgb(${white});
   font-weight: normal;
-  background: black;
+  background: rgb(${black});
   z-index: 999;
   position: absolute;
   left: 50%;
