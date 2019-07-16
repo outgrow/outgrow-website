@@ -12,7 +12,7 @@ import {
   Wire
 } from "../components"
 import media from "../styles/mediaQueries"
-import { red, black, white } from "../styles/colors"
+import { red, white } from "../styles/colors"
 
 const PageWrapper = styled.div`
   padding: 1.2rem;
