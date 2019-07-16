@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Component } from "react"
 import styled from "styled-components"
 import dynamic from "next/dynamic"
 import Link from "next/link"
@@ -16,25 +16,11 @@ import {
 } from "../components"
 import media from "../styles/mediaQueries"
 import { blue, lightBlue, black, white } from "../styles/colors"
-
-const Slider = dynamic(import("react-slick"))
-
-dynamic(import("slick-carousel/slick/slick.css"))
+import "slick-carousel/slick/slick.css"
 
 const PageWrapper = styled.div`
   padding: 1.2rem;
   ${media.smallTablet`padding: 3rem;`}
-`
-
-const StyledSlider = styled(Slider)`
-  width: 100vw;
-
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-
-  ${media.tablet`padding-left: 27.5rem;`}
-  ${media.laptop`margin: 3rem 0;`}
 `
 
 const SliderItem = styled.img`
@@ -68,92 +54,123 @@ const StyledLink = styled.a`
   }
 `
 
-const Consulting = () => (
-  <div style={{ position: "relative" }}>
-    <Head title="Technical E-Commerce Consulting | Reaction Commerce, Salesforce Commerce Cloud, BigCommerce | out:grow" />
-    <Nav />
+class Consulting extends Component {
+  constructor() {
+    super()
 
-    <Header
-      backgroundImage="/static/consulting.jpg"
-      body={[
-        "Throughought the lifecycle of a project, all technical teams face issues and challenges that they are not prepared for, causing them to get stuck and lose precious time.",
-        "Our industry-renowned consulting service gives your team access to our engineers’ invaluable experience, and ensures that your project is kept on track."
-      ]}
-      buttonTextColor={blue}
-      overlayColor={lightBlue}
-      title="Your team. Supercharged."
-    />
+    this.state = {
+      isServer: true
+    }
+  }
 
-    <Wire color={blue} />
+  componentDidMount() {
+    this.setState((state) => state.isServer && { isServer: false })
+  }
 
-    <PageWrapper id="section-content">
-      <Title color={blue} noMarginTop>We know your stack.</Title>
-      <StyledSlider {...{
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        centerMode: true,
-        variableWidth: true
-      }}>
-        <div>
-          <Link href="/reaction-commerce" passHref>
-            <StyledLink>
-              <SliderItem src="/static/reaction-logo.png" loading="lazy" />
-            </StyledLink>
-          </Link>
-        </div>
-        <SliderItem src="/static/salesforce-cc-logo.png" loading="lazy"/>
-        <SliderItem src="/static/bigcommerce-logo.png" loading="lazy" />
-      </StyledSlider>
+  render() {
+    const Slider = dynamic(import("react-slick"), {
+      ssr: this.state.isServer
+    })
 
-      <Paragraph>Our engineers have accumulated <Blue>dozens of years of experience</Blue> on modern technologies like <Link href="/reaction-commerce" passHref><StyledLink withUnderline><Blue>Reaction Commerce</Blue></StyledLink></Link>, <Blue>BigCommerce</Blue> and <Blue>Salesforce Commerce Cloud</Blue>.</Paragraph>
-      <Paragraph>Unlike many consultancy companies, we <Blue>focus exclusively</Blue> on these technologies to provide our clients with a <Blue>truly unique expertise</Blue>.</Paragraph>
+    const StyledSlider = styled(Slider)`
+      width: 100vw;
+    
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    
+      ${media.tablet`padding-left: 27.5rem;`}
+      ${media.laptop`margin: 3rem 0;`}
+    `
 
-      <ButtonWrapper>
-        <Button backgroundColor={blue} color={white} href="/contact">Talk to an expert</Button>
-      </ButtonWrapper>
+    return (
+      <div style={{ position: "relative" }}>
+        <Head title="Technical E-Commerce Consulting | Reaction Commerce, Salesforce Commerce Cloud, BigCommerce | out:grow" />
+        <Nav />
 
-      <Title color={blue}>Mid-project technical advice.</Title>
+        <Header
+          backgroundImage="/static/consulting.jpg"
+          body={[
+            "Throughought the lifecycle of a project, all technical teams face issues and challenges that they are not prepared for, causing them to get stuck and lose precious time.",
+            "Our industry-renowned consulting service gives your team access to our engineers’ invaluable experience, and ensures that your project is kept on track."
+          ]}
+          buttonTextColor={blue}
+          overlayColor={lightBlue}
+          title="Your team. Supercharged."
+        />
 
-      <Paragraph>The biggest issues arise either mid-project, or at a critical pre-delivery stage. Too often, <Blue>these roadblocks cause sensible delays</Blue> and force teams to <Blue>postpone deliveries</Blue>.</Paragraph>
+        <Wire color={blue} />
 
-      <Paragraph>Here’s how <Blue>out:grow ensures that your developers never get stuck</Blue> so that your project stays on track:</Paragraph>
+        <PageWrapper id="section-content">
+          <Title color={blue} noMarginTop>We know your stack.</Title>
+          <StyledSlider {...{
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+            variableWidth: true
+          }}>
+            <div>
+              <Link href="/reaction-commerce" passHref>
+                <StyledLink>
+                  <SliderItem src="/static/reaction-logo.png" loading="lazy" />
+                </StyledLink>
+              </Link>
+            </div>
+            <SliderItem src="/static/salesforce-cc-logo.png" loading="lazy"/>
+            <SliderItem src="/static/bigcommerce-logo.png" loading="lazy" />
+          </StyledSlider>
 
-      <BulletPointWrapper>
-        <BulletPoint title="Private problem-solving calls" body="Benefit from one-on-one or group video calls with our best engineers." />
-        <BulletPoint title="Code reviews" body="Our experts will provide comprehensive code reviews right in your team's pull requests, on GitHub or any other VCS." />
-        <BulletPoint title="Unlimited e-mail & chat" body="Give your technical team the assurance of always getting answers to their technical questions via e-mail or Slack." />
-      </BulletPointWrapper>
+          <Paragraph>Our engineers have accumulated <Blue>dozens of years of experience</Blue> on modern technologies like <Link href="/reaction-commerce" passHref><StyledLink withUnderline><Blue>Reaction Commerce</Blue></StyledLink></Link>, <Blue>BigCommerce</Blue> and <Blue>Salesforce Commerce Cloud</Blue>.</Paragraph>
+          <Paragraph>Unlike many consultancy companies, we <Blue>focus exclusively</Blue> on these technologies to provide our clients with a <Blue>truly unique expertise</Blue>.</Paragraph>
 
-      <ButtonWrapper>
-        <Button backgroundColor={blue} color={white} href="/contact">Supercharge your team</Button>
-      </ButtonWrapper>
+          <ButtonWrapper>
+            <Button backgroundColor={blue} color={white} href="/contact">Talk to an expert</Button>
+          </ButtonWrapper>
 
-      <Title color={blue}>Feasability reports.</Title>
+          <Title color={blue}>Mid-project technical advice.</Title>
 
-      <Paragraph>Are you <Blue>still exploring your options</Blue> for an e-commerce project? A <Blue>custom-tailored feasability report</Blue> will help you make an <Blue>informed business decision</Blue>.</Paragraph>
-      <Paragraph>Taking into account your project's unique characteristics, <Blue>our experts will help you decide</Blue> which e-commerce technology is right for you by <Blue>estimating development time</Blue>, warning you of <Blue>technical pitfals</Blue>, and more.</Paragraph>
+          <Paragraph>The biggest issues arise either mid-project, or at a critical pre-delivery stage. Too often, <Blue>these roadblocks cause sensible delays</Blue> and force teams to <Blue>postpone deliveries</Blue>.</Paragraph>
 
-      <ButtonWrapper>
-        <Button backgroundColor={blue} color={white} href="/contact">Order a report</Button>
-      </ButtonWrapper>
+          <Paragraph>Here’s how <Blue>out:grow ensures that your developers never get stuck</Blue> so that your project stays on track:</Paragraph>
 
-      <Title color={blue}>Let's talk.</Title>
+          <BulletPointWrapper>
+            <BulletPoint title="Private problem-solving calls" body="Benefit from one-on-one or group video calls with our best engineers." />
+            <BulletPoint title="Code reviews" body="Our experts will provide comprehensive code reviews right in your team's pull requests, on GitHub or any other VCS." />
+            <BulletPoint title="Unlimited e-mail & chat" body="Give your technical team the assurance of always getting answers to their technical questions via e-mail or Slack." />
+          </BulletPointWrapper>
 
-      <Paragraph>Because every project is different, let us provide <Blue>tailored answers to your questions</Blue>. Speak with one of our consultants today to assess how can out:grow help your business reach new heights.</Paragraph>
+          <ButtonWrapper>
+            <Button backgroundColor={blue} color={white} href="/contact">Supercharge your team</Button>
+          </ButtonWrapper>
 
-      <ButtonWrapper>
-        <Button backgroundColor={blue} color={white} href="/contact">Get called back</Button>
-      </ButtonWrapper>
-    </PageWrapper>
+          <Title color={blue}>Feasability reports.</Title>
 
-    <Footer color={blue} />
-  </div>
-)
+          <Paragraph>Are you <Blue>still exploring your options</Blue> for an e-commerce project? A <Blue>custom-tailored feasability report</Blue> will help you make an <Blue>informed business decision</Blue>.</Paragraph>
+          <Paragraph>Taking into account your project's unique characteristics, <Blue>our experts will help you decide</Blue> which e-commerce technology is right for you by <Blue>estimating development time</Blue>, warning you of <Blue>technical pitfals</Blue>, and more.</Paragraph>
+
+          <ButtonWrapper>
+            <Button backgroundColor={blue} color={white} href="/contact">Order a report</Button>
+          </ButtonWrapper>
+
+          <Title color={blue}>Let's talk.</Title>
+
+          <Paragraph>Because every project is different, let us provide <Blue>tailored answers to your questions</Blue>. Speak with one of our consultants today to assess how can out:grow help your business reach new heights.</Paragraph>
+
+          <ButtonWrapper>
+            <Button backgroundColor={blue} color={white} href="/contact">Get called back</Button>
+          </ButtonWrapper>
+        </PageWrapper>
+
+        <Footer color={blue} />
+      </div>
+    )
+  }
+}
 
 export default Consulting
 
