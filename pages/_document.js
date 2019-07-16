@@ -23,8 +23,8 @@ export default class MyDocument extends Document {
 
           <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossOrigin="anonymous" />
           <link rel="preconnect" href="https://www.googleadservices.com" crossOrigin="anonymous"  />
-          <script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=AW-767784789" crossOrigin="anonymous" defer />
-          <script type="text/javascript" src="https://snap.licdn.com/li.lms-analytics/insight.min.js" crossOrigin="anonymous" defer />
+          <script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=AW-767784789" defer />
+          <script type="text/javascript" src="https://snap.licdn.com/li.lms-analytics/insight.min.js" defer />
           <script type="text/javascript" src="/static/modernizr.js" />
         </Head>
         <body style={{ overflowX: "hidden" }}>
