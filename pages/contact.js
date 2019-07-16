@@ -1,7 +1,7 @@
 import React, { Component } from "react"
+import dynamic from "next/dynamic"
 import styled from "styled-components"
-import { Stitch, AnonymousCredential } from "mongodb-stitch-browser-sdk"
-import SegmentedControlWithoutStyles from "segmented-control/dist/SegmentedControlWithoutStyles"
+import SegmentedControl from "segmented-control/dist/SegmentedControlWithoutStyles"
 import DatePicker from "react-datepicker"
 import {
   Button,
@@ -141,6 +141,9 @@ const defaultState = {
   error: false
 }
 
+let Stitch
+let AnonymousCredential
+
 class Contact extends Component {
   constructor() {
     super()
@@ -152,6 +155,9 @@ class Contact extends Component {
   }
 
   componentDidMount() {
+    Stitch = dynamic(() => import("mongodb-stitch-browser-sdk").then((module) => module.Stitch))
+    AnonymousCredential = dynamic(() => import("mongodb-stitch-browser-sdk").then((module) => module.AnonymousCredential))
+
     try {
       const client = Stitch.defaultAppClient;
 
@@ -285,7 +291,7 @@ class Contact extends Component {
               </FieldWrapper>
 
               <FieldWrapper className="small-segmented-control-container" marginLeft>
-                <SegmentedControlWithoutStyles
+                <SegmentedControl
                   className="small"
                   name="callbackPreferred"
                   options={[
@@ -322,7 +328,7 @@ class Contact extends Component {
             }
 
             <FieldWrapper>
-              <SegmentedControlWithoutStyles
+              <SegmentedControl
                 name="category"
                 options={[
                   { label: "Consulting", value: "consulting", default: true },
