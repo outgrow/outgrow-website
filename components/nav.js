@@ -273,7 +273,7 @@ class Nav extends Component {
           <List>
             {links.map(({ key, href, label }, index) => (
               <ListItem key={key} iterationCount={index}>
-                <Link href={href}>
+                <Link href={href} prefetch>
                   <ListItemLink onClick={this.handleCloseMenu}>{label}</ListItemLink>
                 </Link>
               </ListItem>
