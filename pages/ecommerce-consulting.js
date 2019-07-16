@@ -16,7 +16,8 @@ import {
 } from "../components"
 import media from "../styles/mediaQueries"
 import { blue, lightBlue, black, white } from "../styles/colors"
-import "slick-carousel/slick/slick.css"
+
+dynamic(import("slick-carousel/slick/slick.css"))
 
 const PageWrapper = styled.div`
   padding: 1.2rem;

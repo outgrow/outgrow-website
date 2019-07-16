@@ -17,8 +17,9 @@ import {
 import media from "../styles/mediaQueries"
 import { green, black, white } from "../styles/colors"
 import { reportConversion } from "../utils/googleAds"
-import "segmented-control/dist/SegmentedControl.css"
-import "../styles/segmentedControl.css"
+
+dynamic(import("segmented-control/dist/SegmentedControl.css"))
+dynamic(import("../styles/segmentedControl.css"))
 
 const PageWrapper = styled.div`
   padding: 1.2rem;

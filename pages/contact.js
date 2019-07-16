@@ -16,10 +16,11 @@ import {
 import { white, black, blue, lightBlue, red } from "../styles/colors"
 import media from "../styles/mediaQueries"
 import { reportConversion } from "../utils/googleAds"
-import "segmented-control/dist/SegmentedControl.css"
-import "../styles/segmentedControl.css"
-import "react-datepicker/dist/react-datepicker.css"
-import "../styles/datePicker.css"
+
+dynamic(import("segmented-control/dist/SegmentedControl.css"))
+dynamic(import("../styles/segmentedControl.css"))
+dynamic(import("react-datepicker/dist/react-datepicker.css"))
+dynamic(import("../styles/datePicker.css"))
 
 const PageWrapper = styled.div`
   padding: 1.2rem;
