@@ -30,7 +30,7 @@ const List = styled.ul`
 `
 
 const ListItem = styled.li`
-  margin: .25rem 0;
+  margin: .6rem 0;
 `
 
 const ListItemLink = styled.a`
@@ -43,7 +43,7 @@ const Copyright = styled.p`
   font-size: .9rem;
   ${media.smallTablet`text-align: center;`}
 
-  margin: 1rem 0;
+  margin: .6rem 0;
 `
 
 const AppFooter = ({ color }) => (
