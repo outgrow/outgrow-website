@@ -21,8 +21,8 @@ export default class MyDocument extends Document {
         <Head>
           {this.props.styleTags}
 
-          <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossOrigin="anonymous" />
-          <link rel="preconnect" href="https://www.googleadservices.com" crossOrigin="anonymous"  />
+          <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossOrigin="true" />
+          <link rel="preconnect" href="https://www.googleadservices.com" crossOrigin="true" />
           <script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=AW-767784789" defer />
           <script type="text/javascript" src="https://snap.licdn.com/li.lms-analytics/insight.min.js" defer />
           <script type="text/javascript" src="/static/modernizr.js" />
