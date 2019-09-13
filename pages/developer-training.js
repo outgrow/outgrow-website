@@ -67,7 +67,7 @@ const Training = () => (
       <Paragraph>Leverage our best trainers’s knowledge and expertise thanks to our pre-recorded tutorial series. With flexibility in mind, <Red>out:grow university</Red> is a platform that your team members can use to consume our educational content from <Red>anywhere and at anytime</Red>.</Paragraph>
 
       <ButtonWrapper>
-        <Button backgroundColor={red} color={white} href="/contact">Sign up</Button>
+        <Button backgroundColor={red} color={white} href="https://university.outgrow.io">Sign up</Button>
       </ButtonWrapper>
     </PageWrapper>
 
