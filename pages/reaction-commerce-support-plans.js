@@ -3,6 +3,7 @@ import dynamic from "next/dynamic"
 import SegmentedControl from "segmented-control/dist/SegmentedControlWithoutStyles"
 import styled from "styled-components"
 import VisibilitySensor from "react-visibility-sensor"
+import { Stitch, AnonymousCredential } from "mongodb-stitch-browser-sdk" 
 import {
   Button,
   ButtonWrapper,
@@ -183,9 +184,6 @@ const SubLabel = styled.p`
   font-size: 1rem;
 `
 
-let Stitch
-let AnonymousCredential
-
 class SupportPlans extends Component {
   constructor() {
     super()
@@ -218,9 +216,6 @@ class SupportPlans extends Component {
   }
 
   componentDidMount() {
-    Stitch = dynamic(() => import("mongodb-stitch-browser-sdk").then((module) => module.Stitch))
-    AnonymousCredential = dynamic(() => import("mongodb-stitch-browser-sdk").then((module) => module.AnonymousCredential))
-
     try {
       const client = Stitch.defaultAppClient;
 
