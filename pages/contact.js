@@ -3,6 +3,7 @@ import dynamic from "next/dynamic"
 import styled from "styled-components"
 import SegmentedControl from "segmented-control/dist/SegmentedControlWithoutStyles"
 import DatePicker from "react-datepicker"
+import { Stitch, AnonymousCredential } from "mongodb-stitch-browser-sdk"  
 import {
   Button,
   Footer,
@@ -142,9 +143,6 @@ const defaultState = {
   error: false
 }
 
-let Stitch
-let AnonymousCredential
-
 class Contact extends Component {
   constructor() {
     super()
@@ -156,9 +154,6 @@ class Contact extends Component {
   }
 
   componentDidMount() {
-    Stitch = dynamic(() => import("mongodb-stitch-browser-sdk").then((module) => module.Stitch))
-    AnonymousCredential = dynamic(() => import("mongodb-stitch-browser-sdk").then((module) => module.AnonymousCredential))
-
     try {
       const client = Stitch.defaultAppClient;
 
