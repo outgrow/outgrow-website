@@ -3,7 +3,6 @@ import dynamic from "next/dynamic"
 import SegmentedControl from "segmented-control/dist/SegmentedControlWithoutStyles"
 import styled from "styled-components"
 import VisibilitySensor from "react-visibility-sensor"
-import { Stitch, AnonymousCredential } from "mongodb-stitch-browser-sdk" 
 import {
   Button,
   ButtonWrapper,
@@ -18,6 +17,8 @@ import {
 import media from "../styles/mediaQueries"
 import { green, black, white } from "../styles/colors"
 import { reportConversion } from "../utils/googleAds"
+
+let Stitch, AnonymousCredential;
 
 dynamic(import("segmented-control/dist/SegmentedControl.css"))
 dynamic(import("../styles/segmentedControl.css"))
@@ -216,15 +217,20 @@ class SupportPlans extends Component {
   }
 
   componentDidMount() {
-    try {
-      const client = Stitch.defaultAppClient;
+    import("mongodb-stitch-browser-sdk").then((mod) => {
+      Stitch = mod.Stitch;
+      AnonymousCredential = mod.AnonymousCredential;
 
-      // Stitch client is already initiated if this didn't crash
-    } catch(err) {
-      // Threw error because client is not initiated
-      const stitchClient = Stitch.initializeDefaultAppClient("outgrow-hunql")
-      stitchClient.auth.loginWithCredential(new AnonymousCredential())
-    }
+      try {
+        const client = Stitch.defaultAppClient;
+
+        // Stitch client is already initiated if this didn't crash
+      } catch(err) {
+        // Threw error because client is not initiated
+        const stitchClient = Stitch.initializeDefaultAppClient("outgrow-hunql")
+        stitchClient.auth.loginWithCredential(new AnonymousCredential())
+      }
+    });
   }
 
   handleUpdatePrice = () => {
