@@ -83,7 +83,7 @@ const AppFooter = ({ color }) => (
       </List>
     </nav>
 
-    <Copyright>Copyright &copy; 2019 Outgrow LLC</Copyright>
+    <Copyright>Copyright &copy; 2019 Outgrow FZE</Copyright>
 
     <List right>
       <ListItem>

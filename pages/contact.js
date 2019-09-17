@@ -159,8 +159,6 @@ class Contact extends Component {
       Stitch = mod.Stitch;
       AnonymousCredential = mod.AnonymousCredential;
 
-      console.log("Stitch loaded:", Stitch);
-
       try {
         const client = Stitch.defaultAppClient;
 
@@ -220,7 +218,7 @@ class Contact extends Component {
         <Header
           backgroundImage="/static/contact.jpg"
           body={[
-            "Submit the form below and an out:grow representative will get back to you at your preferred time. Alternatively, set up a face-to-face meeting at one of our locations around the world.",
+            "Submit the form below and an out:grow representative will get back to you at your preferred time. Alternatively, set up a face-to-face meeting at our offices.",
             "For emergencies, do not wait and call our 24/7 hotline at +1 (281) OUT-GROW."
           ]}
           buttonText="Reach out"
@@ -232,22 +230,11 @@ class Contact extends Component {
         <Wire color={blue} />
 
         <PageWrapper id="section-content">
-          <Title color={blue}>Our locations.</Title>
+          <Title color={blue}>Our location.</Title>
 
-          <Paragraph>As a global company helping global clients, we at out:grow provide 24/7 services to retailers and agencies around the world thanks to our offices in Los Angeles and Dubai.</Paragraph>
+          <Paragraph>As a global company helping global clients, we at out:grow provide 24/7 services to retailers and agencies around the world thanks to our offices in Dubai.</Paragraph>
 
           <Locations>
-            <Location style={{ marginRight: ".5rem" }}>
-              <LocationTitle>Los Angeles</LocationTitle>
-              <LocationIcon alt="Los Angeles, California" src="/static/california.png" />
-              <LocationAddress>
-                601 S. Figueroa Street<br/>
-                Suite 4050<br/>
-                Los Angeles, CA 90071<br/>
-                United States of America
-              </LocationAddress>
-            </Location>
-
             <Location style={{ marginLeft: ".5rem" }}>
               <LocationTitle>Dubai</LocationTitle>
               <LocationIcon alt="Dubai, United Arab Emirates" src="/static/uae.png" />
