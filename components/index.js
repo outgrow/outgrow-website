@@ -1,6 +1,8 @@
 export { default as BulletPoint } from "./bulletPoint"
 export { default as Button } from "./button"
 export { default as ButtonWrapper } from "./buttonWrapper"
+export { default as Calendar } from "./calendar"
+export { default as CalendarWrapper } from "./calendarWrapper"
 export { default as Footer } from "./footer"
 export { default as Head } from "./head"
 export { default as HomeSection } from "./homeSection"
