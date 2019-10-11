@@ -6,5 +6,6 @@ export default styled.iframe`
   height: 100%;
   width: 100%;
   position: relative;
+  overflow-y: scroll;
   top: -260px;
 `

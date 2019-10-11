@@ -4,7 +4,7 @@ import media from "../styles/mediaQueries"
 export default styled.div`
   width: 100vw;
   ${media.smallTablet`width: 420px;`}
-  height: 1890px;
+  height: 2470px;
   overflow: hidden;
   margin-left: -19px;
   ${media.smallTablet`margin-left: 0;`}
