@@ -86,7 +86,7 @@ class Consulting extends Component {
 
     return (
       <div style={{ position: "relative" }}>
-        <Head title="Technical E-Commerce Consulting | Reaction Commerce, Salesforce Commerce Cloud, BigCommerce | out:grow" />
+        <Head title="E-Commerce Technology Consulting | E-Commerce Developer Help | Reaction Commerce, Salesforce Commerce Cloud, BigCommerce | out:grow" />
         <Nav />
 
         <Header
@@ -97,7 +97,7 @@ class Consulting extends Component {
           ]}
           buttonTextColor={blue}
           overlayColor={lightBlue}
-          title="Your team. Supercharged."
+          title="Your own developers. Supercharged."
         />
 
         <Wire color={blue} />
@@ -133,29 +133,29 @@ class Consulting extends Component {
             <Button backgroundColor={blue} color={white} href="/contact">Talk to an expert</Button>
           </ButtonWrapper>
 
-          <Title color={blue}>Mid-project technical advice.</Title>
+          <Title color={blue}>Get expert developer help.</Title>
 
-          <Paragraph>The biggest issues arise either mid-project, or at a critical pre-delivery stage. Too often, <Blue>these roadblocks cause sensible delays</Blue> and force teams to <Blue>postpone deliveries</Blue>.</Paragraph>
+          <Paragraph>The biggest development issues arise either mid-project, or at a critical pre-delivery stage. Too often, <Blue>these roadblocks cause sensible delays</Blue> and force teams to <Blue>postpone deliveries</Blue>.</Paragraph>
 
-          <Paragraph>Here’s how <Blue>out:grow ensures that your developers never get stuck</Blue> so that your project stays on track:</Paragraph>
+          <Paragraph>Whether you're using <Link href="/reaction-commerce" passHref><StyledLink withUnderline>Reaction Commerce</StyledLink></Link>, BigCommerce or Salesforce Commerce Cloud, here’s how <Blue>out:grow ensures that your developers never get stuck</Blue>:</Paragraph>
 
           <BulletPointWrapper>
-            <BulletPoint title="Private problem-solving calls" body="Benefit from one-on-one or group video calls with our best engineers." />
-            <BulletPoint title="Code reviews" body="Our experts will provide comprehensive code reviews right in your team's pull requests, on GitHub or any other VCS." />
-            <BulletPoint title="Unlimited e-mail & chat" body="Give your technical team the assurance of always getting answers to their technical questions via e-mail or Slack." />
+            <BulletPoint title="Private problem-solving calls" body="Get video and screen-sharing calls with software engineers who know your stack inside out. Dealing with obscure bugs? Got a question about best practices? Stop Googling around and get an expert answer right away." />
+            <BulletPoint title="Code reviews" body="Let our experts review and approve your team's pull requests on GitHub or any other VCS, ensuring every line of code meets our standards before getting merged." />
+            <BulletPoint title="Unlimited e-mail & chat" body="Give your developers the peace of mind of always getting answers to their technical questions via e-mail, Slack or any other chat app. Available for free during business hours to all our clients." />
           </BulletPointWrapper>
 
           <ButtonWrapper>
-            <Button backgroundColor={blue} color={white} href="/contact">Supercharge your team</Button>
+            <Button backgroundColor={blue} color={white} href="/contact">Get developer help</Button>
           </ButtonWrapper>
 
-          <Title color={blue}>Feasability reports.</Title>
+          <Title color={blue}>Choosing an e-commerce platform.</Title>
 
           <Paragraph>Are you <Blue>still exploring your options</Blue> for an e-commerce project? A <Blue>custom-tailored feasability report</Blue> will help you make an <Blue>informed business decision</Blue>.</Paragraph>
           <Paragraph>Taking into account your project's unique characteristics, <Blue>our experts will help you decide</Blue> which e-commerce technology is right for you by <Blue>estimating development time</Blue>, warning you of <Blue>technical pitfals</Blue>, and more.</Paragraph>
 
           <ButtonWrapper>
-            <Button backgroundColor={blue} color={white} href="/contact">Order a report</Button>
+            <Button backgroundColor={blue} color={white} href="/contact">Get our experts' opinion</Button>
           </ButtonWrapper>
 
           <Title color={blue}>Let's talk.</Title>

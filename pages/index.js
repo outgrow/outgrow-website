@@ -16,7 +16,7 @@ const Home = () => (
       buttonHref="/ecommerce-consulting"
       buttonText="Consulting"
       overlayColor={lightBlue}
-      title="Redefining<br/><nobr>e-commerce</nobr><br/>consulting."
+      title="E-commerce<br/><nobr>technology</nobr><br/>consulting."
     />
 
     <HomeSection
@@ -25,7 +25,7 @@ const Home = () => (
       buttonHref="/developer-training"
       buttonText="Training"
       overlayColor={red}
-      title="Providing<br/><nobr>ROI-focused</nobr><br/>training."
+      title="Expert<br/><nobr>developer</nobr><br/>training."
     />
 
     <HomeSection
@@ -34,7 +34,7 @@ const Home = () => (
       buttonHref="/support-plans"
       buttonText="Support plans"
       overlayColor={green}
-      title="Emergency?<br/>We have your back. 24/7."
+      title="Emergency<br/>developer support. 24/7."
     />
 
     <Footer />
