@@ -27,5 +27,8 @@
     "nextjs-sitemap-generator": "^0.0.6",
     "postcss-loader": "^3.0.0",
     "style-loader": "^1.0.0"
+  },
+  "engines": {
+    "node": "12.x"
   }
 }
