@@ -122,8 +122,11 @@ class Consulting extends Component {
                 </StyledLink>
               </Link>
             </div>
-            <SliderItem src="/salesforce-cc-logo.png" loading="lazy"/>
-            <SliderItem src="/bigcommerce-logo.png" loading="lazy" />
+            <SliderItem src="/nodejs.svg" loading="lazy"/>
+            <SliderItem src="/mongodb.svg" loading="lazy" />
+            <SliderItem src="/graphql.svg" loading="lazy" />
+            <SliderItem src="/react.svg" loading="lazy" />
+            <SliderItem src="/nextjs.svg" loading="lazy" />
           </StyledSlider>
 
           <Paragraph>Our engineers have accumulated <Blue>dozens of years of experience</Blue> on <Link href="/reaction-commerce" passHref><StyledLink withUnderline><Blue>Reaction Commerce</Blue></StyledLink></Link>.</Paragraph>
