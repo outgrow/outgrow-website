@@ -86,7 +86,7 @@ class Consulting extends Component {
 
     return (
       <div style={{ position: "relative" }}>
-        <Head title="E-Commerce Technology Consulting | E-Commerce Developer Help | Reaction Commerce, Salesforce Commerce Cloud, BigCommerce | out:grow" />
+        <Head title="E-Commerce Technology Consulting | E-Commerce Developer Help | Reaction Commerce | out:grow" />
         <Nav />
 
         <Header
@@ -126,8 +126,8 @@ class Consulting extends Component {
             <SliderItem src="/static/bigcommerce-logo.png" loading="lazy" />
           </StyledSlider>
 
-          <Paragraph>Our engineers have accumulated <Blue>dozens of years of experience</Blue> on modern technologies like <Link href="/reaction-commerce" passHref><StyledLink withUnderline><Blue>Reaction Commerce</Blue></StyledLink></Link>, <Blue>BigCommerce</Blue> and <Blue>Salesforce Commerce Cloud</Blue>.</Paragraph>
-          <Paragraph>Unlike many consultancy companies, we <Blue>focus exclusively</Blue> on these technologies to provide our clients with a <Blue>truly unique expertise</Blue>.</Paragraph>
+          <Paragraph>Our engineers have accumulated <Blue>dozens of years of experience</Blue> on <Link href="/reaction-commerce" passHref><StyledLink withUnderline><Blue>Reaction Commerce</Blue></StyledLink></Link>.</Paragraph>
+          <Paragraph>Unlike most consultancy companies, we <Blue>focus exclusively</Blue> on Reaction Commerce and its stack (Node.js, MongoDB, GraphQL, React, Next.js) to provide our clients with a <Blue>truly unique expertise</Blue>.</Paragraph>
 
           <ButtonWrapper>
             <Button backgroundColor={blue} color={white} href="/contact">Talk to an expert</Button>
@@ -137,7 +137,7 @@ class Consulting extends Component {
 
           <Paragraph>The biggest development issues arise either mid-project, or at a critical pre-delivery stage. Too often, <Blue>these roadblocks cause sensible delays</Blue> and force teams to <Blue>postpone deliveries</Blue>.</Paragraph>
 
-          <Paragraph>Whether you're using <Link href="/reaction-commerce" passHref><StyledLink withUnderline>Reaction Commerce</StyledLink></Link>, BigCommerce or Salesforce Commerce Cloud, here’s how <Blue>out:grow ensures that your developers never get stuck</Blue>:</Paragraph>
+          <Paragraph>If you're using <Link href="/reaction-commerce" passHref><StyledLink withUnderline>Reaction Commerce</StyledLink></Link> for the first time, here’s how <Blue>out:grow ensures that your developers never get stuck</Blue>:</Paragraph>
 
           <BulletPointWrapper>
             <BulletPoint title="Private problem-solving calls" body="Get video and screen-sharing calls with software engineers who know your stack inside out. Dealing with obscure bugs? Got a question about best practices? Stop Googling around and get an expert answer right away." />

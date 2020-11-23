@@ -45,7 +45,7 @@ const Training = () => (
       <Title color={red}>In-person group training.</Title>
 
       <Paragraph>Sometimes, nothing is better than a real person to show you the ropes. Our <Red>in-house group training</Red> program leverage your team’s potential with full-days or half-days of intensive training.</Paragraph>
-      <Paragraph><Red>Wherever you are in the world</Red>, our experienced trainers will come to you and <Red>will teach your technical team</Red> anything related to Reaction Commerce, Salesforce Commerce Cloud or BigCommerce.</Paragraph>
+      <Paragraph><Red>Wherever you are in the world</Red>, our experienced trainers will come to you and <Red>will teach your technical team</Red> anything related to Reaction Commerce.</Paragraph>
 
       <ButtonWrapper>
         <Button backgroundColor={red} color={white} href="/contact">Book a session</Button>
