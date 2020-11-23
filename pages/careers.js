@@ -40,7 +40,7 @@ const Emergency = () => (
     <Header
       backgroundImage="/static/emergency.jpg"
       body={[
-        "It's time to upgrade your career. Join our fully remote team from anywhere in the world and experience what it's like to lead the way in e-commerce consulting.",
+        "It's time to upgrade your career. Join our fully remote team from anywhere in the world and experience what it's like to lead the way in e-commerce tech consulting.",
         "Search for open positions below and show use what you got. Please no resumes or cover letters. We've been in the 21st century for long enough."
       ]}
       buttonTextColor={blue}
@@ -54,12 +54,8 @@ const Emergency = () => (
       <Title color={blue}>We're hiring.</Title>
 
       <JobList>
-        <Job>Business Developer - South-East Asia & Middle East</Job>
-        <Job>Business Developer - Americas</Job>
-        <Job>Salesforce Commerce Cloud (Demandware) Developer - Worldwide</Job>
-        <Job>Reaction Commerce Developer - Worldwide</Job>
-        <Job>BigCommerce Developer - Worldwide</Job>
-        <Job>Key Account Manager - Worldwide</Job>
+        <Job>Junior Reaction Commerce Developer - Worldwide</Job>
+        <Job>Senior Reaction Commerce Developer - Worldwide</Job>
       </JobList>
 
       <ButtonWrapper>
