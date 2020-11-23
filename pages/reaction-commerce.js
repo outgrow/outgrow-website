@@ -44,7 +44,7 @@ const ReactionCommerce = () => (
     <Nav />
 
     <Header
-      backgroundImage="/static/contact.jpg"
+      backgroundImage="/contact.jpg"
       body={[
         "Whether you're evaluating Reaction Commerce or need technical help with an existing project, you're at the right place.",
         "Over the past years, our engineers have helped countless clients build amazing projects on Reaction. Trust the #1 experts on the market."
@@ -56,10 +56,10 @@ const ReactionCommerce = () => (
     />
 
     <Wire color={blue} />
-  
+
     <PageWrapper id="section-content">
       <Title color={blue}>Is Reaction Commerce right for you?</Title>
-    
+
       <Paragraph>Are you evaluating your options for an upcoming e-commerce project? Whether you are replatforming or starting from scratch, it never is an easy decision to make. With all of the different solutions available on the market, and the very specific business requirements expressed by your team — it's easy to get lost.</Paragraph>
 
       <Paragraph>Our experts have walked countless retailers and agencies through their technological choices, and we would be glad to make you benefit from this experience. Book a free 30-minute consultation with them and we'll help you assess which platform would be the best fit given your project's unique characteristics.</Paragraph>
@@ -87,17 +87,17 @@ const ReactionCommerce = () => (
       <Title color={blue}>Reaction emergency hotline.</Title>
 
       <Paragraph>Failed production deployment? Reaction Commerce site down? Get immediate help by dialing our 24/7 emergency support hotline. Because we know that every minutes counts in such situations, our expert engineers will assess your needs and walk your team through until complete resolution of the incident.</Paragraph>
-      
+
       <ButtonWrapper>
         <Button backgroundColor={blue} color={white} href="tel:+12816884769">
-          <ButtonIcon src="/static/phone.png" alt="Call" />
+          <ButtonIcon src="/phone.png" alt="Call" />
           <ButtonText>
             +1 (281) OUT-GROW
             <ButtonCaption>24/7 Emergency Support</ButtonCaption>
           </ButtonText>
         </Button>
       </ButtonWrapper>
- 
+
     </PageWrapper>
 
     <Footer />

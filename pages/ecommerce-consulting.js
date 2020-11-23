@@ -90,7 +90,7 @@ class Consulting extends Component {
         <Nav />
 
         <Header
-          backgroundImage="/static/consulting.jpg"
+          backgroundImage="/consulting.jpg"
           body={[
             "Throughought the lifecycle of a project, all technical teams face issues and challenges that they are not prepared for, causing them to get stuck and lose precious time.",
             "Our industry-renowned consulting service gives your team access to our engineers’ invaluable experience, and ensures that your project is kept on track."
@@ -118,12 +118,12 @@ class Consulting extends Component {
             <div>
               <Link href="/reaction-commerce" passHref>
                 <StyledLink>
-                  <SliderItem src="/static/reaction-logo.png" loading="lazy" />
+                  <SliderItem src="/reaction-logo.png" loading="lazy" />
                 </StyledLink>
               </Link>
             </div>
-            <SliderItem src="/static/salesforce-cc-logo.png" loading="lazy"/>
-            <SliderItem src="/static/bigcommerce-logo.png" loading="lazy" />
+            <SliderItem src="/salesforce-cc-logo.png" loading="lazy"/>
+            <SliderItem src="/bigcommerce-logo.png" loading="lazy" />
           </StyledSlider>
 
           <Paragraph>Our engineers have accumulated <Blue>dozens of years of experience</Blue> on <Link href="/reaction-commerce" passHref><StyledLink withUnderline><Blue>Reaction Commerce</Blue></StyledLink></Link>.</Paragraph>

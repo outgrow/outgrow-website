@@ -45,7 +45,7 @@ const Emergency = () => (
     <Nav />
 
     <Header
-      backgroundImage="/static/emergency.jpg"
+      backgroundImage="/emergency.jpg"
       body={[
         "Site down? Failed production deployment? Can’t keep up with the pace on Black Friday? Whatever your emergency is, we at out:grow have your back.",
         "Subscribe to a support plan and our teams will be available around the clock for your needs. Not an out:grow client? Dial our 24/7 emergency hotline and our teams will solve your issue."
@@ -65,7 +65,7 @@ const Emergency = () => (
 
       <ButtonWrapper>
         <Button backgroundColor={green} color={white} href="tel:+12816884769">
-          <ButtonIcon src="/static/phone.png" alt="Call" />
+          <ButtonIcon src="/phone.png" alt="Call" />
           <ButtonText>
             +1 (281) OUT-GROW
             <ButtonCaption>24/7 Emergency Hotline</ButtonCaption>

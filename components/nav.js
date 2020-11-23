@@ -265,7 +265,7 @@ class Nav extends Component {
 
           <Link href="/">
             <ListItemLink onClick={this.handleCloseMenu}>
-              <Logo alt="Outgrow logo" src="/static/logo-white.svg" />
+              <Logo alt="Outgrow logo" src="/logo-white.svg" />
             </ListItemLink>
           </Link>
         </TopBar>
@@ -273,7 +273,7 @@ class Nav extends Component {
           <List>
             {links.map(({ key, href, label }, index) => (
               <ListItem key={key} iterationCount={index}>
-                <Link href={href} prefetch={true}>
+                <Link href={href}>
                   <ListItemLink onClick={this.handleCloseMenu}>{label}</ListItemLink>
                 </Link>
               </ListItem>
@@ -287,7 +287,7 @@ class Nav extends Component {
             <ListItem style={{ marginTop: "2.5rem" }} iterationCount={6}>E-Commerce Site Down?</ListItem>
             <ListItem iterationCount={7}>
               <ButtonLink href="tel:+12816884769">
-                <ButtonIcon src="/static/phone.png" alt="Call" />
+                <ButtonIcon src="/phone.png" alt="Call" />
                 <ButtonText>
                   +1 (281) OUT-GROW<br/>
                   <ButtonCaption>24/7 Emergency Hotline</ButtonCaption>

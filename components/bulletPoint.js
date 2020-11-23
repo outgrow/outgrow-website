@@ -27,7 +27,7 @@ const Body = styled.p`
 
 const BulletPoint = ({ body, title }) => (
   <Wrapper>
-    <CheckMark src="/static/check.svg" />
+    <CheckMark src="/check.svg" />
     <div>
       <Title>{title}</Title>
       <Body>{body}</Body>

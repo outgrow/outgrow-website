@@ -11,7 +11,7 @@ const Home = () => (
     <Nav />
 
     <HomeSection
-      backgroundImage="/static/consulting"
+      backgroundImage="/consulting"
       buttonColor={blue}
       buttonHref="/ecommerce-consulting"
       buttonText="Consulting"
@@ -20,7 +20,7 @@ const Home = () => (
     />
 
     <HomeSection
-      backgroundImage="/static/training"
+      backgroundImage="/training"
       buttonColor={red}
       buttonHref="/developer-training"
       buttonText="Training"
@@ -29,7 +29,7 @@ const Home = () => (
     />
 
     <HomeSection
-      backgroundImage="/static/emergency"
+      backgroundImage="/emergency"
       buttonColor={green}
       buttonHref="/support-plans"
       buttonText="Support plans"

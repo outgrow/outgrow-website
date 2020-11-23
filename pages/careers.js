@@ -38,7 +38,7 @@ const Emergency = () => (
     <Nav />
 
     <Header
-      backgroundImage="/static/emergency.jpg"
+      backgroundImage="/emergency.jpg"
       body={[
         "It's time to upgrade your career. Join our fully remote team from anywhere in the world and experience what it's like to lead the way in e-commerce tech consulting.",
         "Search for open positions below and show use what you got. Please no resumes or cover letters. We've been in the 21st century for long enough."

@@ -400,7 +400,7 @@ class SupportPlans extends Component {
         <Nav />
 
         <Header
-          backgroundImage="/static/emergency.jpg"
+          backgroundImage="/emergency.jpg"
           body={[
             "Your new Reaction Commerce project is looking sharper than ever. But is your team ready to react in case an emergency happens? At out:grow, we've got the support plan you need for any situation.",
             "With a support plan, our team is at your service 24/7 for your needs. Whether you prefer chat, screen-sharing calls or need a guaranteed response time — we have a solution to answer your needs."

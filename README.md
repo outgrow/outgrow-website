@@ -55,7 +55,7 @@ Out of the box, we get:
 - Automatic transpilation and bundling (with webpack and babel)
 - Hot code reloading
 - Server rendering and indexing of `./pages`
-- Static file serving. `./static/` is mapped to `/static/`
+- Static file serving. `./` is mapped to `/`
 
 Read more about [Next's Routing](https://github.com/zeit/next.js#routing)
 

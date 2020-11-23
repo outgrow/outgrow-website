@@ -26,7 +26,7 @@ export default () => (
     <Nav />
 
     <Header
-      backgroundImage="/static/contact.jpg"
+      backgroundImage="/contact.jpg"
       body={[
         "Do you have technical questions that need answers? Fill in the form below and book a free 30-minute consultation with our experts on your time, or set up a face-to-face meeting at our Dubai or Los Angeles offices."
       ]}

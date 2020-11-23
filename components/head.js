@@ -28,17 +28,17 @@ const Head = props => (
     <meta property="og:image" content={props.ogImage || defaultOGImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png" />
-    <link rel="manifest" href="/static/site.webmanifest" />
-    <link rel="mask-icon" href="/static/safari-pinned-tab.svg" color="#1d1d1d" />
-    <link rel="shortcut icon" href="/static/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1d1d1d" />
+    <link rel="shortcut icon" href="/favicon.ico" />
     <meta name="apple-mobile-web-app-title" content="out:grow" />
     <meta name="application-name" content="out:grow" />
     <meta name="msapplication-TileColor" content="#1d1d1d" />
-    <meta name="msapplication-TileImage" content="/static/mstile-144x144.png" />
-    <meta name="msapplication-config" content="/static/browserconfig.xml" />
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
     <meta name="theme-color" content="#1d1d1d" />
 
     <style>{`

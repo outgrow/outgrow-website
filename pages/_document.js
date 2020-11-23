@@ -1,4 +1,4 @@
-import Document, { Head, Main, NextScript } from "next/document"
+import Document, { Head, Html, Main, NextScript } from "next/document"
 import { ServerStyleSheet } from "styled-components"
 import React from "react";
 
@@ -17,7 +17,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html lang="en">
+      <Html lang="en">
         <Head>
           {this.props.styleTags}
 
@@ -25,13 +25,13 @@ export default class MyDocument extends Document {
           <link rel="preconnect" href="https://www.googleadservices.com" crossOrigin="true" />
           <script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=AW-767784789" defer />
           <script type="text/javascript" src="https://snap.licdn.com/li.lms-analytics/insight.min.js" defer />
-          <script type="text/javascript" src="/static/modernizr.js" />
+          <script type="text/javascript" src="/modernizr.js" />
         </Head>
         <body style={{ overflowX: "hidden" }}>
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }

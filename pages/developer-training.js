@@ -29,7 +29,7 @@ const Training = () => (
     <Nav />
 
     <Header
-      backgroundImage="/static/training.jpg"
+      backgroundImage="/training.jpg"
       body={[
         "A well-trained team is the very root of well-built projects. Make your project managers and developers learn from the best with out:grow’s training programs.",
         "While consulting is essential during critical times, training is the way to go for preventing issues from arising."

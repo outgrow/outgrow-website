@@ -51,22 +51,22 @@ const AppFooter = ({ color }) => (
     <nav>
       <List>
         <ListItem>
-          <Link href="/ecommerce-consulting" prefetch={true}>
+          <Link href="/ecommerce-consulting">
             <ListItemLink>E-Commerce Consulting</ListItemLink>
           </Link>
         </ListItem>
         <ListItem>
-          <Link href="/developer-training" prefetch={true}>
+          <Link href="/developer-training">
             <ListItemLink>Developer Training</ListItemLink>
           </Link>
         </ListItem>
         <ListItem>
-          <Link href="/reaction-commerce-support-plans" prefetch={true}>
+          <Link href="/reaction-commerce-support-plans">
             <ListItemLink>Support Plans</ListItemLink>
           </Link>
         </ListItem>
         <ListItem>
-          <Link href="/contact" prefetch={true}>
+          <Link href="/contact">
             <ListItemLink>Contact Us</ListItemLink>
           </Link>
         </ListItem>

@@ -28,7 +28,7 @@ export default () => (
     <Nav />
 
     <Header
-      backgroundImage="/static/contact.jpg"
+      backgroundImage="/contact.jpg"
       body={[
         "Are you currently evaluating Reaction Commerce as a solution for your next project? Looking for a demo of the platform to make your own opinion?",
         "You're at the right place. Our expert Reaction Commerce consultants will show you around."
@@ -40,10 +40,10 @@ export default () => (
     />
 
     <Wire color={blue} />
-  
+
     <PageWrapper id="section-content">
       <Title color={blue}>Reaction Commerce demo website.</Title>
-    
+
       <Paragraph>Are you looking for the official Reaction demo website? Taking into account Reaction Commerce's flexible and project-focused architecture, building a one-size-fits-all demo website would not showcase the solution's proven capabilities in terms of customization. This is why the engineering team at Reaction Commerce has chosen not to build such an example website.</Paragraph>
 
       <Paragraph>However, this doesn't mean that you can't easily get an idea of how Reaction works and whether it would be a good fit for your next e-commerce project. Our team of engineers have walked numerous clients through Reaction Commerce since the beta era in 2016.</Paragraph>

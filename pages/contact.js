@@ -168,7 +168,7 @@ class Contact extends Component {
         const stitchClient = Stitch.initializeDefaultAppClient("outgrow-hunql")
         stitchClient.auth.loginWithCredential(new AnonymousCredential())
       }
-    }); 
+    });
   }
 
   handleCallbackPreferredToggle = (callbackPreferred) => this.setState({ callbackPreferred })
@@ -216,7 +216,7 @@ class Contact extends Component {
         <Nav />
 
         <Header
-          backgroundImage="/static/contact.jpg"
+          backgroundImage="/contact.jpg"
           body={[
             "Submit the form below and an out:grow representative will get back to you at your preferred time. Alternatively, set up a face-to-face meeting at our offices.",
             "For emergencies, do not wait and call our 24/7 hotline at +1 (281) OUT-GROW."
@@ -237,7 +237,7 @@ class Contact extends Component {
           <Locations>
             <Location style={{ marginLeft: ".5rem" }}>
               <LocationTitle>Dubai</LocationTitle>
-              <LocationIcon alt="Dubai, United Arab Emirates" src="/static/uae.png" />
+              <LocationIcon alt="Dubai, United Arab Emirates" src="/uae.png" />
               <LocationAddress>
                 3rd Floor, The Offices 3<br/>
                 One Central, World Trade Center<br/>
