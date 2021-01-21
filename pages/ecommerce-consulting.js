@@ -129,7 +129,7 @@ class Consulting extends Component {
             <SliderItem src="/nextjs.svg" loading="lazy" />
           </StyledSlider>
 
-          <Paragraph>Our engineers have accumulated <Blue>dozens of years of experience</Blue> on <Link href="/reaction-commerce" passHref><StyledLink withUnderline><Blue>Reaction Commerce</Blue></StyledLink></Link>.</Paragraph>
+          <Paragraph>Together, our engineers have accumulated <Blue>dozens of years of experience</Blue> on <Link href="/reaction-commerce" passHref><StyledLink withUnderline><Blue>Reaction Commerce</Blue></StyledLink></Link>.</Paragraph>
           <Paragraph>Unlike most consultancy companies, we <Blue>focus exclusively</Blue> on Reaction Commerce and its stack (Node.js, MongoDB, GraphQL, React, Next.js) to provide our clients with a <Blue>truly unique expertise</Blue>.</Paragraph>
 
           <ButtonWrapper>
