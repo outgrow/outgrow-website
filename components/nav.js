@@ -265,7 +265,7 @@ class Nav extends Component {
 
           <Link href="/">
             <ListItemLink onClick={this.handleCloseMenu}>
-              <Logo alt="Outgrow logo" src="/logo-white.svg" />
+              <Logo alt="Outgrow logo" src="/logo-white.svg" height="32px" width="145px" />
             </ListItemLink>
           </Link>
         </TopBar>
