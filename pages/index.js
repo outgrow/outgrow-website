@@ -3,7 +3,7 @@ import Head from "../components/head"
 import Nav from "../components/nav"
 import HomeSection from "../components/homeSection"
 import Footer from "../components/footer"
-import { blue, lightBlue, red, green } from "../styles/colors"
+import { blue, lightBlue, red, green, darkGreen } from "../styles/colors"
 
 const Home = () => (
   <div>
@@ -30,7 +30,7 @@ const Home = () => (
 
     <HomeSection
       backgroundImage="/emergency"
-      buttonColor={green}
+      buttonColor={darkGreen}
       buttonHref="/support-plans"
       buttonText="Support plans"
       overlayColor={green}
