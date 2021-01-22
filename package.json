@@ -7,7 +7,7 @@
     "export": "next export && node ./sitemapGenerator.js"
   },
   "dependencies": {
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "mongodb-stitch-browser-sdk": "^4.8.0",
     "next": "^10.0.5",
     "next-ga": "^2.3.4",
