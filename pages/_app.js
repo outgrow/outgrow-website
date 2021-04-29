@@ -7,7 +7,9 @@ import { initializeGoogleAds } from "../utils/googleAds"
 if (typeof window !== "undefined") {
   window._linkedin_data_partner_ids = ["672676"]
 
-  initializeGoogleAds()
+  window.setTimeout(function () {
+    initializeGoogleAds();
+  }, 1500);
 }
 
 class CustomApp extends App {
