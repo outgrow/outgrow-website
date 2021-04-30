@@ -396,13 +396,13 @@ class SupportPlans extends Component {
   render() {
     return (
       <div style={{ position: "relative" }}>
-        <Head title="Reaction Commerce Support Plans | Official Partner | Chat & Live Developer Help | out:grow" />
+        <Head title="Mailchimp Open Commerce (formerly Reaction Commerce) Support Plans | Official Partner | Chat & Live Developer Help | out:grow" />
         <Nav />
 
         <Header
           backgroundImage="/emergency.jpg"
           body={[
-            "Your new Reaction Commerce project is looking sharper than ever. But is your team ready to react in case an emergency happens? At out:grow, we've got the support plan you need for any situation.",
+            "Your new Mailchimp Open Commerce project is looking sharper than ever. But is your team ready to react in case an emergency happens? At out:grow, we've got the support plan you need for any situation.",
             "With a support plan, our team is at your service 24/7 for your needs. Whether you prefer chat, screen-sharing calls or need a guaranteed response time — we have a solution to answer your needs."
           ]}
           buttonTextColor={green}
@@ -413,11 +413,11 @@ class SupportPlans extends Component {
         <Wire color={green} />
 
         <PageWrapper id="section-content">
-          <Title color={green}>Our Reaction Commerce support plans.</Title>
+          <Title color={green}>Our Open Commerce support plans.</Title>
 
-          <Paragraph>Because every project is different, there is no one-size-fits-all in the world of support. Our Reaction Commerce experts are available to your team — whether you need a full-featured dedicated plan with a guaranteed response time, or a lightweight chat-only membership for non-urgent use.</Paragraph>
+          <Paragraph>Because every project is different, there is no one-size-fits-all in the world of support. Our Mailchimp Open Commerce (formerly Reaction Commerce) experts are available to your team — whether you need a full-featured dedicated plan with a guaranteed response time, or a lightweight chat-only membership for non-urgent use.</Paragraph>
 
-          <Paragraph>With our support plan configurator, we're leading the way by giving our customers full power. Estimate your base pricing, choose your payment terms and sign up right from our website. Getting peace of mind for your Reaction Commerce infrastructure has never been that easy.</Paragraph>
+          <Paragraph>With our support plan configurator, we're leading the way by giving our customers full power. Estimate your base pricing, choose your payment terms and sign up right from our website. Getting peace of mind for your Mailchimp Open Commerce infrastructure has never been that easy.</Paragraph>
 
           {this.state.step === 0 &&
             <Form>

@@ -24,19 +24,19 @@ const PageWrapper = styled.div`
 
 export default () => (
   <div style={{ position: "relative" }}>
-    <Head title="Get Help From Expert Reaction Commerce Developers Now | out:grow" />
+    <Head title="Get Help From Expert Mailchimp Open Commerce (formerly Reaction Commerce) Developers Now | out:grow" />
     <Nav />
 
     <Header
       backgroundImage="/contact.jpg"
       body={[
-        "Are your developers stuck on a tedious bug with Reaction Commerce? Is your project delayed because of technical roadblocks?",
-        "We've been through this enough times to show you the way. Our expert Reaction Commerce consultants will help your developers ship on time."
+        "Are your developers stuck on a tedious bug with Mailchimp Open Commerce? Is your project delayed because of technical roadblocks?",
+        "We've been through this enough times to show you the way. Our expert Mailchimp Open Commerce consultants will help your developers ship on time."
       ]}
       buttonText="Get help with Reaction"
       buttonTextColor={blue}
       overlayColor={lightBlue}
-      title="Get Reaction Commerce help now."
+      title="Get Open Commerce help now."
     />
 
     <Wire color={blue} />
@@ -44,9 +44,9 @@ export default () => (
     <PageWrapper id="section-content">
       <Title color={blue}>We're the Reaction experts.</Title>
 
-      <Paragraph>Whether your team needs immediate help to fix a bug which is delaying your project, or expert Reaction Commerce consultants to show them the way during the whole development cycle, you can't go wrong with out:grow.</Paragraph>
+      <Paragraph>Whether your team needs immediate help to fix a bug which is delaying your project, or expert Mailchimp Open Commerce consultants to show them the way during the whole development cycle, you can't go wrong with out:grow.</Paragraph>
 
-      <Paragraph>We've helped our clients ship countless Reaction Commerce projects ever since the first stable version in 2016. Our engineers have helped implement very different requirements from a wide variety of industries, giving them an unmatchable experience on the market.</Paragraph>
+      <Paragraph>We've helped our clients ship countless Mailchimp Open Commerce (formerly Reaction Commerce) projects ever since the first stable version in 2016. Our engineers have helped implement very different requirements from a wide variety of industries, giving them an unmatchable experience on the market.</Paragraph>
 
       <Title color={blue}>Book a free consulting session.</Title>
 

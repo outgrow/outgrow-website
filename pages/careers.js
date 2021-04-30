@@ -54,8 +54,8 @@ const Emergency = () => (
       <Title color={blue}>We're hiring.</Title>
 
       <JobList>
-        <Job>Junior Reaction Commerce Developer - Worldwide</Job>
-        <Job>Senior Reaction Commerce Developer - Worldwide</Job>
+        <Job>Junior Mailchimp Open Commerce Developer - Worldwide</Job>
+        <Job>Senior Mailchimp Open Commerce Developer - Worldwide</Job>
       </JobList>
 
       <ButtonWrapper>

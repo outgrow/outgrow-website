@@ -396,13 +396,13 @@ class SupportPlans extends Component {
   render() {
     return (
       <div style={{ position: "relative" }}>
-        <Head title="Reaction Commerce Chat Support | Official Partner | Live Developer Help | out:grow" />
+        <Head title="Mailchimp Open Commerce (formerly Reaction Commerce) Chat Support | Official Partner | Live Developer Help | out:grow" />
         <Nav />
 
         <Header
           backgroundImage="/emergency.jpg"
           body={[
-            "Do your Reaction Commerce developers need help with their code? Do you want the peace of mind of always having a sidekick with you in case of emergencies?",
+            "Do your Mailchimp Open Commerce developers need help with their code? Do you want the peace of mind of always having a sidekick with you in case of emergencies?",
             "With the help of our experts, your development teams will never be alone to face technical roadblocks — making feature development more efficient and fixing emergencies faster."
           ]}
           buttonText="Sign up now"

@@ -40,13 +40,13 @@ const ButtonCaption = styled.span`
 
 const ReactionCommerce = () => (
   <div style={{ position: "relative" }}>
-    <Head title="Reaction Commerce Consulting | Top Experts Available | out:grow" />
+    <Head title="Mailchimp Open Commerce (formerly Reaction Commerce) Consulting | Top Experts Available | out:grow" />
     <Nav />
 
     <Header
       backgroundImage="/contact.jpg"
       body={[
-        "Whether you're evaluating Reaction Commerce or need technical help with an existing project, you're at the right place.",
+        "Whether you're evaluating Mailchimp Open Commerce (formerly Reaction Commerce) or need technical help with an existing project, you're at the right place.",
         "Over the past years, our engineers have helped countless clients build amazing projects on Reaction. Trust the #1 experts on the market."
       ]}
       buttonText="Discover our services"
@@ -58,7 +58,7 @@ const ReactionCommerce = () => (
     <Wire color={blue} />
 
     <PageWrapper id="section-content">
-      <Title color={blue}>Is Reaction Commerce right for you?</Title>
+      <Title color={blue}>Is Open Commerce right for you?</Title>
 
       <Paragraph>Are you evaluating your options for an upcoming e-commerce project? Whether you are replatforming or starting from scratch, it never is an easy decision to make. With all of the different solutions available on the market, and the very specific business requirements expressed by your team — it's easy to get lost.</Paragraph>
 
@@ -68,7 +68,7 @@ const ReactionCommerce = () => (
         <Button backgroundColor={blue} color={white} href="/is-reaction-commerce-right">Evaluate your options</Button>
       </ButtonWrapper>
 
-      <Title color={blue}>Reaction Commerce demo.</Title>
+      <Title color={blue}>Mailchimp Open Commerce demo.</Title>
 
       <Paragraph>Are you unsure of what Reaction can bring to your specific use cases? We'll show you around. Let us walk you through its main features and capabilities, focusing on your project's needs and answering all of your questions. Click the button below to learn more and book a free demo session.</Paragraph>
 
@@ -76,17 +76,17 @@ const ReactionCommerce = () => (
         <Button backgroundColor={blue} color={white} href="/reaction-commerce-demo">Get a demo</Button>
       </ButtonWrapper>
 
-      <Title color={blue}>Expert help on Reaction Commerce.</Title>
+      <Title color={blue}>Expert help on Mailchimp Open Commerce.</Title>
 
-      <Paragraph>Has your Reaction project come to a stall? Are your development teams struggling on technical issues? We've seen that happen, and we've helped numerous clients put their projects back on track in tough conditions. Let our team of experts assess the current state of your project in a free 30-minute consultation.</Paragraph>
+      <Paragraph>Has your Open Commerce (formerly Reaction Commerce) project come to a stall? Are your development teams struggling on technical issues? We've seen that happen, and we've helped numerous clients put their projects back on track in tough conditions. Let our team of experts assess the current state of your project in a free 30-minute consultation.</Paragraph>
 
       <ButtonWrapper>
         <Button backgroundColor={blue} color={white} href="/reaction-commerce-help">Let us help</Button>
       </ButtonWrapper>
 
-      <Title color={blue}>Reaction emergency hotline.</Title>
+      <Title color={blue}>Open Commerce emergency hotline.</Title>
 
-      <Paragraph>Failed production deployment? Reaction Commerce site down? Get immediate help by dialing our 24/7 emergency support hotline. Because we know that every minutes counts in such situations, our expert engineers will assess your needs and walk your team through until complete resolution of the incident.</Paragraph>
+      <Paragraph>Failed production deployment? Mailchimp Open Commerce site down? Get immediate help by dialing our 24/7 emergency support hotline. Because we know that every minutes counts in such situations, our expert engineers will assess your needs and walk your team through until complete resolution of the incident.</Paragraph>
 
       <ButtonWrapper>
         <Button backgroundColor={blue} color={white} href="tel:+12816884769">
