@@ -1,3 +1,5 @@
+"use client"
+
 import styled from "styled-components"
 import media from "../styles/mediaQueries"
 
@@ -7,7 +9,7 @@ export default styled.div`
 
   width: 27rem;
   
-  border-right: rgb(${props => props.color}) 2px solid;
+  border-right: rgb(${props => props.$color}) 2px solid;
 
   position: absolute;
   top: 100vh;

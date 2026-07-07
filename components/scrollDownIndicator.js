@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+
 import styled, { keyframes } from "styled-components";
 
 const arrow1 = keyframes`

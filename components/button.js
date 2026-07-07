@@ -1,22 +1,23 @@
-import React from "react"
+"use client"
+
 import Link from "next/link"
 import styled from "styled-components"
 import media from "../styles/mediaQueries"
 import { grey, white } from "../styles/colors"
 
-const StyledLink = styled.a`
+const StyledLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background: rgb(${props => props.backgroundColor || white});
+  background: rgb(${props => props.$backgroundColor || white});
 
   padding: .5rem 1rem;
 
   border-radius: 35px;
 
   text-decoration: none;
-  color: rgb(${props => props.color});
+  color: rgb(${props => props.$color});
   font-weight: 800;
   font-size: 1.2rem;
   ${media.smallTablet`font-size: 1.3rem;`}
@@ -27,7 +28,7 @@ const StyledButton = styled.button`
   align-items: center;
   justify-content: center;
 
-  background: rgb(${props => props.backgroundColor || white});
+  background: rgb(${props => props.$backgroundColor || white});
   ${props => props.disabled && `background: rgb(${grey});`}
 
   padding: .5rem 2rem;
@@ -36,7 +37,7 @@ const StyledButton = styled.button`
   border-radius: 35px;
 
   text-decoration: none;
-  color: rgb(${props => props.color});
+  color: rgb(${props => props.$color});
   font-weight: 800;
   font-size: 1.2rem;
   ${media.smallTablet`font-size: 1.3rem;`}
@@ -45,16 +46,14 @@ const StyledButton = styled.button`
 const Button = ({ backgroundColor, children, color, href, type, disabled, onClick }) => {
   if (typeof href !== "undefined") {
     return (
-      <Link href={href} passHref>
-        <StyledLink backgroundColor={backgroundColor} color={color}>{children}</StyledLink>
-      </Link>
+      <StyledLink href={href} $backgroundColor={backgroundColor} $color={color}>{children}</StyledLink>
     )
   }
 
   return (
     <StyledButton
-      backgroundColor={backgroundColor}
-      color={color}
+      $backgroundColor={backgroundColor}
+      $color={color}
       type={type}
       disabled={disabled}
       onClick={onClick}
@@ -65,4 +64,3 @@ const Button = ({ backgroundColor, children, color, href, type, disabled, onClic
 }
 
 export default Button
-

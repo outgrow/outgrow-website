@@ -1,16 +1,18 @@
-import React, { Component }  from "react"
+"use client"
+
+import { useState } from "react"
 import Link from "next/link"
 import styled, { keyframes } from "styled-components"
 import media from "../styles/mediaQueries"
-import { black, white } from "../styles/colors"
+import { black, blue, white } from "../styles/colors"
 
 const links = [
   { href: "/", label: "Home", hideOnDesktop: true },
-  { href: "/ecommerce-consulting", label: "Technical Consulting" },
-  { href: "/developer-training", label: "Developer Training" },
-  { href: "/reaction-commerce-support-plans", label: "Support Plans" },
-  { href: "/contact", label: "Contact Us" },
-  { href: "/careers", label: "Careers" }
+  { href: "/ai-audits", label: "AI Audits" },
+  { href: "/ai-training", label: "AI Training" },
+  { href: "/ai-support", label: "AI Support" },
+  { href: "/founder", label: "Founder" },
+  { href: "/contact", label: "Contact Us" }
 ].map(link => {
   link.key = `nav-link-${link.href}-${link.label}`
   return link
@@ -29,7 +31,7 @@ const listItemAnimation = keyframes`
 `
 
 const TopBar = styled.div`
-  position: ${props => props.isMenuOpen ? "fixed" : "absolute"};
+  position: ${props => props.$isMenuOpen ? "fixed" : "absolute"};
   top: 0;
   width: 100%;
   z-index: 999;
@@ -53,15 +55,15 @@ const MenuButton = styled.button`
   border: 0;
   margin: 0;
   overflow: visible;
-  
+
   &:hover {
     opacity: 0.7;
   }
-  
+
   &.is-active:hover {
     opacity: 0.7;
   }
-  
+
   &.is-active .hamburger-inner,
   &.is-active .hamburger-inner::before,
   &.is-active .hamburger-inner::after {
@@ -160,14 +162,18 @@ const ListItem = styled.li`
 
   animation-name: ${listItemAnimation};
   animation-duration: 300ms;
-  animation-delay: ${props => props.iterationCount * 0.05}s;
+  animation-delay: ${props => props.$iterationCount * 0.05}s;
   animation-fill-mode: forwards;
 `
 
-const ListItemLink = styled.a`
+const ListItemLink = styled(Link)`
   font-size: 1.2rem;
   color: rgb(${white});
   text-decoration: none;
+  cursor: pointer;
+`
+
+const LogoLink = styled(Link)`
   cursor: pointer;
 `
 
@@ -192,21 +198,22 @@ const DividerText = styled.h3`
   padding: 0 1rem;
 `
 
-const ButtonLink = styled.a`
+const ButtonLink = styled(Link)`
   display: flex;
   align-items: center;
+  justify-content: center;
 
   width: 16rem;
-  
-  background: #016FB9;
-  
-  text-decoration: none; 
-  
+
+  background: rgb(${blue});
+
+  text-decoration: none;
+
   padding: 1rem;
   margin-top: 1rem;
 
   border-radius: 68px;
-  
+
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -217,88 +224,52 @@ const ButtonText = styled.p`
 
   text-align: center;
   font-weight: 800;
-
-  padding-right: .5rem;
 `
 
-const ButtonCaption = styled.span`
-  font-size: .8rem;
-  font-weight: 400;
-`
+export default function Nav() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-const ButtonIcon = styled.img`
-  width: 1.8rem;
-  margin-right: 1rem;
-`
+  const handleToggleMenu = () => setIsMenuOpen(open => !open)
+  const handleCloseMenu = () => setIsMenuOpen(false)
 
-class Nav extends Component {
-  constructor() {
-    super();
+  return (
+    <div>
+      <TopBar $isMenuOpen={isMenuOpen}>
+        <MenuButton
+          className={`hamburger hamburger--spring ${isMenuOpen ? "is-active" : ""}`}
+          aria-label="menu"
+          type="button"
+          onClick={handleToggleMenu}
+        >
+          <MenuButtonBox className="hamburger-box">
+            <MenuButtonInner className="hamburger-inner" />
+          </MenuButtonBox>
+        </MenuButton>
 
-    this.state = {
-      isMenuOpen: false
-    }
-  }
-
-  handleToggleMenu = () => this.setState({
-    isMenuOpen: !this.state.isMenuOpen
-  })
-
-  handleCloseMenu = () => this.setState({
-    isMenuOpen: false
-  })
-
-  render() {
-    return (
-      <div>
-        <TopBar isMenuOpen={this.state.isMenuOpen}>
-          <MenuButton
-            className={`hamburger hamburger--spring ${this.state.isMenuOpen ? "is-active" : ""}`}
-            aria-label="menu"
-            type="button"
-            onClick={this.handleToggleMenu}
-          >
-            <MenuButtonBox className="hamburger-box">
-              <MenuButtonInner className="hamburger-inner" />
-            </MenuButtonBox>
-          </MenuButton>
-
-          <Link href="/">
-            <ListItemLink onClick={this.handleCloseMenu}>
-              <Logo alt="Outgrow logo" src="/logo-white.svg" height="32px" width="145px" />
-            </ListItemLink>
-          </Link>
-        </TopBar>
-        {this.state.isMenuOpen && <MobileNavWrapper>
-          <List>
-            {links.map(({ key, href, label }, index) => (
-              <ListItem key={key} iterationCount={index}>
-                <Link href={href}>
-                  <ListItemLink onClick={this.handleCloseMenu}>{label}</ListItemLink>
-                </Link>
-              </ListItem>
-            ))}
-
-            <ListItem iterationCount={5}>
-              <Divider />
-              <DividerText>or</DividerText>
+        <LogoLink href="/" onClick={handleCloseMenu}>
+          <Logo alt="Outgrow logo" src="/logo-white.svg" height="32px" width="145px" />
+        </LogoLink>
+      </TopBar>
+      {isMenuOpen && <MobileNavWrapper>
+        <List>
+          {links.map(({ key, href, label }, index) => (
+            <ListItem key={key} $iterationCount={index}>
+              <ListItemLink href={href} onClick={handleCloseMenu}>{label}</ListItemLink>
             </ListItem>
+          ))}
 
-            <ListItem style={{ marginTop: "2.5rem" }} iterationCount={6}>E-Commerce Site Down?</ListItem>
-            <ListItem iterationCount={7}>
-              <ButtonLink href="tel:+12816884769">
-                <ButtonIcon src="/phone.png" alt="Call" />
-                <ButtonText>
-                  +1 (281) OUT-GROW<br/>
-                  <ButtonCaption>24/7 Emergency Hotline</ButtonCaption>
-                </ButtonText>
-              </ButtonLink>
-            </ListItem>
-          </List>
-        </MobileNavWrapper>}
-      </div>
-    )
-  }
+          <ListItem $iterationCount={6}>
+            <Divider />
+            <DividerText>or</DividerText>
+          </ListItem>
+
+          <ListItem style={{ marginTop: "2.5rem" }} $iterationCount={7}>
+            <ButtonLink href="/contact" onClick={handleCloseMenu}>
+              <ButtonText>Get in touch</ButtonText>
+            </ButtonLink>
+          </ListItem>
+        </List>
+      </MobileNavWrapper>}
+    </div>
+  )
 }
-
-export default Nav

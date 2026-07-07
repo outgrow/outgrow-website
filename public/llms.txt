@@ -1,0 +1,21 @@
+# out:grow
+
+> out:grow helps small and medium web, commerce, and 360 agencies adopt AI into their day-to-day workflows through audits, training, and embedded support. Founded by Loan Laux, who built and exited a headless commerce agency (acquired by Trellis in 2021, itself acquired by Zaelab in 2024) and now builds CommerceCopilot, an AI agent suite for Shopify agencies.
+
+## Services
+
+- [AI Workflow Audits](https://outgrow.io/ai-audits.md): Audits how an agency actually works and delivers a sequenced roadmap for adopting AI in client delivery.
+- [AI Training](https://outgrow.io/ai-training.md): Hands-on AI workshops and coaching for agency PMs, designers, and developers, run on real client projects.
+- [Embedded AI Support](https://outgrow.io/ai-support.md): Direct access to AI engineers for agency teams, including white-label support for agencies serving their own clients.
+
+## About
+
+- [Founder: Loan Laux](https://outgrow.io/founder.md): Agency founder and AI operator. Built and exited out:grow (acquired by Trellis in 2021), then ran engineering through Trellis's 2024 acquisition by Zaelab. Also builds CommerceCopilot, an AI agent suite for Shopify agencies.
+
+## Contact
+
+- [Contact](https://outgrow.io/contact.md): Get in touch with out:grow about an audit, training, or support plan.
+
+## Policies
+
+- [Privacy Policy](https://outgrow.io/privacy.md)

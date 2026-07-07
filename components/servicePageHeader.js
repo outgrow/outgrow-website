@@ -1,9 +1,10 @@
-import React from "react"
+"use client"
+
 import styled from "styled-components"
 import Button from "./button"
-import ScrollDownIndicator from "./scrollDownIndicator";
+import ScrollDownIndicator from "./scrollDownIndicator"
 import media from "../styles/mediaQueries"
-import { white } from "../styles/colors"
+import { black, white } from "../styles/colors"
 
 const Overlay = styled.section`
   height: 100%;
@@ -24,6 +25,7 @@ const SectionWithBackgroundImage = styled.div`
   width: 100vw;
   background-size: cover;
   background-position: 50%;
+  ${props => !props.$backgroundImage && `background-color: rgb(${black});`}
 `
 
 const Title = styled.h1`
@@ -45,9 +47,12 @@ const ButtonWrapper = styled.div`
 `
 
 const ServicePageHeader = ({ backgroundImage, body, buttonText, buttonTextColor, overlayColor, title }) => (
-  <SectionWithBackgroundImage style={{ backgroundImage: `url(${backgroundImage})` }}>
+  <SectionWithBackgroundImage
+    $backgroundImage={backgroundImage}
+    style={backgroundImage ? { backgroundImage: `url(${backgroundImage})` } : undefined}
+  >
     <Overlay style={{ backgroundColor: `rgba(${overlayColor}, .57)` }}>
-      <Title>{title}</Title>
+      <Title dangerouslySetInnerHTML={{ __html: title }} />
       {body.map((bodyParagraph, index) => (
         <Paragraph key={index}>{bodyParagraph}</Paragraph>
       ))}

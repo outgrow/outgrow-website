@@ -1,11 +1,12 @@
-import React from "react"
+"use client"
+
 import styled from "styled-components"
 import Link from "next/link"
 import { blue, white } from "../styles/colors"
 import media from "../styles/mediaQueries"
 
 const Footer = styled.footer`
-  background: rgb(${props => props.color || blue});
+  background: rgb(${props => props.$color || blue});
 
   color: rgb(${white});
 
@@ -25,7 +26,7 @@ const Footer = styled.footer`
 const List = styled.ul`
   list-style: none;
   ${media.smallTablet`
-    ${props => props.right && `text-align: right;`}
+    ${props => props.$right && `text-align: right;`}
   `}
 `
 
@@ -33,7 +34,7 @@ const ListItem = styled.li`
   margin: .6rem 0;
 `
 
-const ListItemLink = styled.a`
+const ListItemLink = styled(Link)`
   cursor: pointer;
   text-decoration: none;
   color: rgb(${white});
@@ -47,48 +48,33 @@ const Copyright = styled.p`
 `
 
 const AppFooter = ({ color }) => (
-  <Footer color={color}>
+  <Footer $color={color}>
     <nav>
       <List>
         <ListItem>
-          <Link href="/ecommerce-consulting">
-            <ListItemLink>E-Commerce Consulting</ListItemLink>
-          </Link>
+          <ListItemLink href="/ai-audits">AI Audits</ListItemLink>
         </ListItem>
         <ListItem>
-          <Link href="/developer-training">
-            <ListItemLink>Developer Training</ListItemLink>
-          </Link>
+          <ListItemLink href="/ai-training">AI Training</ListItemLink>
         </ListItem>
         <ListItem>
-          <Link href="/reaction-commerce-support-plans">
-            <ListItemLink>Support Plans</ListItemLink>
-          </Link>
+          <ListItemLink href="/ai-support">AI Support</ListItemLink>
         </ListItem>
         <ListItem>
-          <Link href="/contact">
-            <ListItemLink>Contact Us</ListItemLink>
-          </Link>
+          <ListItemLink href="/founder">Founder</ListItemLink>
         </ListItem>
         <ListItem>
-          <Link href="/careers">
-            <ListItemLink>Careers</ListItemLink>
-          </Link>
+          <ListItemLink href="/contact">Contact Us</ListItemLink>
         </ListItem>
         <ListItem>
-          <Link href="/privacy">
-            <ListItemLink>Privacy Policy</ListItemLink>
-          </Link>
+          <ListItemLink href="/privacy">Privacy Policy</ListItemLink>
         </ListItem>
       </List>
     </nav>
 
-    <Copyright>Copyright &copy; 2021 Outgrow FZE</Copyright>
+    <Copyright>Copyright &copy; 2026 Outgrow FZE. AI adoption consulting for web &amp; commerce agencies.</Copyright>
 
-    <List right>
-      <ListItem>
-        <ListItemLink href="tel:+12816884769">+1 (281) 688-4769</ListItemLink>
-      </ListItem>
+    <List $right>
       <ListItem>
         <ListItemLink href="mailto:contact@outgrow.io">contact@outgrow.io</ListItemLink>
       </ListItem>
@@ -97,4 +83,3 @@ const AppFooter = ({ color }) => (
 )
 
 export default AppFooter
-

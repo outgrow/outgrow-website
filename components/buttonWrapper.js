@@ -1,3 +1,5 @@
+"use client"
+
 import styled from "styled-components"
 import media from "../styles/mediaQueries"
 
@@ -12,7 +14,7 @@ export default styled.div`
   transform: translateX(-50%);
   
   ${media.tablet`
-    left: ${props => props.keepLeft ? `-6rem` : `22rem`};
+    left: ${props => props.$keepLeft ? `-6rem` : `22rem`};
     transform: none;
   `}
 `

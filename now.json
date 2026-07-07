@@ -1,8 +1,0 @@
-{
-  "version": 2,
-  "alias": "outgrow-website",
-  "name": "outgrow-website",
-  "builds": [
-    { "src": "next.config.js", "use": "@now/next" }
-  ]
-}
