@@ -1,59 +1,111 @@
 "use client"
 
 import Link from "next/link"
-import styled from "styled-components"
-import media from "../styles/mediaQueries"
-import { grey, white } from "../styles/colors"
+import styled, { css } from "styled-components"
+import { black, blue, grey, white } from "../styles/colors"
 
-const StyledLink = styled(Link)`
-  display: flex;
+const variants = {
+  primary: css`
+    background: rgb(${props => props.$accent});
+    color: rgb(${white});
+
+    &:hover {
+      box-shadow: 0 12px 28px rgba(${props => props.$accent}, .35);
+    }
+  `,
+  ghost: css`
+    background: rgba(255, 255, 255, .55);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(${black}, .14);
+    color: rgb(${black});
+
+    &:hover {
+      border-color: rgba(${props => props.$accent}, .6);
+      color: rgb(${props => props.$accent});
+      box-shadow: 0 12px 28px rgba(${black}, .08);
+    }
+  `,
+  light: css`
+    background: rgb(${white});
+    color: rgb(${black});
+
+    &:hover {
+      box-shadow: 0 12px 28px rgba(0, 0, 0, .4);
+    }
+  `,
+  ghostDark: css`
+    background: rgba(255, 255, 255, .06);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, .22);
+    color: rgb(${white});
+
+    &:hover {
+      border-color: rgba(255, 255, 255, .55);
+    }
+  `,
+}
+
+const base = css`
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: .5rem;
 
-  background: rgb(${props => props.$backgroundColor || white});
+  padding: .8rem 1.5rem;
+  border: 0;
+  border-radius: 999px;
 
-  padding: .5rem 1rem;
-
-  border-radius: 35px;
-
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
   text-decoration: none;
-  color: rgb(${props => props.$color});
-  font-weight: 800;
-  font-size: 1.2rem;
-  ${media.smallTablet`font-size: 1.3rem;`}
+  cursor: pointer;
+
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, color .18s ease, background-color .18s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  ${props => variants[props.$variant]}
 `
+
+const StyledLink = styled(Link)`${base}`
+
+const StyledAnchor = styled.a`${base}`
 
 const StyledButton = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  ${base}
 
-  background: rgb(${props => props.$backgroundColor || white});
-  ${props => props.disabled && `background: rgb(${grey});`}
-
-  padding: .5rem 2rem;
-
-  border: none;
-  border-radius: 35px;
-
-  text-decoration: none;
-  color: rgb(${props => props.$color});
-  font-weight: 800;
-  font-size: 1.2rem;
-  ${media.smallTablet`font-size: 1.3rem;`}
+  &:disabled {
+    background: rgb(${grey});
+    color: rgb(${white});
+    cursor: default;
+    transform: none;
+    box-shadow: none;
+  }
 `
 
-const Button = ({ backgroundColor, children, color, href, type, disabled, onClick }) => {
+const Button = ({ accent = blue, variant = "primary", href, children, type, disabled, onClick }) => {
   if (typeof href !== "undefined") {
-    return (
-      <StyledLink href={href} $backgroundColor={backgroundColor} $color={color}>{children}</StyledLink>
-    )
+    const isExternal = href.startsWith("http") || href.startsWith("mailto:")
+
+    if (isExternal) {
+      return <StyledAnchor href={href} $accent={accent} $variant={variant}>{children}</StyledAnchor>
+    }
+
+    return <StyledLink href={href} $accent={accent} $variant={variant}>{children}</StyledLink>
   }
 
   return (
     <StyledButton
-      $backgroundColor={backgroundColor}
-      $color={color}
+      $accent={accent}
+      $variant={variant}
       type={type}
       disabled={disabled}
       onClick={onClick}

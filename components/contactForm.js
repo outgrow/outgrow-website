@@ -1,52 +1,66 @@
 "use client"
 
 import { useState } from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import Button from "./button"
-import media from "../styles/mediaQueries"
-import { black, blue, red, white } from "../styles/colors"
+import { black, blue, darkGreen, red, white } from "../styles/colors"
 
 const Form = styled.form`
   width: 100%;
-  ${media.tablet`max-width: 50%;`}
-  ${media.tablet`margin-left: 28rem;`}
 `
 
 const Label = styled.label`
   display: block;
   width: 100%;
+  margin-bottom: .4rem;
+
+  font-size: .85rem;
+  font-weight: 600;
+  color: rgba(${black}, .68);
+`
+
+const fieldStyles = css`
+  display: block;
+  width: 100%;
+
+  padding: .85rem 1rem;
+  border: 1px solid rgba(${black}, .14);
+  border-radius: 14px;
+
+  font-family: inherit;
+  font-size: 1rem;
   color: rgb(${black});
-  font-size: 0.9rem;
+  background: rgba(${white}, .9);
+
+  transition: border-color .15s ease, box-shadow .15s ease;
+
+  &:focus {
+    outline: none;
+    border-color: rgb(${blue});
+    box-shadow: 0 0 0 4px rgba(${blue}, .14);
+  }
 `
 
 const TextInput = styled.input`
-  display: block;
-  width: 100%;
-  height: 1.3rem;
-  ${media.veryLargeSmartphone`height: 1.9rem`}
-  padding: .8rem .9rem;
-  border: 1px solid rgb(${blue});
-  border-radius: 15px;
-  font-family: Axiforma, Helvetica, "sans-serif";
-  background: rgb(${white});
+  ${fieldStyles}
 `
 
 const Textarea = styled.textarea`
-  width: 100%;
-  border: 1px solid rgb(${blue});
-  border-radius: 15px;
-  font-family: Axiforma, "sans-serif";
-  padding: 0.7rem 1rem;
-  background: rgb(${white});
+  ${fieldStyles}
+  resize: vertical;
 `
 
 const FieldWrapper = styled.div`
   width: 100%;
-  margin: .4rem 0;
+  margin: 1rem 0;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
 `
 
 const ButtonWrapper = styled.div`
-  margin: 1rem 0 0 0;
+  margin-top: 1.4rem;
 `
 
 const Error = styled.p`
@@ -56,9 +70,9 @@ const Error = styled.p`
 `
 
 const Success = styled.p`
-  color: rgb(${blue});
+  color: rgb(${darkGreen});
   font-size: 1rem;
-  font-weight: 800;
+  font-weight: 600;
   margin-top: 1rem;
 `
 
@@ -120,25 +134,24 @@ export default function ContactForm() {
       </FieldWrapper>
 
       <FieldWrapper>
-        <Label htmlFor="company">Company</Label>
+        <Label htmlFor="company">Agency</Label>
         <TextInput id="company" name="company" onChange={handleChange} value={fields.company} />
       </FieldWrapper>
 
       <FieldWrapper>
-        <Label htmlFor="message">Message</Label>
-        <Textarea id="message" name="message" rows={4} onChange={handleChange} value={fields.message} required />
+        <Label htmlFor="message">What are you trying to figure out?</Label>
+        <Textarea id="message" name="message" rows={5} onChange={handleChange} value={fields.message} required />
       </FieldWrapper>
 
       <HoneypotField tabIndex={-1} autoComplete="off" name="website" />
 
       <ButtonWrapper>
         <Button
-          backgroundColor={blue}
-          color={white}
+          accent={blue}
           type="submit"
           disabled={status === "sending" || status === "sent"}
         >
-          {status === "sent" ? "Thank you!" : "Send"}
+          {status === "sent" ? "Thank you!" : "Send message"}
         </Button>
       </ButtonWrapper>
 

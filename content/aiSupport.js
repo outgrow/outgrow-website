@@ -4,12 +4,14 @@ const aiSupport = {
   metaDescription:
     "Direct access to AI engineers for agency teams: priority support, implementation reviews, and monthly workflow audits, with white-label support for agencies serving their own clients.",
   hero: {
-    image: "/emergency",
-    title: "Embedded AI<br/>support,<br/>on demand.",
+    kicker: "ai:support",
+    title: "Embedded AI support, on demand.",
     body: [
       "AI adoption doesn't stop after the training session. New models ship, workflows break, and someone on your team ends up debugging a prompt at 6pm instead of shipping client work.",
       "An out:grow support plan gives your team direct access to AI engineers who already know your stack, so problems get solved instead of stalling a delivery."
-    ]
+    ],
+    cta: { label: "Get a support plan", href: "/contact" },
+    secondary: { label: "What's included", href: "#section-content" }
   },
   sections: [
     {

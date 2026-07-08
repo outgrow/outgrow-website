@@ -1,11 +1,10 @@
 import Nav from "../../components/nav"
 import Footer from "../../components/footer"
-import ServicePageHeader from "../../components/servicePageHeader"
-import Wire from "../../components/wire"
+import Hero from "../../components/hero"
 import PageSections from "../../components/pageSections"
 import LinksSection from "../../components/linksSection"
 import founder from "../../content/founder"
-import { blue } from "../../styles/colors"
+import { blue, green, lightBlue } from "../../styles/colors"
 
 export const metadata = {
   title: { absolute: founder.metaTitle },
@@ -27,7 +26,7 @@ const founderJsonLd = {
 
 export default function FounderPage() {
   return (
-    <div style={{ position: "relative" }}>
+    <div>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(founderJsonLd) }}
@@ -35,20 +34,23 @@ export default function FounderPage() {
 
       <Nav />
 
-      <ServicePageHeader
-        body={founder.hero.body}
-        buttonTextColor={blue}
-        overlayColor={blue}
-        title={founder.hero.title}
-      />
+      <main>
+        <Hero
+          accent={blue}
+          glow={[lightBlue, green]}
+          kicker={founder.hero.kicker}
+          title={founder.hero.title}
+          body={founder.hero.body}
+          portrait={founder.hero.portrait}
+          cta={founder.hero.cta}
+        />
 
-      <Wire $color={blue} />
+        <PageSections id="section-content" accent={blue} sections={founder.sections} />
 
-      <PageSections id="section-content" color={blue} sections={founder.sections} />
+        <LinksSection color={blue} kicker="else:where" links={founder.links} title="Elsewhere." />
+      </main>
 
-      <LinksSection color={blue} links={founder.links} title="Elsewhere." />
-
-      <Footer color={blue} />
+      <Footer />
     </div>
   )
 }

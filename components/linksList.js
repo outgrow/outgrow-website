@@ -2,44 +2,67 @@
 
 import styled from "styled-components"
 import media from "../styles/mediaQueries"
+import { glass } from "../styles/glass"
 import { black, blue } from "../styles/colors"
 
-const List = styled.ul`
+const Grid = styled.ul`
   list-style: none;
-  margin-top: 1.5rem;
-  ${media.tablet`margin-left: 28rem;`}
-  ${media.laptop`margin-right: 13rem;`}
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+
+  ${media.smallTablet`grid-template-columns: 1fr 1fr;`}
 `
 
-const ListItem = styled.li`
-  margin-bottom: 1.2rem;
-`
+const Card = styled.a`
+  ${glass}
+  display: block;
+  height: 100%;
 
-const LinkAnchor = styled.a`
-  color: rgb(${blue});
-  font-weight: 800;
+  border-radius: 16px;
+  padding: 1.2rem 1.3rem;
   text-decoration: none;
 
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+
   &:hover {
-    text-decoration: underline;
+    transform: translateY(-3px);
+    border-color: rgba(${blue}, .45);
+    box-shadow: 0 16px 36px rgba(${blue}, .14);
+  }
+`
+
+const Label = styled.p`
+  font-weight: 600;
+  font-size: .98rem;
+  color: rgb(${blue});
+
+  & span {
+    display: inline-block;
+    margin-left: .3rem;
+    font-size: .85em;
   }
 `
 
 const Description = styled.p`
-  color: rgb(${black});
-  font-weight: 100;
-  margin-top: .2rem;
+  margin-top: .4rem;
+  font-size: .9rem;
+  font-weight: 300;
+  line-height: 1.55;
+  color: rgba(${black}, .65);
 `
 
 const LinksList = ({ links }) => (
-  <List>
+  <Grid>
     {links.map(link => (
-      <ListItem key={link.href}>
-        <LinkAnchor href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</LinkAnchor>
-        {link.description && <Description>{link.description}</Description>}
-      </ListItem>
+      <li key={link.href}>
+        <Card href={link.href} target="_blank" rel="noopener noreferrer">
+          <Label>{link.label}<span>&#8599;</span></Label>
+          {link.description && <Description>{link.description}</Description>}
+        </Card>
+      </li>
     ))}
-  </List>
+  </Grid>
 )
 
 export default LinksList

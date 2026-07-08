@@ -1,7 +1,6 @@
 import Nav from "../../components/nav"
 import Footer from "../../components/footer"
-import ServicePageHeader from "../../components/servicePageHeader"
-import Wire from "../../components/wire"
+import Hero from "../../components/hero"
 import PageSections from "../../components/pageSections"
 import aiAudits from "../../content/aiAudits"
 import { blue, lightBlue } from "../../styles/colors"
@@ -16,22 +15,24 @@ export const metadata = {
 
 export default function AiAuditsPage() {
   return (
-    <div style={{ position: "relative" }}>
+    <div>
       <Nav />
 
-      <ServicePageHeader
-        backgroundImage={`${aiAudits.hero.image}.webp`}
-        body={aiAudits.hero.body}
-        buttonTextColor={blue}
-        overlayColor={lightBlue}
-        title={aiAudits.hero.title}
-      />
+      <main>
+        <Hero
+          accent={blue}
+          glow={[lightBlue, blue]}
+          kicker={aiAudits.hero.kicker}
+          title={aiAudits.hero.title}
+          body={aiAudits.hero.body}
+          cta={aiAudits.hero.cta}
+          secondary={aiAudits.hero.secondary}
+        />
 
-      <Wire $color={blue} />
+        <PageSections id="section-content" accent={blue} sections={aiAudits.sections} />
+      </main>
 
-      <PageSections id="section-content" color={blue} sections={aiAudits.sections} />
-
-      <Footer color={blue} />
+      <Footer />
     </div>
   )
 }

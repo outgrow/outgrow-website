@@ -1,22 +1,17 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Link from "next/link"
-import styled, { keyframes } from "styled-components"
+import styled, { css, keyframes } from "styled-components"
 import media from "../styles/mediaQueries"
 import { black, blue, white } from "../styles/colors"
 
 const links = [
-  { href: "/", label: "Home", hideOnDesktop: true },
   { href: "/ai-audits", label: "AI Audits" },
   { href: "/ai-training", label: "AI Training" },
   { href: "/ai-support", label: "AI Support" },
   { href: "/founder", label: "Founder" },
-  { href: "/contact", label: "Contact Us" }
-].map(link => {
-  link.key = `nav-link-${link.href}-${link.label}`
-  return link
-})
+]
 
 const listItemAnimation = keyframes`
   from {
@@ -30,134 +25,176 @@ const listItemAnimation = keyframes`
   }
 `
 
-const TopBar = styled.div`
-  position: ${props => props.$isMenuOpen ? "fixed" : "absolute"};
+const Bar = styled.header`
+  position: fixed;
   top: 0;
-  width: 100%;
-  z-index: 999;
+  left: 0;
+  right: 0;
+  z-index: 100;
 
-  align-items: start;
+  background: rgba(${white}, .72);
+  backdrop-filter: blur(20px) saturate(1.8);
+  border-bottom: 1px solid rgba(${black}, .07);
+`
+
+const Inner = styled.div`
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1.2rem;
+  height: 4rem;
+
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  gap: 1rem;
 `
 
-const MenuButton = styled.button`
-  padding: 15px 15px;
-  display: inline-block;
-  cursor: pointer;
-  transition-property: opacity, filter;
-  transition-duration: 0.15s;
-  transition-timing-function: linear;
-  font: inherit;
-  color: inherit;
-  text-transform: none;
-  background-color: transparent;
-  border: 0;
-  margin: 0;
-  overflow: visible;
-
-  &:hover {
-    opacity: 0.7;
-  }
-
-  &.is-active:hover {
-    opacity: 0.7;
-  }
-
-  &.is-active .hamburger-inner,
-  &.is-active .hamburger-inner::before,
-  &.is-active .hamburger-inner::after {
-    background-color: #fff;
-  }
-
-  &.is-active .hamburger-inner {
-    transition-delay: 0.22s;
-    background-color: transparent !important;
-  }
-
-  &.is-active .hamburger-inner::before {
-    top: 0;
-    transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
-    transform: translate3d(0, 10px, 0) rotate(45deg);
-  }
-
-  &.is-active .hamburger-inner::after {
-    top: 0;
-    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
-    transform: translate3d(0, 10px, 0) rotate(-45deg);
-  }
-`
-
-const MenuButtonBox = styled.span`
-  width: 40px;
-  height: 24px;
-  display: inline-block;
-  position: relative;
-`
-
-const MenuButtonInner = styled.span`
-  display: block;
-  margin-top: -2px;
-  top: 2px;
-  transition: background-color 0s 0.13s linear;
-
-  &,
-  &::before,
-  &::after {
-    width: 40px;
-    height: 2px;
-    background-color: #fff;
-    border-radius: 4px;
-    position: absolute;
-    transition-property: transform;
-    transition-duration: 0.15s;
-    transition-timing-function: ease;
-  }
-
-  &::before,
-  &::after {
-    content: "";
-    display: block;
-  }
-
-  &::before {
-    top: 10px;
-    transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
-
-  &::after {
-    bottom: -10px;
-    top: 20px;
-    transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
+const LogoLink = styled(Link)`
+  display: flex;
+  align-items: center;
 `
 
 const Logo = styled.img`
-  height: 1.5rem;
-  ${media.smallTablet`height: 2rem;`}
-
-  margin: 1rem .5rem 0 0;
+  height: 1.3rem;
+  width: auto;
+  display: block;
 `
 
-const MobileNavWrapper = styled.nav`
-  background: rgb(${black});
-  height: 100vh;
-  width: 100vw;
+const DesktopLinks = styled.nav`
+  display: none;
+  ${media.tablet`
+    display: flex;
+    align-items: center;
+    gap: 1.9rem;
+  `}
+`
+
+const NavLink = styled(Link)`
+  color: rgba(${black}, .72);
+  text-decoration: none;
+  font-size: .93rem;
+  font-weight: 500;
+  transition: color .18s ease;
+
+  &:hover {
+    color: rgb(${blue});
+  }
+`
+
+const Actions = styled.div`
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+`
+
+const Cta = styled(Link)`
+  display: inline-flex;
+  align-items: center;
+
+  background: rgb(${blue});
+  color: rgb(${white});
+
+  font-size: .9rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  padding: .55rem 1.15rem;
+  border-radius: 999px;
+
+  transition: transform .18s ease, box-shadow .18s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(${blue}, .35);
+  }
+`
+
+const MenuButton = styled.button`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: .6rem .2rem .6rem .6rem;
+
+  ${media.tablet`display: none;`}
+`
+
+const BurgerBox = styled.span`
+  width: 26px;
+  height: 18px;
+  position: relative;
+  display: inline-block;
+`
+
+const BurgerInner = styled.span`
+  &,
+  &::before,
+  &::after {
+    width: 26px;
+    height: 2px;
+    border-radius: 2px;
+    background: rgb(${black});
+    position: absolute;
+    left: 0;
+    transition: transform .25s ease, top .25s ease, opacity .2s ease;
+  }
+
+  & {
+    top: 8px;
+  }
+
+  &::before {
+    content: "";
+    top: -8px;
+    display: block;
+  }
+
+  &::after {
+    content: "";
+    top: 8px;
+    display: block;
+  }
+
+  ${props => props.$open && css`
+    transform: rotate(45deg);
+
+    &::before {
+      top: 0;
+      transform: rotate(90deg);
+    }
+
+    &::after {
+      top: 0;
+      opacity: 0;
+    }
+  `}
+`
+
+const Overlay = styled.nav`
   position: fixed;
-  z-index: 99;
+  inset: 0;
+  z-index: 90;
+
+  background: rgba(${white}, .82);
+  backdrop-filter: blur(36px) saturate(1.6);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  ${media.tablet`display: none;`}
 `
 
 const List = styled.ul`
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
   list-style: none;
+  text-align: center;
 `
 
 const ListItem = styled.li`
-  text-align: center;
-  padding: .5rem 0;
-  color: rgb(${white});
+  padding: .65rem 0;
   opacity: 0;
 
   animation-name: ${listItemAnimation};
@@ -166,64 +203,32 @@ const ListItem = styled.li`
   animation-fill-mode: forwards;
 `
 
-const ListItemLink = styled(Link)`
-  font-size: 1.2rem;
-  color: rgb(${white});
+const OverlayLink = styled(Link)`
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: rgb(${black});
   text-decoration: none;
-  cursor: pointer;
+
+  &:hover {
+    color: rgb(${blue});
+  }
 `
 
-const LogoLink = styled(Link)`
-  cursor: pointer;
-`
-
-const Divider = styled.hr`
-  width: 90%;
-  transform: translate(-50%, 15px);
-  z-index: 1;
-  position: relative;
-  left: 50%;
-`
-
-const DividerText = styled.h3`
-  display: inline-block;
-  text-align: center;
-  color: rgb(${white});
-  font-weight: normal;
-  background: rgb(${black});
-  z-index: 999;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 0 1rem;
-`
-
-const ButtonLink = styled(Link)`
-  display: flex;
+const OverlayCta = styled(Link)`
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-
-  width: 16rem;
 
   background: rgb(${blue});
-
-  text-decoration: none;
-
-  padding: 1rem;
-  margin-top: 1rem;
-
-  border-radius: 68px;
-
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-`
-
-const ButtonText = styled.p`
   color: rgb(${white});
 
-  text-align: center;
-  font-weight: 800;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  padding: .85rem 1.8rem;
+  border-radius: 999px;
+  margin-top: 1.2rem;
 `
 
 export default function Nav() {
@@ -232,44 +237,55 @@ export default function Nav() {
   const handleToggleMenu = () => setIsMenuOpen(open => !open)
   const handleCloseMenu = () => setIsMenuOpen(false)
 
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? "hidden" : ""
+    return () => {
+      document.body.style.overflow = ""
+    }
+  }, [isMenuOpen])
+
   return (
     <div>
-      <TopBar $isMenuOpen={isMenuOpen}>
-        <MenuButton
-          className={`hamburger hamburger--spring ${isMenuOpen ? "is-active" : ""}`}
-          aria-label="menu"
-          type="button"
-          onClick={handleToggleMenu}
-        >
-          <MenuButtonBox className="hamburger-box">
-            <MenuButtonInner className="hamburger-inner" />
-          </MenuButtonBox>
-        </MenuButton>
+      <Bar>
+        <Inner>
+          <LogoLink href="/" onClick={handleCloseMenu} aria-label="out:grow home">
+            <Logo alt="out:grow logo" src="/logo-dark.svg" height="21px" width="96px" />
+          </LogoLink>
 
-        <LogoLink href="/" onClick={handleCloseMenu}>
-          <Logo alt="Outgrow logo" src="/logo-white.svg" height="32px" width="145px" />
-        </LogoLink>
-      </TopBar>
-      {isMenuOpen && <MobileNavWrapper>
-        <List>
-          {links.map(({ key, href, label }, index) => (
-            <ListItem key={key} $iterationCount={index}>
-              <ListItemLink href={href} onClick={handleCloseMenu}>{label}</ListItemLink>
+          <DesktopLinks>
+            {links.map(({ href, label }) => (
+              <NavLink key={href} href={href}>{label}</NavLink>
+            ))}
+          </DesktopLinks>
+
+          <Actions>
+            <Cta href="/contact">Get in touch</Cta>
+            <MenuButton aria-label="menu" aria-expanded={isMenuOpen} type="button" onClick={handleToggleMenu}>
+              <BurgerBox>
+                <BurgerInner $open={isMenuOpen} />
+              </BurgerBox>
+            </MenuButton>
+          </Actions>
+        </Inner>
+      </Bar>
+
+      {isMenuOpen && (
+        <Overlay>
+          <List>
+            <ListItem $iterationCount={0}>
+              <OverlayLink href="/" onClick={handleCloseMenu}>Home</OverlayLink>
             </ListItem>
-          ))}
-
-          <ListItem $iterationCount={6}>
-            <Divider />
-            <DividerText>or</DividerText>
-          </ListItem>
-
-          <ListItem style={{ marginTop: "2.5rem" }} $iterationCount={7}>
-            <ButtonLink href="/contact" onClick={handleCloseMenu}>
-              <ButtonText>Get in touch</ButtonText>
-            </ButtonLink>
-          </ListItem>
-        </List>
-      </MobileNavWrapper>}
+            {links.map(({ href, label }, index) => (
+              <ListItem key={href} $iterationCount={index + 1}>
+                <OverlayLink href={href} onClick={handleCloseMenu}>{label}</OverlayLink>
+              </ListItem>
+            ))}
+            <ListItem $iterationCount={links.length + 1}>
+              <OverlayCta href="/contact" onClick={handleCloseMenu}>Get in touch</OverlayCta>
+            </ListItem>
+          </List>
+        </Overlay>
+      )}
     </div>
   )
 }

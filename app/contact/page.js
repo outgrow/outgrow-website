@@ -1,11 +1,7 @@
 import Nav from "../../components/nav"
 import Footer from "../../components/footer"
-import ServicePageHeader from "../../components/servicePageHeader"
-import Wire from "../../components/wire"
-import Title from "../../components/title"
-import ContactForm from "../../components/contactForm"
+import ContactSection from "../../components/contactSection"
 import contact from "../../content/contact"
-import { blue, lightBlue } from "../../styles/colors"
 
 export const metadata = {
   title: contact.metaTitle,
@@ -17,26 +13,14 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <div style={{ position: "relative" }}>
+    <div>
       <Nav />
 
-      <ServicePageHeader
-        backgroundImage={`${contact.hero.image}.webp`}
-        body={contact.hero.body}
-        buttonText="Reach out"
-        buttonTextColor={blue}
-        overlayColor={lightBlue}
-        title={contact.hero.title}
-      />
+      <main>
+        <ContactSection content={contact} />
+      </main>
 
-      <Wire $color={blue} />
-
-      <div id="section-content" style={{ padding: "1.2rem" }}>
-        <Title $color={blue} $noMarginTop>Let's talk.</Title>
-        <ContactForm />
-      </div>
-
-      <Footer color={blue} />
+      <Footer showCta={false} />
     </div>
   )
 }

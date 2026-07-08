@@ -1,20 +1,23 @@
 const founder = {
   path: "/founder",
-  metaTitle: "Loan Laux — Founder, out:grow",
+  metaTitle: "Loan Laux, Founder of out:grow",
   metaDescription:
     "Loan Laux founded out:grow, a headless commerce agency acquired by Trellis in 2021. He now runs out:grow's AI adoption practice for agencies and builds CommerceCopilot, an AI agent suite for Shopify agencies.",
   hero: {
-    title: "Loan Laux.<br/>Agency founder.<br/>AI operator.",
+    kicker: "the:founder",
+    title: "Loan Laux. Agency founder. AI operator.",
     body: [
       "Founder of out:grow. Built and exited a headless commerce agency, then ran engineering for the company that acquired it. Now back to running out:grow, focused on AI adoption for agencies.",
       "Also the builder behind CommerceCopilot, an AI agent suite for Shopify agencies."
-    ]
+    ],
+    portrait: { src: "/loan-laux.jpg", alt: "Loan Laux, founder of out:grow" },
+    cta: { label: "Work with out:grow", href: "/contact" }
   },
   sections: [
     {
       title: "The track record.",
       paragraphs: [
-        "I started as an independent developer specializing in Reaction Commerce (now Mailchimp Open Commerce), a headless, API-first platform most agencies avoided because it required real engineering instead of a plugin marketplace.",
+        "I started as an independent developer specializing in Reaction Commerce (later Mailchimp Open Commerce, wound down after Intuit's acquisition of Mailchimp), a headless, API-first platform most agencies avoided because it required real engineering instead of a plugin marketplace.",
         "That specialty became out:grow: a Dubai-based agency helping retailers and agencies ship headless commerce projects, with clients across Europe and Southeast Asia. **In 2021, Trellis, a Boston-based e-commerce agency, acquired out:grow** to build out its own headless commerce practice.",
         "I stayed on through Trellis's growth, then its 2024 acquisition by Zaelab, running engineering across the combined team."
       ],

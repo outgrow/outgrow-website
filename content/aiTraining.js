@@ -4,12 +4,14 @@ const aiTraining = {
   metaDescription:
     "Hands-on AI workshops and coaching for agency PMs, designers, and developers, run on real client projects instead of generic slides.",
   hero: {
-    image: "/training",
-    title: "Train your team.<br/>Not just your<br/>tools.",
+    kicker: "ai:training",
+    title: "Train your team. Not just your tools.",
     body: [
       "Buying AI tools without training is how agencies end up with unused licenses and a team that still does everything the old way.",
       "out:grow runs hands-on training for agency teams: PMs, designers, and developers, all learning the workflows that actually stick."
-    ]
+    ],
+    cta: { label: "Book a workshop", href: "/contact" },
+    secondary: { label: "See the formats", href: "#section-content" }
   },
   sections: [
     {

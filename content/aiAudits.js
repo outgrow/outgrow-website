@@ -4,12 +4,14 @@ const aiAudits = {
   metaDescription:
     "out:grow audits how your agency actually works and delivers a sequenced roadmap for adopting AI in client delivery, without the enterprise change-management overhead.",
   hero: {
-    image: "/consulting",
-    title: "AI adoption,<br/>mapped to<br/>your workflow.",
+    kicker: "ai:audits",
+    title: "AI adoption, mapped to your workflow.",
     body: [
-      "Most agencies don't have an AI problem. They have a mapping problem: which tasks are worth automating, which tools actually fit your stack, and where the risk sits.",
+      "Which tasks are worth automating, which tools actually fit your stack, and where the risk sits: most agencies are missing the map, not the motivation.",
       "An out:grow audit gives you a concrete plan: the workflows to change first, the tools to use, and the order to roll them out in."
-    ]
+    ],
+    cta: { label: "Book an audit", href: "/contact" },
+    secondary: { label: "How it works", href: "#section-content" }
   },
   sections: [
     {

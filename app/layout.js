@@ -7,7 +7,7 @@ const siteUrl = "https://outgrow.io"
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "out:grow — AI Adoption Consulting for Agencies",
+    default: "out:grow | AI Adoption Consulting for Agencies",
     template: "%s | out:grow",
   },
   description:
@@ -16,7 +16,7 @@ export const metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "out:grow — AI Adoption Consulting for Agencies",
+    title: "out:grow | AI Adoption Consulting for Agencies",
     description:
       "out:grow helps small and medium web, commerce, and 360 agencies adopt AI into their day-to-day workflows through audits, training, and embedded support.",
     url: siteUrl,
@@ -25,7 +25,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "out:grow — AI Adoption Consulting for Agencies",
+    title: "out:grow | AI Adoption Consulting for Agencies",
     description:
       "out:grow helps small and medium web, commerce, and 360 agencies adopt AI into their day-to-day workflows through audits, training, and embedded support.",
   },
@@ -44,7 +44,7 @@ export const metadata = {
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#1d1d1d",
+  themeColor: "#fafafa",
 }
 
 const jsonLd = {

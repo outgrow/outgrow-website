@@ -1,10 +1,9 @@
 import Nav from "../../components/nav"
 import Footer from "../../components/footer"
-import ServicePageHeader from "../../components/servicePageHeader"
-import Wire from "../../components/wire"
+import Hero from "../../components/hero"
 import PageSections from "../../components/pageSections"
 import aiTraining from "../../content/aiTraining"
-import { red } from "../../styles/colors"
+import { lightBlue, red } from "../../styles/colors"
 
 export const metadata = {
   title: aiTraining.metaTitle,
@@ -16,22 +15,24 @@ export const metadata = {
 
 export default function AiTrainingPage() {
   return (
-    <div style={{ position: "relative" }}>
+    <div>
       <Nav />
 
-      <ServicePageHeader
-        backgroundImage={`${aiTraining.hero.image}.webp`}
-        body={aiTraining.hero.body}
-        buttonTextColor={red}
-        overlayColor={red}
-        title={aiTraining.hero.title}
-      />
+      <main>
+        <Hero
+          accent={red}
+          glow={[red, lightBlue]}
+          kicker={aiTraining.hero.kicker}
+          title={aiTraining.hero.title}
+          body={aiTraining.hero.body}
+          cta={aiTraining.hero.cta}
+          secondary={aiTraining.hero.secondary}
+        />
 
-      <Wire $color={red} />
+        <PageSections id="section-content" accent={red} sections={aiTraining.sections} />
+      </main>
 
-      <PageSections id="section-content" color={red} sections={aiTraining.sections} />
-
-      <Footer color={red} />
+      <Footer />
     </div>
   )
 }

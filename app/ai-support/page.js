@@ -1,10 +1,9 @@
 import Nav from "../../components/nav"
 import Footer from "../../components/footer"
-import ServicePageHeader from "../../components/servicePageHeader"
-import Wire from "../../components/wire"
+import Hero from "../../components/hero"
 import PageSections from "../../components/pageSections"
 import aiSupport from "../../content/aiSupport"
-import { green } from "../../styles/colors"
+import { darkGreen, green } from "../../styles/colors"
 
 export const metadata = {
   title: aiSupport.metaTitle,
@@ -16,22 +15,24 @@ export const metadata = {
 
 export default function AiSupportPage() {
   return (
-    <div style={{ position: "relative" }}>
+    <div>
       <Nav />
 
-      <ServicePageHeader
-        backgroundImage={`${aiSupport.hero.image}.webp`}
-        body={aiSupport.hero.body}
-        buttonTextColor={green}
-        overlayColor={green}
-        title={aiSupport.hero.title}
-      />
+      <main>
+        <Hero
+          accent={darkGreen}
+          glow={[green, darkGreen]}
+          kicker={aiSupport.hero.kicker}
+          title={aiSupport.hero.title}
+          body={aiSupport.hero.body}
+          cta={aiSupport.hero.cta}
+          secondary={aiSupport.hero.secondary}
+        />
 
-      <Wire $color={green} />
+        <PageSections id="section-content" accent={darkGreen} sections={aiSupport.sections} />
+      </main>
 
-      <PageSections id="section-content" color={green} sections={aiSupport.sections} />
-
-      <Footer color={green} />
+      <Footer />
     </div>
   )
 }

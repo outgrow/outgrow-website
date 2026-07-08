@@ -1,8 +1,9 @@
 import Nav from "../../components/nav"
 import Footer from "../../components/footer"
+import Hero from "../../components/hero"
 import PageSections from "../../components/pageSections"
 import privacy from "../../content/privacy"
-import { blue } from "../../styles/colors"
+import { blue, lightBlue } from "../../styles/colors"
 
 export const metadata = {
   title: privacy.metaTitle,
@@ -15,13 +16,23 @@ export const metadata = {
 export default function PrivacyPage() {
   return (
     <div>
-      <div style={{ background: `rgb(${blue})`, width: "100%", height: "3.7rem", marginBottom: "2rem" }}>
-        <Nav />
-      </div>
+      <Nav />
 
-      <PageSections color={blue} sections={privacy.sections} />
+      <main>
+        <Hero
+          accent={blue}
+          glow={[lightBlue]}
+          compact
+          kicker="privacy:policy"
+          title="Privacy policy."
+          body={[privacy.metaDescription]}
+          trust={`Last updated: ${privacy.updated}`}
+        />
 
-      <Footer color={blue} />
+        <PageSections accent={blue} numbered={false} sections={privacy.sections} />
+      </main>
+
+      <Footer showCta={false} />
     </div>
   )
 }

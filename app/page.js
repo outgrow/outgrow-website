@@ -1,8 +1,10 @@
 import Nav from "../components/nav"
 import Footer from "../components/footer"
-import HomeSection from "../components/homeSection"
+import Hero from "../components/hero"
+import ServiceCards from "../components/serviceCards"
+import WhyStrip from "../components/whyStrip"
 import home from "../content/home"
-import * as colors from "../styles/colors"
+import { blue, green, lightBlue, red } from "../styles/colors"
 
 export const metadata = {
   description: home.metaDescription,
@@ -14,17 +16,22 @@ export default function HomePage() {
     <div>
       <Nav />
 
-      {home.pillars.map(pillar => (
-        <HomeSection
-          key={pillar.buttonHref}
-          backgroundImage={pillar.backgroundImage}
-          buttonColor={colors[pillar.buttonColorName]}
-          buttonHref={pillar.buttonHref}
-          buttonText={pillar.buttonText}
-          overlayColor={colors[pillar.overlayColorName]}
-          title={pillar.title}
+      <main>
+        <Hero
+          accent={blue}
+          glow={[lightBlue, green, red]}
+          kicker={home.hero.kicker}
+          title={home.hero.title}
+          body={home.hero.body}
+          cta={home.hero.cta}
+          secondary={home.hero.secondary}
+          trust={home.hero.trust}
         />
-      ))}
+
+        <ServiceCards id="services" intro={home.servicesIntro} services={home.services} />
+
+        <WhyStrip why={home.why} />
+      </main>
 
       <Footer />
     </div>

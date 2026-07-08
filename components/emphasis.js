@@ -2,7 +2,8 @@
 
 import styled from "styled-components"
 
-const Emphasis = styled.span`
+const Emphasis = styled.strong`
+  font-weight: 600;
   color: rgb(${props => props.$color});
 `
 
