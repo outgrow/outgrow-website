@@ -173,6 +173,7 @@ const Footer = ({ showCta = true }) => (
         <nav aria-label="Company">
           <ColumnTitle>company:</ColumnTitle>
           <LinkList>
+            <LinkItem><FooterLink href="/blog">Blog</FooterLink></LinkItem>
             <LinkItem><FooterLink href="/founder">Founder</FooterLink></LinkItem>
             <LinkItem><FooterLink href="/contact">Contact Us</FooterLink></LinkItem>
             <LinkItem><FooterLink href="/privacy">Privacy Policy</FooterLink></LinkItem>

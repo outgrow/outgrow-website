@@ -1,4 +1,5 @@
-import { renderPageMarkdown } from "../../lib/renderMarkdown"
+import { renderBlogIndexMarkdown, renderPageMarkdown } from "../../lib/renderMarkdown"
+import { posts } from "../../content/blog"
 import home from "../../content/home"
 import aiAudits from "../../content/aiAudits"
 import aiTraining from "../../content/aiTraining"
@@ -22,6 +23,12 @@ export async function GET(_request, { params }) {
 
   if (!slug.endsWith(".md")) {
     return new Response("Not found", { status: 404 })
+  }
+
+  if (slug === "blog.md") {
+    return new Response(renderBlogIndexMarkdown(posts), {
+      headers: { "Content-Type": "text/markdown; charset=utf-8" },
+    })
   }
 
   const content = pages[slug.slice(0, -3)]

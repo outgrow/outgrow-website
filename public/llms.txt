@@ -8,6 +8,21 @@
 - [AI Training](https://outgrow.io/ai-training.md): Hands-on AI workshops and coaching for agency PMs, designers, and developers, run on real client projects.
 - [Embedded AI Support](https://outgrow.io/ai-support.md): Direct access to AI engineers for agency teams, including white-label support for agencies serving their own clients.
 
+## Blog
+
+Guides on AI adoption for small and mid-sized agencies, written by founder Loan Laux. Index: [Blog](https://outgrow.io/blog.md)
+
+- [AI for Small Agencies: What Actually Works](https://outgrow.io/blog/ai-for-small-agencies.md): Where AI fits in a 5-to-50-person agency's delivery, what it costs, the four failure modes, and a 90-day adoption plan.
+- [How Do I Get My Employees to Use AI?](https://outgrow.io/blog/how-to-get-employees-to-use-ai.md): Nine tactics that raise AI usage on a team: workflow defaults, explicit permission, training on live work, and honest answers about job fear.
+- [Claude Skills for Agencies](https://outgrow.io/blog/claude-skills-for-agencies.md): What Claude Skills are, why they fit agency work, six skills worth building first, and how to write a SKILL.md.
+- [Custom AI Agents for Agencies](https://outgrow.io/blog/custom-ai-agents-for-agencies.md): What agents can do for agencies today, the build-buy-configure decision, costs, and where agencies get burned.
+- [How to Run an AI Workflow Audit](https://outgrow.io/blog/how-to-run-an-ai-workflow-audit.md): A step-by-step method for mapping agency workflows, scoring them for AI fit, and writing a sequenced roadmap.
+- [The AI Tool Stack for Small Agencies](https://outgrow.io/blog/ai-stack-for-small-agencies.md): The four core tools a small agency needs, what to skip, and how to consolidate an overgrown stack.
+- [AI Training for Agency Teams](https://outgrow.io/blog/ai-training-for-agency-teams.md): Why the standard AI workshop changes nothing, and the format that works: role-specific sessions on live client work.
+- [ChatGPT vs Claude for Agencies](https://outgrow.io/blog/chatgpt-vs-claude-for-agencies.md): A task-by-task comparison for agency work, where each pulls ahead, and how to run both without chaos.
+- [White-Label AI Services for Agencies](https://outgrow.io/blog/white-label-ai-services-for-agencies.md): How small agencies sell AI work under their own brand: delivery models, pricing rules, and the partner checklist.
+- [Will AI Replace Agencies?](https://outgrow.io/blog/will-ai-replace-agencies.md): Why AI reprices agencies rather than replacing them, which agencies are at risk, and what to change in the next 12 months.
+
 ## About
 
 - [Founder: Loan Laux](https://outgrow.io/founder.md): Agency founder and AI operator. Built and exited out:grow (acquired by Trellis in 2021), then ran engineering through Trellis's 2024 acquisition by Zaelab. Also builds CommerceCopilot, an AI agent suite for Shopify agencies.

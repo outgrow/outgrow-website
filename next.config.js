@@ -4,6 +4,12 @@ const nextConfig = {
     styledComponents: true,
   },
 
+  async rewrites() {
+    // Markdown mirrors of blog posts for LLM crawlers, matching the /:page.md
+    // convention handled by app/[slug]/route.js for the static pages.
+    return [{ source: "/blog/:slug.md", destination: "/blog-md/:slug" }]
+  },
+
   async redirects() {
     return [
       { source: "/careers", destination: "/", permanent: true },

@@ -1,3 +1,5 @@
+import { posts } from "../content/blog"
+
 const siteUrl = "https://outgrow.io"
 
 const routes = [
@@ -11,10 +13,26 @@ const routes = [
 ]
 
 export default function sitemap() {
-  return routes.map(({ path, priority }) => ({
-    url: `${siteUrl}${path}`,
-    lastModified: "2026-07-06",
-    changeFrequency: "monthly",
-    priority,
-  }))
+  const latestPostDate = posts[0]?.date || "2026-07-06"
+
+  return [
+    ...routes.map(({ path, priority }) => ({
+      url: `${siteUrl}${path}`,
+      lastModified: "2026-07-06",
+      changeFrequency: "monthly",
+      priority,
+    })),
+    {
+      url: `${siteUrl}/blog`,
+      lastModified: latestPostDate,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    ...posts.map(post => ({
+      url: `${siteUrl}/blog/${post.slug}`,
+      lastModified: post.updated || post.date,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    })),
+  ]
 }
